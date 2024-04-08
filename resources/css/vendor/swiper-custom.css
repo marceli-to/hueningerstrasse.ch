@@ -1,0 +1,13 @@
+
+.swiper {
+  @apply h-auto w-full
+}
+
+.swiper img {
+  @apply aspect-[16/10] md:aspect-[16/8] xl:aspect-[16/7] object-cover h-full w-full
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply !text-white
+}

@@ -1,0 +1,79 @@
+@import "typo/webfonts.css";
+@import "vendor/mapbox.css";
+@import "vendor/swiper.css";
+@import "vendor/swiper-custom.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  @apply flex-1;
+}
+
+h1, h2 {
+  @apply uppercase text-forest font-sans-bold font-bold
+}
+
+h1 {
+  @apply font-black text-lg md:text-xl lg:text-2xl leading-7 mb-15 lg:mb-30
+}
+
+h2 {
+  @apply font-bold text-base md:text-md lg:text-lg mb-5
+}
+
+h3 {
+  @apply uppercase font-black
+}
+
+strong {
+  @apply font-sans-bold !font-bold
+}
+
+.imprint h2,
+.privacy h2 {
+  @apply text-base lg:text-lg
+}
+
+.privacy p {
+  @apply max-w-3xl;
+}
+
+p {
+  @apply mb-16 lg:mb-20;
+}
+
+p:last-of-type {
+  @apply mb-0;
+}
+
+strong {
+  @apply font-sans-bold font-bold font-normal;
+}
+
+main ul {
+  @apply m-0 p-0 mb-16 lg:mb-20;
+}
+
+main ul:last-child {
+  @apply mb-0;
+}
+
+main ul li {
+  @apply list-item list-disc ml-20;
+}
+
+sub,
+sup {
+  font-size: 65%;
+}
+
+.marker {
+  background-image: url('../icons/marker.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 50px;
+  width: 40px;
+}
