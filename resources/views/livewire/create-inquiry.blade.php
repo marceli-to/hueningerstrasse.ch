@@ -28,7 +28,7 @@
         <div class="md:mb-0">
           <div class="mb-5">
             <x-form.checkbox name="interest" value="1.5-Zimmerwohnung" isWire="true" class="-mt-4" id="interest-1.5zi" />
-            <x-form.checkbox-label for="interest-1.5zi">1-Zimmerwohnung</x-form.checkbox-label>
+            <x-form.checkbox-label for="interest-1.5zi">1.5-Zimmerwohnung</x-form.checkbox-label>
           </div>
           <div class="mb-5">
             <x-form.checkbox name="interest" value="2.5-Zimmerwohnung" isWire="true" class="-mt-4" id="interest-2.5zi" />

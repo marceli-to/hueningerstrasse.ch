@@ -8,11 +8,11 @@
       Industriestrasse 21<br>
       8304 Wallisellen<br>
       <a 
-        href="mailto:alessia.lavacca@apleona.com" 
+        href="mailto:mieten@apleona.com" 
         target="_blank" 
         rel="noopener" 
         class="hover:underline underline-offset-2 decoration-1">
-        alessia.lavacca@apleona.com
+        mieten@apleona.com
       </a>
     </p>
     <h2>Design und Entwicklung</h2>

@@ -1,6 +1,6 @@
 <x-mail::message>
   <div class="text-base pb-base">
-    Sehr geehrte Damen und Herren<br><br>Danke für Ihr Interesse. Gerne kontaktieren wir Sie mit weiteren Informationen, wenn der offizielle Vermarktungsstart erfolgt.
+    Sehr geehrte Damen und Herren<br><br>Danke für Ihr Interesse. Gerne kontaktieren wir Sie mit weiteren Informationen, sobald der offizielle Vermarktungsstart erfolgt.
   </div>
   <br>
   <div class="text-base pb-base">
