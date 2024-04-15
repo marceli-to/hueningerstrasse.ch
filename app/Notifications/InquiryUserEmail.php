@@ -40,7 +40,6 @@ class InquiryUserEmail extends Notification
   {
     return (new MailMessage)
       ->from(env('MAIL_FROM_ADDRESS'))
-      ->replyTo(env('MAIL_TO'))
       ->subject('Wohnen in Basel | Hüningerstrasse 40')
       ->markdown('mail.inquiry.user', ['data' => $this->data]);
   }
