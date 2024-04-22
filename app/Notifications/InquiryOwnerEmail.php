@@ -40,7 +40,7 @@ class InquiryOwnerEmail extends Notification
   {
     return (new MailMessage)
       ->from(env('MAIL_FROM_ADDRESS'))
-      ->subject('Interessent hueningerstrasse-basel.ch')
+      ->subject('Interessent Hüningerstrasse Basel')
       ->markdown('mail.inquiry.owner', ['data' => $this->data]);
   }
 

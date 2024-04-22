@@ -1,6 +1,11 @@
 <x-mail::message>
   <div class="text-base pb-base">
-    Sehr geehrte Damen und Herren<br><br>Danke für Ihr Interesse. Gerne kontaktieren wir Sie mit weiteren Informationen, sobald der offizielle Vermarktungsstart erfolgt.
+    Sehr geehrte Damen und Herren<br><br>
+    @if ($data->interest == 'Gewerbefläche')
+      Danke für Ihr Interesse. Gerne werde wir Sie in den nächsten Tagen bezüglich den freien Gewerbeflächen kontaktieren.
+    @else
+      Danke für Ihr Interesse. Gerne kontaktieren wir Sie mit weiteren Informationen, sobald der offizielle Vermarktungsstart erfolgt.
+    @endif
   </div>
   <br>
   <div class="text-base pb-base">

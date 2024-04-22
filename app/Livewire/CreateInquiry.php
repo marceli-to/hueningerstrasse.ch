@@ -52,10 +52,13 @@ class CreateInquiry extends Component
     $interest_string = implode(', ', $this->interest);
     $inquiry->interest = $interest_string;
     $inquiry->save();
+    
+    if (in_array('Gewerbefläche', $this->interest))
+    {
+      Notification::route('mail', env('MAIL_TO'))->notify(new InquiryOwnerEmail($inquiry));
+    }
 
-    Notification::route('mail', env('MAIL_TO'))->notify(new InquiryOwnerEmail($inquiry));
     Notification::route('mail', $inquiry->email)->notify(new InquiryUserEmail($inquiry));
-
     session()->flash('status', 'Inquiry was submitted');
     $this->reset();
     $this->render();
