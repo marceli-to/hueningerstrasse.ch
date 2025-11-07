@@ -2,8 +2,10 @@
 @section('content')
 <x-layout.section class="bg-white !p-0">
   <x-swiper>
-    <x-swiper.slide :image="'hueningerstrasse-40-visualisierung-1'" :alt="''" />
-    <x-swiper.slide :image="'hueningerstrasse-40-visualisierung-2'" :alt="''" />
+    <x-swiper.slide :image="'hueningerstrasse-40-visualisierung-vorderhaus-1'" :alt="''" />
+    <x-swiper.slide :image="'hueningerstrasse-40-visualisierung-hinterhaus-2'" :alt="''" />
+    <x-swiper.slide :image="'hueningerstrasse-40-visualisierung-wohnung-3'" :alt="''" />
+    <x-swiper.slide :image="'hueningerstrasse-40-visualisierung-4'" :alt="''" />
   </x-swiper>
 </x-layout.section>
 
