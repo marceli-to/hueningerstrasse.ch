@@ -1,4 +1,4 @@
-<header class="bg-white h-80 md:h-110 xl:h-160 w-full sticky top-0 z-[100] px-15 lg:px-45 shadow-sm">
+<header class="bg-white h-70 md:h-90 xl:h-120 w-full sticky top-0 z-[100] px-15 lg:px-45 shadow-sm">
   <x-layout.inner class="h-full flex justify-end items-center">
     <a 
       href="{{ route('page.home') }}"
