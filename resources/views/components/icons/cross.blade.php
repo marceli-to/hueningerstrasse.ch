@@ -1,4 +1,3 @@
-@props(['strokeWidth' => '4'])
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 19" {{ $attributes->merge(['class' => 'block w-22 h-19']) }}>
-  <path fill="none" stroke="currentColor" stroke-width="{{ $strokeWidth }}" d="M3.2 17.1L18.6 1.8M3.2 1.8l15.4 15.3"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" class="{{ $class ?? '' }}">
+  <path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"></path>
 </svg>

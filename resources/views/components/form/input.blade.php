@@ -1,14 +1,20 @@
-@props(['type' => 'text', 'placeholder' => '', 'name', 'isWire' => false])
-@if ($isWire)
-  <input 
-    type="{{ $type }}" 
-    wire:model="{{ $name }}" 
-    placeholder="{{ $placeholder }}" 
-    class="bg-pearl rounded-sm py-6 pt-6 pb-9 w-full ring-0 focus:ring-0 border-none font-sans-regular text-forest placeholder:text-olive">
-@else
-  <input 
-    type="{{ $type }}" 
-    name="{{ $name }}" 
-    placeholder="{{ $placeholder }}" 
-    class="bg-pearl rounded-sm py-6 pt-6 pb-9 w-full ring-0 focus:ring-0 border-none font-sans-regular text-forest placeholder:text-olive">
-@endif
+@props([
+  'name',
+  'label',
+  'type' => 'text',
+])
+
+<div>
+  <label for="{{ $name }}" class="sr-only">{{ $label }}</label>
+  <input
+    type="{{ $type }}"
+    id="{{ $name }}"
+    name="{{ $name }}"
+    placeholder="{{ $label }}"
+    @error($name) aria-invalid="true" @enderror
+    {{ $attributes->class([
+      'w-full px-16 py-13 text-ink placeholder:text-ink/55 outline-none focus-visible:ring-2 focus-visible:ring-bordeaux transition',
+      'bg-white' => ! $errors->has($name),
+      'bg-red-100 ring-1 ring-red-400' => $errors->has($name),
+    ]) }}>
+</div>

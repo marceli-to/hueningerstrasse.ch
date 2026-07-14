@@ -1,0 +1,23 @@
+@theme {
+  /* --- Hüningerstrasse 40 brand palette (per design spec) --- */
+  --color-ink: #4b4b50;      /* Dunkelgrau — text, headings, borders */
+  --color-sky: #e0e9eb;      /* Hellblau — section bands, header/footer */
+  --color-mist: #d0dde0;     /* Blau — isometry building, soft accents */
+  --color-bordeaux: #9b4053; /* Rot — buttons, links, active nav */
+
+  --color-iso-house: #d0dde0;
+  --color-iso-inactive: #e0e9eb;
+  --color-iso-selected: #afc36e;
+  --color-iso-rented: #c8413c;
+
+  /* Availability dots */
+  --color-state-free: #0dad23;
+  --color-state-reserved: #e69600;
+  --color-state-taken: #c8413c;
+
+  /* --- Back-compat aliases so the ported component library keeps working --- */
+  --color-forest: #4b4b50;   /* dark text / borders */
+  --color-dew: #4b4b50;
+  --color-sand: #e0e9eb;
+  --color-cream: #ffffff;
+}

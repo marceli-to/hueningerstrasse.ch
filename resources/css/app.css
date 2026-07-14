@@ -1,79 +1,64 @@
-@import "typo/webfonts.css";
-@import "vendor/mapbox.css";
-@import "vendor/swiper.css";
-@import "vendor/swiper-custom.css";
+@import url("https://use.typekit.net/fgu0sqy.css"); /* Bio Sans */
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './colors.css';
+@import './fonts.css';
+@import './fontsize.css';
+@import './iso.css';
+@import './spacing.css';
 
-main {
-  @apply flex-1;
-}
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';  
+@source '../**/*.js';
 
-h1, h2 {
-  @apply uppercase text-forest font-sans-bold font-bold
-}
-
-h1 {
-  @apply font-black text-lg md:text-xl lg:text-2xl leading-7 mb-15 lg:mb-30
-}
-
-h2 {
-  @apply font-bold text-base md:text-md lg:text-lg mb-5
-}
-
-h3 {
-  @apply uppercase font-black
+body {
+  @apply font-sans text-ink antialiased;
 }
 
 strong {
-  @apply font-sans-bold !font-bold
+  @apply font-bold;
 }
 
-.imprint h2,
-.privacy h2 {
-  @apply text-base lg:text-lg
+[x-cloak] {
+  display: none !important;
 }
 
-.privacy p {
-  @apply max-w-3xl;
-}
-
-p {
-  @apply mb-16 lg:mb-20;
-}
-
-p:last-of-type {
-  @apply mb-0;
-}
-
-strong {
-  @apply font-sans-bold font-bold font-normal;
+p:not(:last-of-type){
+  @apply mb-16 md:mb-24;
 }
 
 main ul {
-  @apply m-0 p-0 mb-16 lg:mb-20;
+  @apply mb-16 md:mb-24 pl-20;
 }
 
-main ul:last-child {
-  @apply mb-0;
+main li {
+  @apply mb-5 list-item list-disc
 }
 
-main ul li {
-  @apply list-item list-disc ml-20;
+/* Swiper: ensure slides fill their container */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  @apply h-full;
 }
 
-sub,
-sup {
-  font-size: 65%;
+/* Swiper pagination dots */
+.swiper-pagination {
+  @apply flex justify-center gap-8;
 }
 
-.marker {
-  background-image: url('../icons/marker.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  height: 50px;
-  width: 40px;
+.swiper-pagination-bullet {
+  @apply w-8 h-8 rounded-full bg-ink/30 cursor-pointer transition-opacity;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-ink;
+}
+
+/* Prevent flash of unstyled content before ScrollReveal initialises */
+[data-reveal],
+[data-reveal-down],
+[data-reveal-children] > * {
+  @apply invisible;
 }

@@ -1,13 +1,22 @@
-import Swiper, { Navigation, Autoplay } from 'swiper';
-const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Autoplay],
-  direction: 'horizontal',
-  loop: true,
-  autoplay: {
-    delay: 6000,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+
+document.querySelectorAll('.gallery-swiper').forEach((el) => {
+  new Swiper(el, {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      prevEl: el.parentElement.querySelector('.gallery-swiper-prev'),
+      nextEl: el.parentElement.querySelector('.gallery-swiper-next'),
+    },
+    pagination: {
+      el: el.parentElement.querySelector('.swiper-pagination'),
+      clickable: true,
+    },
+  });
 });

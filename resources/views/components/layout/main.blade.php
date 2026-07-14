@@ -1,3 +1,3 @@
-<main role="main" class="flex flex-col">
+<main role="main" class="flex-1 bg-white">
   {{ $slot }}
 </main>

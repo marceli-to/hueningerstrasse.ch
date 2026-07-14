@@ -1,12 +1,20 @@
-@props(['type' => 'text', 'placeholder' => '', 'name', 'isWire' => false])
-@if ($isWire)
-  <textarea 
-    wire:model="{{ $name }}" 
-    placeholder="{{ $placeholder }}" 
-    class="text-base lg:text-md xl:text-lg w-full min-h-[150px] ring-0 focus:ring-0 border-none bg-white text-olive placeholder:text-serene"></textarea>
-@else
-  <textarea 
-    name="{{ $name }}" 
-    placeholder="{{ $placeholder }}" 
-    class="text-base lg:text-md xl:text-lg w-full ring-0 focus:ring-0 border-none bg-serene text-white placeholder:text-white"></textarea>
-@endif
+@props([
+  'name',
+  'label',
+  'rows' => 6,
+])
+
+<div>
+  <label for="{{ $name }}" class="sr-only">{{ $label }}</label>
+  <textarea
+    id="{{ $name }}"
+    name="{{ $name }}"
+    rows="{{ $rows }}"
+    placeholder="{{ $label }}"
+    @error($name) aria-invalid="true" @enderror
+    {{ $attributes->class([
+      'w-full px-16 py-13 text-ink placeholder:text-ink/55 outline-none focus-visible:ring-2 focus-visible:ring-bordeaux transition resize-y',
+      'bg-white' => ! $errors->has($name),
+      'bg-red-100 ring-1 ring-red-400' => $errors->has($name),
+    ]) }}></textarea>
+</div>

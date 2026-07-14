@@ -1,0 +1,70 @@
+
+.iso-cls-0 {
+
+}
+
+.iso-cls-1 {
+  fill: #fff;
+}
+
+.iso-cls-1, .iso-cls-2, .iso-cls-3 {
+  fill-rule: evenodd;
+}
+
+.iso-cls-4 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: .28px;
+}
+
+.iso-cls-2 {
+  fill: #ebf0df;
+}
+
+.iso-cls-3 {
+  fill: #d6d6d6;
+}
+
+.iso-cls-5 {
+  display: none;
+}
+
+/* State classes */
+.is-active.is-available [class^="iso-cls-"],
+.is-active.is-available[class^="iso-cls-"] {
+  fill: #BDCD9A;
+}
+
+.is-active.is-reserved [class^="iso-cls-"],
+.is-active.is-reserved[class^="iso-cls-"],
+.is-active.is-taken [class^="iso-cls-"],
+.is-active.is-taken[class^="iso-cls-"] {
+  fill: #C04145;
+}
+
+[data-iso]:hover {
+  @apply cursor-pointer;
+}
+
+[data-object].is-active {
+  @apply bg-dew/50!;
+}
+
+/* Floor classes */
+[data-iso-floor],
+[data-iso-building] {
+  @apply transition-transform duration-300;
+}
+.is-up {
+  @apply transform -translate-y-[90px] md:-translate-y-[125px] transition-transform duration-300;
+}
+
+.is-down {
+  @apply transform translate-y-[90px] md:translate-y-[125px] transition-transform duration-300;
+}
+
+.no-transform {
+  @apply !transform-none;
+}
