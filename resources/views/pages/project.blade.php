@@ -24,42 +24,36 @@
   </section>
 
   {{-- Pures Raumgefühl --}}
-  <section class="bg-white">
-    <x-layout.inner class="py-40 md:py-56 lg:py-72">
-      <div class="grid lg:grid-cols-2 gap-x-48 xl:gap-x-64 gap-y-32 items-center">
+  <x-sections.hero-split bg="bg-white" align="center">
+    <x-headings.h2>Pures Raumgefühl</x-headings.h2>
+    <p>
+      Das Projekt vereint den charaktervollen Bestand mit einem modernen Wohn- und Nutzungskonzept.
+      Grosszügige Raumhöhen, weitläufige Fensterfronten und viel Tageslicht verleihen den Wohnungen
+      und Gewerbeflächen einen unverwechselbaren Loft- und Ateliercharakter und schaffen ein
+      aussergewöhnliches Raumgefühl.
+    </p>
+    <p>
+      Das umfassend umgebaute Wohn- und Geschäftshaus wird im Minergie-P-Standard realisiert und
+      erfüllt hohe Anforderungen an Nachhaltigkeit und Energieeffizienz. Ergänzt wird das Angebot
+      durch grosszügige Veloparkierungsflächen sowie E-Bike- und Cargobike-Stellplätze.
+    </p>
+    <div class="mt-28">
+      <x-buttons.primary href="{{ route('page.commercial') }}" title="Gewerbeflächen">
+        Gewerbeflächen
+        <x-icons.arrow-right class="w-16 h-auto shrink-0 group-hover:translate-x-3 transition-transform" />
+      </x-buttons.primary>
+    </div>
 
-        <div data-reveal>
-          <x-headings.h2>Pures Raumgefühl</x-headings.h2>
-          <p>
-            Das Projekt vereint den charaktervollen Bestand mit einem modernen Wohn- und Nutzungskonzept.
-            Grosszügige Raumhöhen, weitläufige Fensterfronten und viel Tageslicht verleihen den Wohnungen
-            und Gewerbeflächen einen unverwechselbaren Loft- und Ateliercharakter und schaffen ein
-            aussergewöhnliches Raumgefühl.
-          </p>
-          <p>
-            Das umfassend umgebaute Wohn- und Geschäftshaus wird im Minergie-P-Standard realisiert und
-            erfüllt hohe Anforderungen an Nachhaltigkeit und Energieeffizienz. Ergänzt wird das Angebot
-            durch grosszügige Veloparkierungsflächen sowie E-Bike- und Cargobike-Stellplätze.
-          </p>
-          <div class="mt-28">
-            <x-buttons.primary href="{{ route('page.commercial') }}" title="Gewerbeflächen">
-              Gewerbeflächen
-              <x-icons.arrow-right class="w-16 h-auto shrink-0 group-hover:translate-x-3 transition-transform" />
-            </x-buttons.primary>
-          </div>
-        </div>
-
-        <div class="lg:h-[520px]" data-reveal>
-          <x-gallery.carousel name="gallery" alt="Gewerbe- und Wohnräume an der Hüningerstrasse 40" :images="[
-            '/img/gewerbe-buero-01',
-            '/img/gebaeude-02',
-            '/img/gewerbe-cafe',
-          ]" />
-        </div>
-
+    <x-slot:aside>
+      <div class="px-24 lg:px-0 lg:h-[520px]" data-reveal>
+        <x-gallery.carousel name="gallery" alt="Gewerbe- und Wohnräume an der Hüningerstrasse 40" :images="[
+          '/img/gewerbe-buero-01',
+          '/img/gebaeude-02',
+          '/img/gewerbe-cafe',
+        ]" />
       </div>
-    </x-layout.inner>
-  </section>
+    </x-slot:aside>
+  </x-sections.hero-split>
 
   {{-- Map --}}
   <x-map />

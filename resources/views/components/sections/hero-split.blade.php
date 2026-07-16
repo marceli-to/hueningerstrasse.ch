@@ -1,20 +1,20 @@
 @props([
-  'bg' => 'bg-cream',
-  'class' => '',
+  'bg' => 'bg-white',
+  'align' => 'start',
 ])
 
-<section class="{{ $bg }}">
-  <x-layout.inner class="!px-0 !max-w-none">
-    <div class="lg:grid lg:grid-cols-2">
+<section class="{{ $bg }} py-40 md:py-56 lg:py-64">
+  <div class="lg:grid lg:grid-cols-2 {{ $align === 'center' ? 'lg:items-center' : 'lg:items-start' }}">
 
-      <div class="py-40 md:py-60 pl-24 pr-48 xl:pr-64 self-center xl:ml-[calc((100vw_-_80rem)_/_2_+_24px)] xl:pl-0" data-reveal>
-        {{ $slot }}
-      </div>
-
-      @if(isset($aside))
-        {{ $aside }}
-      @endif
-
+    {{-- Text: aligned to the container's left edge; the image gets the outer bleed --}}
+    <div class="px-24 mb-32 lg:mb-0 lg:pr-48 xl:pr-64 xl:pl-0 xl:ml-[calc((100vw_-_80rem)_/_2_+_24px)]" data-reveal>
+      {{ $slot }}
     </div>
-  </x-layout.inner>
+
+    {{-- Image: runs out to the right edge of the viewport --}}
+    @isset($aside)
+      {{ $aside }}
+    @endisset
+
+  </div>
 </section>
