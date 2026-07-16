@@ -1,70 +1,67 @@
+/*
+ | Isometrie – Etagen-Animation (Hüningerstrasse 40)
+ |
+ | Das SVG (components/objects/iso.blade.php) ist aus dem AI-File generiert;
+ | jede Etage ist eine Gruppe <g class="iso-floor" data-iso-floor="UG|EG|1.OG|2.OG|3.OG">.
+ | Beim Hover einer Listenzeile hebt iso.js die darüberliegenden Etagen an (.is-up)
+ | und markiert die zugehörige Etage (.is-active).
+ |
+ | Wohnungs-Farbmarkierung pro Objekt folgt, sobald die Wohnungen im SVG als
+ | eigene benannte Formen vorliegen und der Mieterspiegel final ist.
+*/
 
-.iso-cls-0 {
-
+:root {
+  --iso-lift: 1000px;           /* Hub in SVG-User-Units (viewBox 4150×3400) */
+  --iso-ease: cubic-bezier(.4, 0, .2, 1);
 }
 
-.iso-cls-1 {
-  fill: #fff;
+.iso-svg {
+  display: block;
+  overflow: visible;           /* angehobene Etagen dürfen über die viewBox ragen */
 }
 
-.iso-cls-1, .iso-cls-2, .iso-cls-3 {
-  fill-rule: evenodd;
+/* Grundfarben der Gebäudeflächen (ersetzen die Inline-Fills aus dem Export) */
+.iso-svg .iso-face { fill: #d0dde0; }
+.iso-svg .iso-top  { fill: #e0e9eb; }
+
+/* Etagen animieren ihre vertikale Position */
+.iso-floor {
+  transition: transform .4s var(--iso-ease);
 }
 
-.iso-cls-4 {
-  fill: none;
-  stroke: #000;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: .28px;
+/* Etagen oberhalb der aktiven Etage werden angehoben */
+.iso-floor.is-up {
+  transform: translateY(calc(-1 * var(--iso-lift)));
 }
 
-.iso-cls-2 {
-  fill: #ebf0df;
+/* Aktive Etage farblich markieren */
+.iso-floor.is-active .iso-face,
+.iso-floor.is-active .iso-top {
+  transition: fill .25s var(--iso-ease);
+}
+.iso-floor.is-active .iso-face { fill: #b06172; }
+.iso-floor.is-active .iso-top  { fill: #c17e8c; }
+
+/* Etagen-Beschriftungen (als Overlay generiert, folgen ihrer Etage) */
+.iso-label {
+  fill: #4b4b50;                       /* ink */
+  font-family: "bio-sans", sans-serif;
+  font-size: 82px;                     /* User-Units -> ~11px bei Anzeigebreite */
+  font-weight: 700;
+  letter-spacing: 1px;
+  pointer-events: none;                /* blockiert den Etagen-Hover nicht */
+  user-select: none;
+  transition: transform .4s var(--iso-ease), fill .25s var(--iso-ease);
+}
+.iso-label.is-up     { transform: translateY(calc(-1 * var(--iso-lift))); }
+.iso-label.is-active { fill: #fff; }   /* Kontrast auf der bordeaux-markierten Etage */
+
+/* Etagen im SVG sind (auf Desktop) interaktiv */
+@media (min-width: 1024px) {
+  .iso-floor { cursor: pointer; }
 }
 
-.iso-cls-3 {
-  fill: #d6d6d6;
-}
-
-.iso-cls-5 {
-  display: none;
-}
-
-/* State classes */
-.is-active.is-available [class^="iso-cls-"],
-.is-active.is-available[class^="iso-cls-"] {
-  fill: #BDCD9A;
-}
-
-.is-active.is-reserved [class^="iso-cls-"],
-.is-active.is-reserved[class^="iso-cls-"],
-.is-active.is-taken [class^="iso-cls-"],
-.is-active.is-taken[class^="iso-cls-"] {
-  fill: #C04145;
-}
-
-[data-iso]:hover {
-  @apply cursor-pointer;
-}
-
+/* Zugehörige Listenzeile hervorheben */
 [data-object].is-active {
-  @apply bg-dew/50!;
-}
-
-/* Floor classes */
-[data-iso-floor],
-[data-iso-building] {
-  @apply transition-transform duration-300;
-}
-.is-up {
-  @apply transform -translate-y-[90px] md:-translate-y-[125px] transition-transform duration-300;
-}
-
-.is-down {
-  @apply transform translate-y-[90px] md:translate-y-[125px] transition-transform duration-300;
-}
-
-.no-transform {
-  @apply !transform-none;
+  background-color: rgb(155 64 83 / 0.10);   /* bordeaux */
 }

@@ -27,10 +27,12 @@
         @foreach($objects as $o)
           <tr
             data-filterable
+            data-object
+            data-object-number="{{ $o['ref'] }}"
             data-object-state="{{ $o['state'] }}"
             data-object-rooms="{{ $o['rooms'] }}"
             data-object-floor="{{ $o['floor'] }}"
-            class="border-b border-ink/15 text-sm md:text-md">
+            class="border-b border-ink/15 text-sm md:text-md transition-colors hover:bg-ink/5">
             <td class="py-10 px-10">{{ $o['ref'] }}</td>
             <td class="py-10 px-10">{{ $o['floor_label'] }}</td>
             <td class="py-10 px-10">{{ $o['rooms'] }}</td>
