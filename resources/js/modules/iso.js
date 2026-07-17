@@ -29,12 +29,8 @@ const Iso = (function () {
     return out;
   };
 
-  const labelFor = function (key) {
-    return document.querySelector('[data-iso-label="' + key + '"]');
-  };
-
   const clear = function () {
-    document.querySelectorAll('.iso-floor, [data-iso-label]').forEach(function (el) {
+    document.querySelectorAll('.iso-floor').forEach(function (el) {
       el.classList.remove('is-active', 'is-up');
     });
     document.querySelectorAll(selectors.object).forEach(function (o) {
@@ -42,18 +38,13 @@ const Iso = (function () {
     });
   };
 
-  // Etage markieren + darüberliegende Etagen (inkl. deren Labels) anheben
+  // Etage markieren + darüberliegende Etagen anheben. Die Etagen-Beschriftung ist
+  // Teil der Etagen-Gruppe (Pfade aus dem AI) und wird dabei mitbewegt.
   const activateFloor = function (key) {
     const floorEl = document.querySelector('[data-iso-floor="' + key + '"]');
     if (!floorEl) return null;
     floorEl.classList.add('is-active');
-    const lbl = labelFor(key);
-    if (lbl) lbl.classList.add('is-active');
-    floorsAbove(floorEl).forEach(function (f) {
-      f.classList.add('is-up');
-      const l = labelFor(f.dataset.isoFloor);
-      if (l) l.classList.add('is-up');
-    });
+    floorsAbove(floorEl).forEach(function (f) { f.classList.add('is-up'); });
     return floorEl;
   };
 

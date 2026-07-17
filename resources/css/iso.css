@@ -42,19 +42,20 @@
 .iso-floor.is-active .iso-face { fill: #b06172; }
 .iso-floor.is-active .iso-top  { fill: #c17e8c; }
 
-/* Etagen-Beschriftungen (als Overlay generiert, folgen ihrer Etage) */
+/* Etagen-Beschriftung. Sie steht als <text> in der Gruppe ihrer Etage (wird also
+   mit angehoben) und ersetzt die Konturschrift aus dem AI – die läuft bei dieser
+   Anzeigegrösse zu. Schnitt und Grösse deshalb hier steuern, nicht im AI. */
 .iso-label {
   fill: #4b4b50;                       /* ink */
   font-family: "bio-sans", sans-serif;
-  font-size: 82px;                     /* User-Units -> ~11px bei Anzeigebreite */
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 66px;                     /* User-Units; entspricht der Höhe im AI */
+  font-weight: 400;
+  letter-spacing: 2px;
   pointer-events: none;                /* blockiert den Etagen-Hover nicht */
   user-select: none;
-  transition: transform .4s var(--iso-ease), fill .25s var(--iso-ease);
+  transition: fill .25s var(--iso-ease);
 }
-.iso-label.is-up     { transform: translateY(calc(-1 * var(--iso-lift))); }
-.iso-label.is-active { fill: #fff; }   /* Kontrast auf der bordeaux-markierten Etage */
+.iso-floor.is-active .iso-label { fill: #fff; }   /* Kontrast auf Bordeaux */
 
 /* Etagen im SVG sind (auf Desktop) interaktiv */
 @media (min-width: 1024px) {
