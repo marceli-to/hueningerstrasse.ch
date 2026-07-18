@@ -2,21 +2,21 @@
 
 <div class="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-20 lg:items-end">
 
-  <x-forms.select
+  <x-form.select
     id="availability"
     label="Verfügbarkeit"
     class="js-filter-attribute"
     data-filterType="object-state"
     :options="$options['availability'] ?? []" />
 
-  <x-forms.select
+  <x-form.select
     id="rooms"
     label="Zimmer"
     class="js-filter-attribute"
     data-filterType="object-rooms"
     :options="$options['rooms'] ?? []" />
 
-  <x-forms.select
+  <x-form.select
     id="floor"
     label="Etage"
     class="js-filter-attribute"

@@ -6,7 +6,7 @@
 
   {{-- Intro split --}}
   <x-sections.hero-split bg="bg-white" align="start">
-    <x-headings.h1>Moderne Gewerbeflächen mit Industriecharme</x-headings.h1>
+    <x-headings.h1>Moderne Gewerbe&shy;flächen mit Industriecharme</x-headings.h1>
     <p>
       Mitten im dynamischen Volta-Quartier entstehen zwei moderne Gewerbeflächen mit unverwechselbarem
       Industrie- und Ateliercharakter. Die Fertigstellung der Gewerbeflächen ist <strong>per Februar 2027</strong>
@@ -48,9 +48,9 @@
           ];
         @endphp
         @foreach($usages as [$icon, $label])
-          <li class="!flex items-center gap-14 !mb-0 !list-none">
-            <x-dynamic-component :component="'icons.' . $icon" class="w-22 h-22 text-ink shrink-0" />
-            <span class="font-bold">{{ $label }}</span>
+          <li class="!flex items-center gap-18 !mb-0 !list-none">
+            <x-dynamic-component :component="'icons.' . $icon" class="w-28 h-28 md:w-30 md:h-30 text-ink shrink-0" />
+            <span class="font-bold text-[20px] md:text-[22px]">{{ $label }}</span>
           </li>
         @endforeach
       </ul>
@@ -77,7 +77,7 @@
 
   {{-- Angebot Gewerbe --}}
   <section class="bg-sky">
-    <x-layout.inner class="py-40 md:py-56 lg:py-64">
+    <x-layout.inner class="pt-22 md:pt-34 pb-40 md:pb-56 lg:pb-64">
       <div data-reveal>
         <x-headings.h2>Angebot Gewerbe</x-headings.h2>
         <x-objects.wrapper :objects="$objects" title="Gewerbeflächen" variant="commercial" />

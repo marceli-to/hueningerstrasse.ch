@@ -1,5 +1,5 @@
 @props([
-  'class' => 'aspect-[710/252]',
+  'class' => 'aspect-square md:aspect-[710/252]',
 ])
 
 <x-layout.inner>

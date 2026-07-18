@@ -52,6 +52,31 @@ class ContactForm extends Component
         ];
     }
 
+    /** @return array<string,string> */
+    protected function messages(): array
+    {
+        return [
+            'apartment_sizes.required' => 'Bitte wählen Sie mindestens eine Option aus.',
+            'apartment_sizes.min' => 'Bitte wählen Sie mindestens eine Option aus.',
+            'first_name.required' => 'Bitte geben Sie Ihren Vornamen ein.',
+            'last_name.required' => 'Bitte geben Sie Ihren Namen ein.',
+            'street.required' => 'Bitte geben Sie Ihre Strasse und Nr. ein.',
+            'zip_city.required' => 'Bitte geben Sie PLZ und Ort ein.',
+            'email.required' => 'Bitte geben Sie Ihre E-Mail-Adresse ein.',
+            'email.email' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+            'phone.required' => 'Bitte geben Sie Ihre Telefonnummer ein.',
+            'message.required' => 'Bitte geben Sie eine Nachricht ein.',
+            'privacy.accepted' => 'Bitte akzeptieren Sie die Datenschutzerklärung.',
+            'max' => 'Die Eingabe ist zu lang.',
+        ];
+    }
+
+    /** Inline-Validierung: prüft das einzelne Feld, sobald es geändert/verlassen wird. */
+    public function updated(string $property): void
+    {
+        $this->validateOnly($property);
+    }
+
     public function submit(): void
     {
         $this->validate();

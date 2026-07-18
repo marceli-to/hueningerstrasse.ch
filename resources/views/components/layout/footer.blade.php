@@ -21,7 +21,7 @@
 
       </div>
 
-      <div class="flex h-full items-center justify-end gap-x-28 md:gap-x-36">
+      <div class="flex h-full items-center justify-end gap-x-32 md:gap-x-41">
         <x-icons.logo-apleona class="w-150 md:w-180 h-auto" />
         <x-icons.logo-medpension class="w-[174px] md:w-[209px] h-auto" />
       </div>
@@ -30,7 +30,7 @@
   </x-layout.inner>
 
   <div class="bg-sky">
-    <x-layout.inner class="pt-8 pb-10 flex flex-wrap gap-x-28 gap-y-6 text-lg md:text-xl">
+    <x-layout.inner class="pt-8 pb-10 flex flex-wrap gap-x-28 gap-y-6 text-lg md:text-xl font-normal">
       <a href="{{ route('page.imprint') }}" class="transition-colors hover:text-bordeaux">Impressum</a>
       <a href="{{ route('page.privacy') }}" class="transition-colors hover:text-bordeaux">Datenschutz</a>
       <a href="https://stoz.ch" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-bordeaux">design by stoz</a>

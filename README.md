@@ -1,58 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hüningerstrasse 40
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Vermarktungs-Website für das Wohn- und Gewerbeprojekt Hüningerstrasse 40, Basel.
 
-## About Laravel
+**Stack:** Laravel 13 · Livewire 4 · Tailwind CSS v4 · Alpine.js · Vite
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Setup
 
 ```bash
-composer require laravel/boost --dev
+composer install
+npm install
+cp .env.example .env        # danach APP_KEY, Mail- und Turnstile-Keys setzen
+php artisan key:generate
 
-php artisan boost:install
+npm run dev                 # Vite Dev-Server (HMR)
+# oder
+npm run build               # Produktions-Build
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Lokale URL (Herd/Valet): `https://hueningerstrasse-basel.local`
 
-## Contributing
+Wichtige `.env`-Werte: `APP_NAME`, `APP_URL`, `APP_LOCALE=de_CH`,
+`MAIL_*` (Bestätigungsmail), `TURNSTILE_*` (Cloudflare Spam-Schutz, optional).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## Projektstruktur (Views)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+resources/views/
+├── app.blade.php              # Root-Layout (@yield content, meta_title, meta_description)
+├── pages/                     # Eine Datei pro Route (project, location, commercial, living, contact, imprint, privacy)
+├── livewire/contact-form.*    # Kontaktformular (App\Livewire\ContactForm)
+└── components/
+    ├── layout/                # html, head, body, header, footer, inner (Container), main
+    ├── headings/              # h1, h2, h3
+    ├── buttons/primary        # DER Button — nie den Style kopieren, immer diese Komponente
+    ├── form/                  # input, textarea, checkbox, select  (nur EIN Formular-Ordner!)
+    ├── menu/                  # desktop/*, mobile/*
+    ├── sections/hero-split    # zweispaltiges Text/Bild-Layout
+    ├── gallery/carousel       # Swiper-Slider
+    ├── objects/               # Angebots-Tabelle + Filter + Isometrie
+    ├── icons/                 # SVG-Icons als Blade-Komponenten (currentColor)
+    └── media, links, map, swiper …
+```
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Styling-Konventionen
 
-## License
+> Kurz: **keine hardcodierten Farben, keine kopierten Styles.** Farben kommen aus
+> Tokens, wiederkehrende Elemente aus Komponenten.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Farben — immer über Tokens
+
+Alle Farben sind in [`resources/css/colors.css`](resources/css/colors.css) als
+`@theme`-Tokens definiert und stehen als Tailwind-Utilities zur Verfügung
+(`text-ink`, `bg-sky`, `hover:bg-bordeaux`, …). **Keine Hex-Werte in Blade/JS.**
+
+| Token | Wert | Verwendung |
+|-------|------|-----------|
+| `ink` | `#4b4b50` | Text, Überschriften, Rahmen |
+| `sky` | `#e0e9eb` | Section-Bänder, Header/Footer |
+| `mist` | `#d0dde0` | Isometrie-Gebäude, sanfte Akzente |
+| `bordeaux` | `#9b4053` | Buttons, Links, aktive Navigation |
+| `error` / `error-bg` / `error-border` | Rottöne | Formular-Validierung |
+| `iso-*` | div. | Isometrie-Zustände (siehe colors.css) |
+| `state-free/reserved/taken` | Ampel | Verfügbarkeits-Punkte |
+
+Ausnahme: Die rohen Hex-Werte in `components/objects/iso.blade.php` sind
+**SVG-Export-Artefakte** aus Illustrator (nicht editieren). Die sichtbaren
+Isometrie-Farben werden in [`resources/css/iso.css`](resources/css/iso.css) über
+die `iso-*`-Tokens gesetzt.
+
+### Abstände — 1 Einheit = 1 px
+
+[`resources/css/spacing.css`](resources/css/spacing.css) definiert die Spacing-Skala
+in 1-px-Schritten: `--spacing-16 = 1rem = 16px`, also **`p-13` = 13 px, `gap-24` = 24 px**.
+Das Design ist px-basiert; deshalb Ganzzahl-Utilities statt der Standard-Tailwind-Skala.
+
+### Typografie
+
+- **Body/Fliesstext:** Token-Skala aus [`resources/css/fontsize.css`](resources/css/fontsize.css)
+  (`text-lg`, `text-xl`, …).
+- **Überschriften, Menü, Button:** nutzen bewusst **feste Pixelwerte** als
+  Arbitrary-Values (z. B. `text-[51.9px]`, `tracking-[1.5px]`), weil sie exakt der
+  Design-Vorlage folgen. Quelle der Wahrheit sind die Komponenten in
+  `components/headings/`, `menu/desktop/item`, `buttons/primary` — Grössen dort ändern,
+  nicht pro Seite. `h1` und `h2` sind absichtlich identisch (nur `margin-bottom` unterscheidet sich).
+- Schrift: **Bio Sans** (Adobe Fonts / Typekit, geladen in `app.css`).
+
+### Komponenten statt Wiederholung
+
+- Buttons **immer** über `<x-buttons.primary>` (leitet Attribute wie `wire:*` durch) —
+  nie den Klassen-String kopieren.
+- Container-Breite/Padding über `<x-layout.inner>`.
+- Icons als `<x-icons.name>` (nutzen `currentColor`, Grösse per `class="w-… h-…"`).
+
+### Design-Referenz
+
+Die verbindliche Gestaltung liegt als PDF in
+[`resources/design/`](resources/design/) (Ansicht + Beschreibung inkl. Font/Farb-Spec).
+
+---
+
+## Wichtige Befehle
+
+```bash
+php artisan test            # Tests
+php artisan view:clear      # Blade-Cache leeren (nach Config-Änderungen)
+php artisan config:clear    # Config-Cache leeren (nach .env-Änderungen)
+npm run build               # Assets für Produktion bauen
+```

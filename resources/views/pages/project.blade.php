@@ -8,11 +8,11 @@
 
   {{-- Intro band --}}
   <section class="bg-sky">
-    <x-layout.inner class="py-40 md:py-56 lg:py-64">
-      <div class="max-w-3xl" data-reveal>
+    <x-layout.inner class="pt-26 md:pt-36 lg:pt-41 pb-32 md:pb-45 lg:pb-51">
+      <div class="max-w-4xl" data-reveal>
         <x-headings.h2 class="mb-24! md:mb-36!">Im Herzen des Volta-Quartiers</x-headings.h2>
         <x-headings.h3>Industriecharme trifft auf modernes Wohnen und Arbeiten</x-headings.h3>
-        <p class="max-w-2xl">
+        <p class="max-w-4xl">
           An der <x-links.styled :href="config('estate.maps_url')" target="_blank" rel="noopener noreferrer">Hüningerstrasse 40</x-links.styled>
           in Basel entsteht nach einem hochwertigen Umbau ein attraktives Wohn- und Gewerbeprojekt mit
           insgesamt 32 Mietwohnungen, zwei Wohnateliers sowie Gewerbeflächen.
@@ -35,7 +35,7 @@
       erfüllt hohe Anforderungen an Nachhaltigkeit und Energieeffizienz. Ergänzt wird das Angebot
       durch grosszügige Veloparkierungsflächen sowie E-Bike- und Cargobike-Stellplätze.
     </p>
-    <div class="mt-28">
+    <div class="mt-56">
       <x-buttons.primary href="{{ route('page.commercial') }}" title="Gewerbeflächen">
         Gewerbeflächen
       </x-buttons.primary>

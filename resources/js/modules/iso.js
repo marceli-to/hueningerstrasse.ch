@@ -75,14 +75,22 @@ const Iso = (function () {
       row.addEventListener('mouseleave', clear);
     });
 
-    // Etage im SVG -> Listenzeilen (reziprok)
+    // Etage im SVG -> Listenzeilen (reziprok). Nur Etagen mit zugehörigem Objekt
+    // sind interaktiv – Etagen ohne Objekt (z.B. Wohn-OGs auf der Gewerbe-Seite)
+    // bleiben passiv und werden nicht eingefärbt.
     document.querySelectorAll(selectors.floor).forEach(function (floorEl) {
       const key = floorEl.dataset.isoFloor;
+      const rows = document.querySelectorAll(selectors.object + '[data-object-floor="' + key + '"]');
+      if (!rows.length) {
+        floorEl.style.cursor = 'default';
+        return;
+      }
+      // gleiche Teilobjekt-Logik wie beim Zeilen-Hover
+      const part = rows[0].dataset.objectPart || null;
       floorEl.addEventListener('mouseenter', function () {
         clear();
-        activateFloor(key);
-        document.querySelectorAll(selectors.object + '[data-object-floor="' + key + '"]')
-          .forEach(function (o) { o.classList.add('is-active'); });
+        activateFloor(key, part);
+        rows.forEach(function (o) { o.classList.add('is-active'); });
       });
       floorEl.addEventListener('mouseleave', clear);
     });

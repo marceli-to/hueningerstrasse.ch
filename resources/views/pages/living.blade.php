@@ -6,7 +6,7 @@
 
   {{-- Intro split --}}
   <x-sections.hero-split bg="bg-white" align="start">
-    <x-headings.h1>Aussergewöhnliche Mietwohnungen mit Industriearchitektur</x-headings.h1>
+    <x-headings.h1>Aussergewöhnliche Mietwohnungen mit Industrie&shy;architektur</x-headings.h1>
     <p>
       An der Hüningerstrasse 40 entstehen im Zuge eines umfassenden Umbaus 32 charaktervolle
       Mietwohnungen – von 1.5- bis 5.5-Zimmerwohnungen sowie zwei Wohnateliers. Das Projekt verbindet

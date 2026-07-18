@@ -5,19 +5,20 @@
   --color-mist: #d0dde0;     /* Blau — isometry building, soft accents */
   --color-bordeaux: #9b4053; /* Rot — buttons, links, active nav */
 
-  --color-iso-house: #d0dde0;
-  --color-iso-inactive: #e0e9eb;
-  --color-iso-selected: #afc36e;
-  --color-iso-rented: #c8413c;
+  --color-iso-house: #d0dde0;      /* Gebäudeflächen (Default) */
+  --color-iso-inactive: #e0e9eb;   /* Deckflächen / inaktiv */
+  --color-iso-active-face: #b06172;/* aktive Etage/Teilobjekt — Seitenfläche */
+  --color-iso-active-top: #c17e8c; /* aktive Etage/Teilobjekt — Deckfläche */
+  --color-iso-selected: #afc36e;   /* reserviert: ausgewählte Wohnung */
+  --color-iso-rented: #c8413c;     /* reserviert: vermietete Wohnung */
 
   /* Availability dots */
   --color-state-free: #0dad23;
   --color-state-reserved: #e69600;
   --color-state-taken: #c8413c;
 
-  /* --- Back-compat aliases so the ported component library keeps working --- */
-  --color-forest: #4b4b50;   /* dark text / borders */
-  --color-dew: #4b4b50;
-  --color-sand: #e0e9eb;
-  --color-cream: #ffffff;
+  /* Form validation / error states */
+  --color-error: #dc2626;        /* message text */
+  --color-error-bg: #fee2e2;     /* invalid field background */
+  --color-error-border: #f87171; /* invalid field border / ring */
 }

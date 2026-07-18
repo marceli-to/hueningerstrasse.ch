@@ -1,707 +1,1314 @@
-{{-- Interaktive Isometrie – generiert aus resources/isometrie/Hueningerstrasse_Isometrie.ai
-     via resources/isometrie/build_isometrie.py. NICHT von Hand editieren; bei Änderungen
-     am AI-File das Skript erneut laufen lassen. Etagen = <g data-iso-floor>. --}}
+{{-- Interaktive Isometrie – generiert aus resources/isometrie/Hueningerstrasse_Isometrie.svg
+     via resources/isometrie/build_from_svg.py. NICHT von Hand editieren; bei Änderungen
+     das SVG neu exportieren und das Skript erneut laufen lassen. Etagen = <g data-iso-floor>,
+     benannte Flächen (Gewerbe, Wohnungen) = id/data-name aus Illustrator. --}}
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4150 3400" class="iso-svg {{ $class ?? '' }}" role="img" aria-label="Isometrie Hüningerstrasse 40 – Etagen UG bis 3. OG">
-  <g class="iso-base">
-<path fill-rule="nonzero" fill="rgb(78.4%, 78.4%, 78.4%)" fill-opacity="1" d="M 1438.8 0 L 0 1822.5 L 0 2343.3 L 1851.5 0 Z M 1438.8 0 "/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 1736.2 695.4 L 1121.8 1050.1 L 0 2470.9 L 0 3288.8 L 48.6 3307.8 L 668.2 3363.3 L 1052.0 3363.3 L 2786.0 3204.4 L 3466.1 3366.3 L 4150 3263.3 L 4150 1517.8 L 1967.7 269.4 Z M 1736.2 695.4 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 165.7 1921.7 L 161.8 1926.6 L 140.0 1909.2 L 119.6 1934.8 L 141.3 1952.2 L 137.4 1957.0 L 90.4 1919.4 L 94.3 1914.5 L 115.0 1931.1 L 135.4 1905.6 L 114.7 1889.0 L 118.6 1884.1 Z M 165.7 1921.7 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 150.2 1857.4 C 151.9 1858.8 152.1 1861.1 150.8 1862.7 C 149.5 1864.4 147.1 1864.6 145.5 1863.3 C 143.8 1862.0 143.6 1859.7 144.9 1858.0 C 146.2 1856.3 148.5 1856.1 150.2 1857.4 M 142.0 1867.7 C 143.7 1869 143.9 1871.3 142.5 1873.0 C 141.2 1874.7 139.0 1874.9 137.3 1873.6 C 135.6 1872.2 135.3 1870.0 136.7 1868.3 C 138.0 1866.6 140.3 1866.3 142.0 1867.7 M 194.8 1885.2 L 191.4 1889.5 L 187.1 1886.3 C 187.9 1890.3 187.7 1895.5 183.3 1900.9 C 177.6 1908.2 168.9 1908.0 160.9 1901.7 L 141.6 1886.2 L 145.3 1881.5 L 164.5 1896.8 C 169.8 1901.1 176.0 1901.1 179.7 1896.4 C 183.4 1891.8 183.1 1887.4 181.8 1882.4 L 159.1 1864.3 L 162.8 1859.6 Z M 194.8 1885.2 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 205.1 1833.1 L 224.3 1848.4 L 220.6 1853.0 L 201.7 1837.9 C 196.2 1833.5 189.7 1833.8 185.6 1839 C 182.2 1843.2 182.3 1847.9 183.6 1852.9 L 206.2 1871.0 L 202.5 1875.6 L 170.5 1850.0 L 173.9 1845.8 L 178.3 1849.0 C 177.5 1845.2 177.7 1839.6 181.9 1834.4 C 188.1 1826.7 197.1 1826.6 205.1 1833.1 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 235.3 1834.6 L 231.6 1839.2 L 199.6 1813.6 L 203.3 1809.0 Z M 193.7 1799.6 C 195.7 1801.2 195.9 1803.8 194.4 1805.6 C 192.9 1807.6 190.3 1807.9 188.4 1806.4 C 186.4 1804.8 186.2 1802.2 187.7 1800.3 C 189.2 1798.4 191.8 1798.1 193.7 1799.6 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 245.6 1782.4 L 264.8 1797.7 L 261.1 1802.3 L 242.2 1787.2 C 236.7 1782.8 230.2 1783.1 226.1 1788.3 C 222.7 1792.6 222.8 1797.3 224.1 1802.3 L 246.7 1820.3 L 243.0 1825.0 L 211.0 1799.4 L 214.4 1795.1 L 218.8 1798.4 C 218.0 1794.6 218.2 1789.0 222.4 1783.7 C 228.6 1776.0 237.5 1776.0 245.6 1782.4 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 257.9 1773.5 C 265.3 1779.4 274.0 1778.9 279.0 1772.5 C 282.9 1767.6 282.8 1762.8 281.2 1758.0 L 267.9 1747.3 C 262.8 1746.8 258.1 1747.8 254.2 1752.6 C 249.1 1759.0 250.6 1767.6 257.9 1773.5 M 263.0 1743.0 L 258.9 1739.5 L 262.3 1735.2 L 293.7 1760.3 C 303.7 1768.2 304.7 1779.3 297.2 1788.6 C 292.2 1795.0 285.9 1797.5 279.3 1797.6 L 278.8 1792.0 C 284.1 1792.0 289.1 1790.1 293.0 1785.3 C 298.3 1778.6 297.2 1770.8 290.1 1765.0 L 286.6 1762.3 C 287.4 1766.1 287.0 1771.2 282.7 1776.6 C 275.7 1785.4 263.9 1785.9 254.2 1778.1 C 244.6 1770.5 242.4 1758.7 249.4 1750.0 C 253.8 1744.5 259.0 1742.9 263.0 1743.0 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 285.5 1734.3 L 301.7 1714.1 C 295.4 1709.5 288.4 1709.6 283.6 1715.6 C 278.7 1721.7 279.6 1729.1 285.5 1734.3 M 307.4 1711.1 L 309.3 1712.6 L 289.4 1737.5 C 296.4 1742.5 303.8 1741.9 309.3 1734.9 C 313.1 1730.2 313.6 1725.2 312.6 1721.5 L 317.6 1720.4 C 319.1 1726.3 318.1 1732.3 313.4 1738.2 C 305.4 1748.2 293.7 1748.5 284.1 1740.9 C 274.5 1733.2 272.3 1721.3 279.5 1712.4 C 286.9 1703.0 298.3 1703.8 307.4 1711.1 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 312.5 1680.6 L 312.1 1681.1 C 308.9 1685.1 309 1689.6 310.6 1694.7 L 332.9 1712.5 L 329.2 1717.1 L 297.2 1691.5 L 300.6 1687.3 L 305.3 1690.6 C 304.0 1687.0 303.9 1681.8 307.8 1676.9 Z M 312.5 1680.6 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 332.1 1653.1 L 334.2 1658.0 C 330.9 1659.0 327.4 1660.9 324.4 1664.6 C 321.3 1668.5 320.5 1672.5 323.8 1675.2 C 326.9 1677.6 329.6 1676.3 335.1 1671.9 C 342.9 1665.8 348.4 1664.6 353.2 1668.4 C 359.1 1673.1 359.1 1681.0 353.2 1688.4 C 349.3 1693.3 344.7 1696.2 339.9 1697.3 L 337.9 1692.1 C 342.0 1691.2 346.0 1689.0 349.1 1685.1 C 352.6 1680.8 353.4 1676.2 349.8 1673.4 C 346.8 1671.0 343.6 1672.3 338.2 1676.6 C 330.4 1682.8 325.5 1684.1 320.5 1680.1 C 314.7 1675.4 314.8 1668.1 320.4 1661.2 C 323.7 1657.0 328.1 1654.3 332.1 1653.1 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 341.7 1635.8 L 350.2 1625.2 L 354.3 1628.5 L 345.8 1639.0 L 363.7 1653.3 C 367.9 1656.6 372.1 1655.9 374.9 1652.5 C 376.8 1650.1 377.4 1648.1 377.7 1646.6 L 382.7 1648.2 C 382.5 1650.4 381.4 1653.1 379.0 1656.1 C 374.0 1662.4 367.1 1663.6 360.0 1657.9 L 342.1 1643.6 L 336.9 1650.2 L 332.8 1646.9 L 338.0 1640.4 L 327.2 1631.7 L 330.8 1627.1 Z M 341.7 1635.8 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 371.0 1607.4 L 370.6 1607.9 C 367.4 1611.9 367.5 1616.4 369.1 1621.4 L 391.4 1639.3 L 387.7 1643.9 L 355.7 1618.3 L 359.1 1614.0 L 363.8 1617.4 C 362.6 1613.8 362.4 1608.5 366.3 1603.7 Z M 371.0 1607.4 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 389.3 1609.0 C 396.7 1614.9 405.2 1614.6 410.3 1608.3 C 414.1 1603.5 413.8 1598.9 412.2 1594.1 L 398.9 1583.4 C 393.8 1582.9 389.2 1583.7 385.4 1588.5 C 380.4 1594.8 382.0 1603.2 389.3 1609.0 M 394.0 1579.1 L 389.9 1575.6 L 393.3 1571.3 L 425.3 1596.9 L 421.9 1601.1 L 417.5 1597.8 C 418.5 1601.8 418.3 1607.0 413.9 1612.4 C 407.0 1621.1 395.3 1621.4 385.6 1613.7 C 376.0 1606.0 373.7 1594.5 380.6 1585.8 C 385.0 1580.4 390.0 1579.0 394.0 1579.1 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 420.1 1543.0 L 422.2 1548.0 C 418.9 1549.0 415.3 1550.9 412.4 1554.6 C 409.3 1558.4 408.4 1562.5 411.8 1565.2 C 414.8 1567.6 417.6 1566.2 423.0 1561.9 C 430.9 1555.7 436.3 1554.6 441.1 1558.4 C 447.0 1563.1 447.0 1571.0 441.2 1578.3 C 437.3 1583.2 432.6 1586.1 427.9 1587.2 L 425.8 1582.0 C 430.0 1581.2 433.9 1579.0 437.1 1575.1 C 440.5 1570.7 441.3 1566.2 437.8 1563.4 C 434.7 1560.9 431.5 1562.3 426.2 1566.6 C 418.3 1572.8 413.4 1574.0 408.5 1570.1 C 402.6 1565.4 402.8 1558.1 408.3 1551.1 C 411.7 1546.9 416.1 1544.2 420.1 1543.0 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 443.1 1514.2 L 445.2 1519.2 C 441.8 1520.2 438.3 1522.1 435.4 1525.8 C 432.3 1529.7 431.4 1533.7 434.8 1536.4 C 437.8 1538.8 440.6 1537.5 446.0 1533.1 C 453.9 1527.0 459.3 1525.8 464.1 1529.6 C 470.0 1534.3 470.0 1542.2 464.1 1549.6 C 460.3 1554.5 455.6 1557.4 450.8 1558.5 L 448.8 1553.3 C 453.0 1552.4 456.9 1550.2 460.0 1546.3 C 463.5 1542.0 464.3 1537.4 460.8 1534.6 C 457.7 1532.2 454.5 1533.5 449.2 1537.8 C 441.3 1544.0 436.4 1545.3 431.5 1541.3 C 425.6 1536.6 425.8 1529.3 431.3 1522.4 C 434.7 1518.2 439.0 1515.5 443.1 1514.2 "/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 462.9 1512.4 L 479.1 1492.1 C 472.8 1487.5 465.8 1487.7 460.9 1493.7 C 456.1 1499.7 457.0 1507.1 462.9 1512.4 M 484.8 1489.1 L 486.7 1490.7 L 466.8 1515.5 C 473.8 1520.6 481.1 1519.9 486.7 1512.9 C 490.5 1508.3 491.0 1503.2 490.0 1499.6 L 495.0 1498.5 C 496.5 1504.4 495.5 1510.4 490.8 1516.2 C 482.8 1526.2 471.1 1526.6 461.5 1518.9 C 451.9 1511.2 449.7 1499.4 456.8 1490.4 C 464.3 1481.1 475.7 1481.8 484.8 1489.1 "/>
-<path fill="none" stroke-width="1.193" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0.4%, 11.4%, 13.7%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 C 34.5 35.5 33.7 92.3 -1.8 126.8 C -37.4 161.4 -94.1 160.5 -128.7 125.0 C -163.2 89.5 -162.4 32.7 -126.8 -1.8 C -91.3 -36.3 -34.5 -35.5 -0.0 -0.0 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 385.0, 421.6)"/>
-<path fill-rule="nonzero" fill="rgb(0.4%, 11.4%, 13.7%)" fill-opacity="1" stroke-width="0.597" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0.4%, 11.4%, 13.7%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L 57.4 -69.6 L 71.2 -55.4 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 256.3, 296.6)"/>
-<path fill="none" stroke-width="0.597" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(7.1%, 7.1%, 5.1%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -57.4 69.6 L -71.2 55.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 385.0, 421.6)"/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 235.2 286.9 L 235.0 286.9 L 211.3 258.4 L 211.3 286.2 L 207.6 286.2 L 207.6 248.8 L 207.8 248.8 L 231.4 277.2 L 231.4 249.5 L 235.2 249.5 Z M 235.2 286.9 "/>
-<path fill-rule="nonzero" fill="rgb(78.4%, 78.4%, 78.4%)" fill-opacity="1" d="M 1976.0 0 L 716.8 1594.7 L 1159.6 1886.7 L 2651.6 0 Z M 1976.0 0 "/>
-<path fill-rule="nonzero" fill="rgb(78.4%, 78.4%, 78.4%)" fill-opacity="1" d="M 4150 3087.7 L 3436.6 3297.0 L 2407.5 3122 L 831 3320.2 L 0 3100.8 L 0 3392.8 L 4150 3392.8 Z M 4150 3087.7 "/>
-<path fill-rule="nonzero" fill="rgb(78.4%, 78.4%, 78.4%)" fill-opacity="1" d="M 925.2 2170.9 L 433.6 1920.8 L 0 2470.3 L 0 3087.1 C 110.8 3060.6 383.4 2979.8 419.8 2967.1 Z M 925.2 2170.9 "/>
+  <!-- Generator: Adobe Illustrator 29.8.9, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35, .st36, .st37, .st38, .st39, .st40, .st41, .st42, .st43, .st44 {
+        fill: none;
+      }
+
+      .st45 {
+        mask: url(#mask);
+      }
+
+      .st1 {
+        stroke-dasharray: 11.35 11.35;
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st46, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st47, .st15, .st16, .st17, .st18, .st19, .st22, .st23, .st24, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35, .st36, .st37, .st48, .st39, .st40, .st41, .st42, .st43, .st44 {
+        stroke: #000;
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st46, .st7, .st8, .st9, .st10, .st11, .st12, .st14, .st47, .st15, .st16, .st17, .st18, .st19, .st22, .st23, .st24, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35, .st36, .st37, .st48, .st39, .st40, .st41, .st42, .st43, .st44 {
+        stroke-width: 5px;
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st14, .st47, .st15, .st16, .st17, .st18, .st19, .st22, .st23, .st24, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35, .st36, .st37, .st48, .st39, .st40, .st41, .st42, .st43, .st44 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st3 {
+        stroke-dasharray: 11.46 11.46;
+      }
+
+      .st49 {
+        fill: #e81f0b;
+      }
+
+      .st4 {
+        stroke-dasharray: 11.35 11.35;
+      }
+
+      .st5 {
+        stroke-dasharray: 12.18 12.18;
+      }
+
+      .st6 {
+        stroke-dasharray: 11.99 11.99;
+      }
+
+      .st46, .st13, .st25 {
+        stroke-miterlimit: 10;
+      }
+
+      .st46, .st50, .st48 {
+        fill: #d0dde0;
+      }
+
+      .st7 {
+        stroke-dasharray: 11.54 11.54;
+      }
+
+      .st8 {
+        stroke-dasharray: 11.41 11.41;
+      }
+
+      .st9 {
+        stroke-dasharray: 11.77 11.77;
+      }
+
+      .st10 {
+        stroke-dasharray: 11.99 11.99;
+      }
+
+      .st11 {
+        stroke-dasharray: 11.43 11.43;
+      }
+
+      .st12 {
+        stroke-dasharray: 11.48 11.48;
+      }
+
+      .st13 {
+        stroke-width: 0px;
+      }
+
+      .st51 {
+        fill: #011d23;
+      }
+
+      .st14 {
+        stroke-dasharray: 11.96 11.96;
+      }
+
+      .st47 {
+        fill: #e0e9eb;
+      }
+
+      .st15 {
+        stroke-dasharray: 12.05 12.05;
+      }
+
+      .st16 {
+        stroke-dasharray: 11.97 11.97;
+      }
+
+      .st17 {
+        stroke-dasharray: 11.35 11.35;
+      }
+
+      .st18 {
+        stroke-dasharray: 11.13 11.13;
+      }
+
+      .st19 {
+        stroke-dasharray: 11.48 11.48;
+      }
+
+      .st52 {
+        mask: url(#mask-2);
+      }
+
+      .st53 {
+        mask: url(#mask-3);
+      }
+
+      .st54 {
+        mask: url(#mask-4);
+      }
+
+      .st55 {
+        mask: url(#mask-1);
+      }
+
+      .st20, .st21 {
+        stroke: #011d23;
+      }
+
+      .st20, .st38 {
+        stroke-width: .6px;
+      }
+
+      .st56 {
+        clip-path: url(#clippath-11);
+      }
+
+      .st57 {
+        clip-path: url(#clippath-10);
+      }
+
+      .st58 {
+        clip-path: url(#clippath-13);
+      }
+
+      .st59 {
+        clip-path: url(#clippath-14);
+      }
+
+      .st60 {
+        clip-path: url(#clippath-12);
+      }
+
+      .st21 {
+        stroke-width: 1.19px;
+      }
+
+      .st61 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st62 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st63 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st64 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st65 {
+        clip-path: url(#clippath-7);
+      }
+
+      .st66 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st67 {
+        clip-path: url(#clippath-9);
+      }
+
+      .st68 {
+        clip-path: url(#clippath-8);
+      }
+
+      .st69 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st22 {
+        stroke-dasharray: 12.05 12.05;
+      }
+
+      .st23 {
+        stroke-dasharray: 11.96 11.96;
+      }
+
+      .st24 {
+        stroke-dasharray: 10.86 10.86;
+      }
+
+      .st25 {
+        stroke: #e81f0b;
+        stroke-width: 300px;
+      }
+
+      .st26 {
+        stroke-dasharray: 11.35 11.35;
+      }
+
+      .st27 {
+        stroke-dasharray: 12.3 12.3;
+      }
+
+      .st28 {
+        stroke-dasharray: 11.35 11.35;
+      }
+
+      .st29 {
+        stroke-dasharray: 12.06 12.06;
+      }
+
+      .st30 {
+        stroke-dasharray: 12.06 12.06;
+      }
+
+      .st31 {
+        stroke-dasharray: 11.94 11.94;
+      }
+
+      .st70 {
+        fill: #f5f5f5;
+      }
+
+      .st32 {
+        stroke-dasharray: 11.35 11.35;
+      }
+
+      .st33 {
+        stroke-dasharray: 11.92 11.92;
+      }
+
+      .st34 {
+        stroke-dasharray: 11.92 11.92;
+      }
+
+      .st35 {
+        stroke-dasharray: 11.96 11.96;
+      }
+
+      .st36 {
+        stroke-dasharray: 13.93 13.93;
+      }
+
+      .st37 {
+        stroke-dasharray: 12.24 12.24;
+      }
+
+      .st38 {
+        stroke: #12120d;
+      }
+
+      .st71 {
+        display: none;
+      }
+
+      .st39 {
+        stroke-dasharray: 13.91 13.91;
+      }
+
+      .st40 {
+        stroke-dasharray: 12.18 12.18;
+      }
+
+      .st72 {
+        clip-path: url(#clippath);
+      }
+
+      .st73 {
+        fill: #c8c8c8;
+      }
+
+      .st41 {
+        stroke-dasharray: 12.49 12.49;
+      }
+
+      .st42 {
+        stroke-dasharray: 12.49 12.49;
+      }
+
+      .st43 {
+        stroke-dasharray: 11.43 11.43;
+      }
+
+      .st44 {
+        stroke-dasharray: 13.93 13.93;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="648.53" y="1827.45" width="80.23" height="97.42"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st0" x="648.53" y="1827.45" width="80.23" height="97.42"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st0" x="648.53" y="1827.45" width="80.23" height="97.42"/>
+    </clipPath>
+    <mask id="mask" x="648.07" y="1827.34" width="81.12" height="97.92" maskUnits="userSpaceOnUse">
+      <g class="st64">
+        
+      </g>
+    </mask>
+    <clipPath id="clippath-3">
+      <rect class="st0" x="648.28" y="1644.04" width="69.52" height="91.2"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="st0" x="648.28" y="1644.04" width="69.52" height="91.2"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="st0" x="648.28" y="1644.04" width="69.52" height="91.2"/>
+    </clipPath>
+    <mask id="mask-1" x="648.07" y="1643.98" width="70.08" height="91.68" maskUnits="userSpaceOnUse">
+      <g class="st69">
+        
+      </g>
+    </mask>
+    <clipPath id="clippath-6">
+      <rect class="st0" x="645.24" y="1464.89" width="145.43" height="127.53"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="st0" x="645.24" y="1464.89" width="145.43" height="127.53"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="st0" x="645.23" y="1464.89" width="145.43" height="127.53"/>
+    </clipPath>
+    <mask id="mask-2" x="645.19" y="1464.46" width="145.92" height="128.16" maskUnits="userSpaceOnUse">
+      <g class="st68">
+        
+      </g>
+    </mask>
+    <clipPath id="clippath-9">
+      <rect class="st0" x="650.39" y="1282.36" width="149.63" height="131.21"/>
+    </clipPath>
+    <clipPath id="clippath-10">
+      <rect class="st0" x="650.39" y="1282.36" width="149.63" height="131.21"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="st0" x="650.39" y="1282.36" width="149.63" height="131.21"/>
+    </clipPath>
+    <mask id="mask-3" x="649.99" y="1282.06" width="150.24" height="131.52" maskUnits="userSpaceOnUse">
+      <g class="st56">
+        
+      </g>
+    </mask>
+    <clipPath id="clippath-12">
+      <rect class="st0" x="653.8" y="1120.36" width="149.83" height="131.77"/>
+    </clipPath>
+    <clipPath id="clippath-13">
+      <rect class="st0" x="653.8" y="1120.36" width="149.83" height="131.77"/>
+    </clipPath>
+    <clipPath id="clippath-14">
+      <rect class="st0" x="653.8" y="1120.36" width="149.83" height="131.77"/>
+    </clipPath>
+    <mask id="mask-4" x="653.35" y="1120.3" width="150.72" height="132" maskUnits="userSpaceOnUse">
+      <g class="st59">
+        
+      </g>
+    </mask>
+  </defs>
+  <g class="iso-base" id="Umgebung">
+    <polygon class="st73" points="0 2343.34 1851.52 0 1438.78 0 0 1822.52 0 2343.34"/>
+    <polygon class="st70" points="1967.73 269.38 1736.2 695.38 1121.82 1050.13 0 2470.89 0 3288.76 48.55 3307.75 668.17 3363.26 1051.96 3363.26 2786.01 3204.36 3466.06 3366.34 4150 3263.28 4150 1517.81 1967.73 269.38"/>
+    <g>
+      <path d="M165.66,1921.74l-3.89,4.87-21.78-17.41-20.43,25.56,21.78,17.41-3.89,4.87-47.08-37.63,3.89-4.87,20.75,16.59,20.43-25.56-20.75-16.59,3.89-4.87,47.08,37.63Z"/>
+      <path d="M194.84,1885.23l-3.43,4.29-4.33-3.25c.8,4,.62,9.21-3.73,14.65-5.79,7.24-14.49,7.1-22.44.75l-19.34-15.46,3.74-4.68,19.15,15.31c5.38,4.3,11.5,4.26,15.29-.48,3.63-4.55,3.31-9,2-13.93l-22.68-18.12,3.74-4.68,32.03,25.6ZM142,1867.67c1.67,1.33,1.92,3.64.54,5.37s-3.58,1.86-5.25.53c-1.67-1.33-1.97-3.57-.64-5.24,1.38-1.73,3.69-1.99,5.35-.66ZM150.19,1857.42c1.67,1.33,1.92,3.64.59,5.3s-3.64,1.92-5.3.59-1.92-3.64-.59-5.3c1.33-1.67,3.64-1.92,5.3-.59Z"/>
+      <path d="M205.12,1833.09l19.15,15.31-3.69,4.61-18.9-15.1c-5.51-4.4-11.95-4.09-16.1,1.1-3.38,4.23-3.26,8.94-2,13.93l22.61,18.07-3.69,4.61-32.03-25.6,3.38-4.23,4.45,3.24c-.83-3.82-.58-9.39,3.62-14.64,6.14-7.69,15.12-7.75,23.19-1.3Z"/>
+      <path d="M193.75,1799.64c1.92,1.54,2.15,4.14.67,5.99s-4.12,2.27-6.04.73-2.22-4.19-.68-6.11c1.48-1.86,4.14-2.15,6.06-.62ZM235.33,1834.56l-3.69,4.61-32.03-25.6,3.69-4.61,32.03,25.6Z"/>
+      <path d="M245.62,1782.42l19.15,15.31-3.69,4.61-18.9-15.1c-5.51-4.4-11.95-4.09-16.1,1.1-3.38,4.23-3.26,8.94-2,13.93l22.61,18.07-3.69,4.61-32.03-25.6,3.38-4.23,4.45,3.24c-.83-3.82-.58-9.39,3.62-14.64,6.14-7.69,15.12-7.75,23.19-1.3Z"/>
+      <path d="M262.97,1742.97l-4.13-3.51,3.43-4.29,31.45,25.14c9.93,7.94,10.98,18.96,3.51,28.31-5.07,6.34-11.38,8.85-17.96,8.95l-.5-5.54c5.3-.07,10.35-1.91,14.19-6.72,5.32-6.66,4.27-14.54-2.9-20.27l-3.46-2.76c.83,3.82.41,8.94-3.89,14.32-7.01,8.78-18.86,9.28-28.53,1.55-9.61-7.68-11.79-19.4-4.78-28.17,4.4-5.51,9.6-7.02,13.57-7ZM257.92,1773.47c7.37,5.89,16.06,5.38,21.13-.96,3.89-4.87,3.76-9.7,2.17-14.54l-13.32-10.65c-5.07-.48-9.81.45-13.7,5.32-5.07,6.34-3.58,14.98,3.72,20.82Z"/>
+      <path d="M307.37,1711.07l1.92,1.54-19.86,24.85c6.98,5.06,14.32,4.41,19.9-2.57,3.74-4.68,4.29-9.7,3.23-13.37l5.07-1.09c1.48,5.9.45,11.91-4.21,17.74-7.99,9.99-19.73,10.37-29.34,2.69-9.61-7.68-11.8-19.51-4.64-28.48,7.47-9.35,18.82-8.58,27.92-1.31ZM285.52,1734.33l16.18-20.24c-6.29-4.61-13.33-4.46-18.15,1.56-4.81,6.02-3.93,13.45,1.97,18.68Z"/>
+      <path d="M312.49,1680.62l-.36.45c-3.23,4.04-3.13,8.52-1.52,13.59l22.29,17.82-3.69,4.61-32.03-25.6,3.38-4.23,4.75,3.38c-1.28-3.65-1.4-8.89,2.49-13.76l4.68,3.74Z"/>
+      <path d="M332.11,1653.05l2.13,4.95c-3.33,1.01-6.85,2.92-9.82,6.64s-3.97,7.85-.57,10.57c3.01,2.41,5.78,1.05,11.24-3.3,7.83-6.13,13.3-7.32,18.11-3.48,5.89,4.71,5.9,12.59,0,19.95-3.89,4.87-8.53,7.78-13.3,8.89l-2.04-5.2c4.16-.87,8.12-3.06,11.24-6.97,3.48-4.36,4.26-8.88.74-11.69-3.07-2.46-6.25-1.11-11.6,3.22-7.89,6.19-12.76,7.43-17.7,3.49-5.89-4.71-5.72-12.02-.19-18.94,3.38-4.23,7.74-6.93,11.75-8.14Z"/>
+      <path d="M341.73,1635.76l8.45-10.57,4.1,3.28-8.45,10.57,17.87,14.28c4.16,3.33,8.4,2.62,11.17-.84,1.89-2.37,2.55-4.37,2.84-5.92l4.97,1.66c-.23,2.13-1.27,4.87-3.67,7.88-5.02,6.28-11.94,7.46-18.99,1.83l-17.87-14.28-5.22,6.53-4.1-3.28,5.22-6.53-10.89-8.7,3.69-4.61,10.89,8.7Z"/>
+      <path d="M371.01,1607.41l-.36.45c-3.23,4.04-3.13,8.52-1.52,13.59l22.29,17.82-3.69,4.61-32.03-25.6,3.38-4.23,4.75,3.38c-1.28-3.65-1.4-8.89,2.49-13.76l4.68,3.74Z"/>
+      <path d="M393.98,1579.06l-4.13-3.51,3.43-4.29,32.03,25.6-3.43,4.29-4.39-3.3c.96,3.92.79,9.13-3.57,14.58-6.96,8.71-18.65,9.02-28.33,1.29s-11.94-19.2-4.98-27.92c4.35-5.44,9.4-6.77,13.37-6.74ZM389.33,1609.04c7.37,5.89,15.91,5.58,20.93-.7,3.84-4.8,3.56-9.44,1.97-14.28l-13.32-10.65c-5.07-.48-9.66.26-13.5,5.06-5.02,6.28-3.37,14.73,3.93,20.57Z"/>
+      <path d="M420.06,1543.01l2.13,4.95c-3.33,1.01-6.85,2.92-9.82,6.64-3.07,3.84-3.97,7.85-.57,10.57,3.01,2.41,5.78,1.05,11.24-3.3,7.83-6.13,13.3-7.32,18.11-3.48,5.89,4.71,5.9,12.59,0,19.95-3.89,4.87-8.53,7.78-13.3,8.89l-2.04-5.2c4.16-.87,8.12-3.06,11.24-6.97,3.48-4.36,4.26-8.88.74-11.69-3.07-2.46-6.25-1.11-11.6,3.22-7.89,6.19-12.76,7.43-17.7,3.49-5.89-4.71-5.72-12.02-.19-18.94,3.38-4.23,7.74-6.93,11.75-8.14Z"/>
+      <path d="M443.05,1514.25l2.13,4.95c-3.33,1.01-6.85,2.92-9.82,6.64-3.07,3.84-3.97,7.85-.57,10.57,3.01,2.41,5.78,1.05,11.24-3.3,7.83-6.13,13.3-7.32,18.11-3.48,5.89,4.71,5.9,12.59,0,19.95-3.89,4.87-8.53,7.78-13.3,8.89l-2.04-5.2c4.16-.87,8.12-3.06,11.24-6.97,3.48-4.36,4.26-8.88.74-11.69-3.07-2.46-6.25-1.11-11.6,3.22-7.89,6.19-12.76,7.43-17.7,3.49-5.89-4.71-5.72-12.02-.19-18.94,3.38-4.23,7.74-6.93,11.75-8.14Z"/>
+      <path d="M484.76,1489.12l1.92,1.54-19.86,24.85c6.98,5.06,14.32,4.41,19.9-2.57,3.74-4.68,4.29-9.7,3.23-13.37l5.07-1.09c1.48,5.9.45,11.91-4.21,17.74-7.99,9.99-19.73,10.37-29.34,2.69-9.61-7.68-11.8-19.51-4.64-28.48,7.47-9.35,18.82-8.58,27.92-1.31ZM462.91,1512.38l16.18-20.24c-6.29-4.61-13.33-4.46-18.15,1.56s-3.93,13.45,1.97,18.68Z"/>
+    </g>
+    <g class="st71">
+      <line class="st25" x1="-1248.72" y1="3696.8" x2="2098.32" y2="-502.03"/>
+    </g>
+    <g class="st71">
+      <polygon class="st49" points="-547.97 4000.67 -990.83 3708.7 2356.21 -490.14 2799.07 -198.17 -547.97 4000.67"/>
+    </g>
+    <g class="st71">
+      <line class="st25" x1="-873.54" y1="3802.2" x2="2473.5" y2="-396.64"/>
+    </g>
+    <g>
+      <path class="st21" d="M384.99,421.59c34.52-35.53,33.71-92.32-1.82-126.84-35.53-34.52-92.32-33.7-126.84,1.83-34.52,35.53-33.71,92.32,1.82,126.84,35.53,34.52,92.32,33.71,126.84-1.82Z"/>
+      <polygon class="st51" points="256.33 296.57 313.77 366.17 327.55 351.98 256.33 296.57"/>
+      <polygon class="st20" points="256.33 296.57 313.77 366.17 327.55 351.98 256.33 296.57"/>
+      <polygon class="st38" points="384.99 421.59 327.55 351.98 313.76 366.17 384.99 421.59"/>
+      <path d="M235.17,286.9h-.2l-23.65-28.45v27.8h-3.75v-37.4h.2l23.6,28.4v-27.75h3.8v37.4Z"/>
+    </g>
+    <polygon class="st73" points="1975.99 0 716.78 1594.68 1159.64 1886.66 2651.6 0 1975.99 0"/>
+    <g>
+      <polygon class="st73" points="4150 3087.69 3436.55 3296.98 2407.54 3122 831 3320.25 0 3100.84 0 3392.83 4150 3392.83 4150 3087.69"/>
+      <path class="st73" d="M925.25,2170.91l-491.69-250.11L0,2470.3v616.82c110.8-26.53,383.42-107.31,419.83-119.99l505.42-796.23Z"/>
+    </g>
   </g>
-  <g class="iso-floor" data-iso-floor="UG">
-<g transform="translate(-415, -340)">
-
-<g transform="translate(415, 340)">
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1422.2 2386.5 L 591.8 1907.0 L 592.3 1722.8 L 1422.7 2202.2 Z M 1422.2 2386.5 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -0.0 -6.0 L -5.2 -3.0 " transform="matrix(1, 0, 0, -1, 1422.2, 2380.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M -0.0 0.0 L -804.4 464.4 " transform="matrix(1, 0, 0, -1, 1406.6, 2377.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -5.2 3.0 L -5.2 9.0 " transform="matrix(1, 0, 0, -1, 597.0, 1910.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 -0.0 L 0.4 155.0 " transform="matrix(1, 0, 0, -1, 591.9, 1889.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 0.0 6.0 L 5.2 3.0 " transform="matrix(1, 0, 0, -1, 592.3, 1728.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 0.0 L 804.4 -464.4 " transform="matrix(1, 0, 0, -1, 607.9, 1731.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 5.2 -3.0 L 5.2 -9.0 " transform="matrix(1, 0, 0, -1, 1417.5, 2199.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 -0.0 L -0.4 -155.0 " transform="matrix(1, 0, 0, -1, 1422.7, 2219.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1878.6 1993.3 L 1719.5 2085.8 L 1579.9 2005.1 L 1422.7 2202.2 L 592.3 1722.8 L 1192.5 968.2 L 2023.3 1447.8 L 1810.1 1716.0 L 1545.4 1644.3 L 1578.8 1602.2 L 1451.8 1568.2 L 1502.5 1504.3 L 1394.1 1475.2 L 1180.2 1744.6 L 1478.7 1824.8 L 1648.3 1870.3 C 1658.6 1873.1 1670.2 1874.8 1680.2 1878.9 C 1693.8 1884.4 1706.8 1894.2 1719.5 1901.5 C 1772.5 1932.1 1825.5 1962.7 1878.6 1993.3 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 C 1.7 -1.0 3.5 -2.0 5.2 -3.0 L 0.0 -6.0 " transform="matrix(1, 0, 0, -1, 1873.4, 1990.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M 0.0 0.0 L -133.8 -77.8 " transform="matrix(1, 0, 0, -1, 1863.5, 2002.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -5.2 -3.0 L -10.4 -0.0 " transform="matrix(1, 0, 0, -1, 1724.7, 2082.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M 0.0 0.0 L -114.3 66.0 " transform="matrix(1, 0, 0, -1, 1704.4, 2077.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -5.2 3.0 L -8.9 -1.7 " transform="matrix(1, 0, 0, -1, 1585.1, 2008.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.4 11.4" stroke-miterlimit="4" d="M -0.0 0.0 L -139.0 -174.3 " transform="matrix(1, 0, 0, -1, 1569.0, 2018.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -3.7 -4.7 L -8.9 -1.7 " transform="matrix(1, 0, 0, -1, 1426.5, 2197.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 0.0 L -804.4 464.4 " transform="matrix(1, 0, 0, -1, 1407.2, 2193.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -5.2 3.0 L -1.5 7.7 " transform="matrix(1, 0, 0, -1, 597.5, 1725.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.1 12.1" stroke-miterlimit="4" d="M 0.0 0.0 L 581.4 731.1 " transform="matrix(1, 0, 0, -1, 603.6, 1708.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L 3.7 4.7 L 8.9 1.7 " transform="matrix(1, 0, 0, -1, 1188.7, 972.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 -0.0 L 804.9 -464.7 " transform="matrix(1, 0, 0, -1, 1208.0, 977.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L 5.2 -3.0 L 1.5 -7.7 " transform="matrix(1, 0, 0, -1, 2018.1, 1444.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.2 12.2" stroke-miterlimit="4" d="M -0.0 -0.0 L -194.2 -244.4 " transform="matrix(1, 0, 0, -1, 2011.9, 1462.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -3.7 -4.7 L -9.5 -3.1 " transform="matrix(1, 0, 0, -1, 1813.9, 1711.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.5 12.5" stroke-miterlimit="4" d="M -0.0 0.0 L -235.1 63.7 " transform="matrix(1, 0, 0, -1, 1792.3, 1711.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -5.8 1.6 L -2.1 6.3 " transform="matrix(1, 0, 0, -1, 1551.2, 1645.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="13.9 13.9" stroke-miterlimit="4" d="M 0.0 -0.0 L 13.0 16.4 " transform="matrix(1, 0, 0, -1, 1557.8, 1628.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L 3.7 4.7 L -2.1 6.3 " transform="matrix(1, 0, 0, -1, 1575.1, 1606.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="10.9 10.9" stroke-miterlimit="4" d="M 0.0 0.0 L -99.7 26.7 " transform="matrix(1, 0, 0, -1, 1562.6, 1597.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -5.8 1.6 L -2.1 6.3 " transform="matrix(1, 0, 0, -1, 1457.6, 1569.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="13.9 13.9" stroke-miterlimit="4" d="M -0.0 -0.0 L 30.2 38.2 " transform="matrix(1, 0, 0, -1, 1464.2, 1552.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 3.7 4.7 L -2.1 6.3 " transform="matrix(1, 0, 0, -1, 1498.8, 1509.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.1 11.1" stroke-miterlimit="4" d="M -0.0 0.0 L -80.6 21.6 " transform="matrix(1, 0, 0, -1, 1485.9, 1499.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -5.8 1.6 L -9.5 -3.1 " transform="matrix(1, 0, 0, -1, 1399.9, 1476.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.3 12.3" stroke-miterlimit="4" d="M 0.0 -0.0 L -195.0 -245.5 " transform="matrix(1, 0, 0, -1, 1382.8, 1489.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -3.7 -4.7 C -1.8 -5.2 0.1 -5.7 2.1 -6.3 " transform="matrix(1, 0, 0, -1, 1184.0, 1739.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M -0.0 0.0 C 93.7 -25.2 187.3 -50.3 281.0 -75.5 C 337.6 -90.7 394.1 -105.8 450.6 -121.0 C 461.0 -123.8 472.6 -125.5 482.5 -129.6 C 496.1 -135.1 509.1 -144.9 521.8 -152.2 C 571.4 -180.8 621.0 -209.4 670.5 -238.0 " transform="matrix(1, 0, 0, -1, 1197.7, 1749.3)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 2022.8 1632.3 L 3673.4 2585.3 L 3673.9 2401.1 L 2023.3 1448.1 Z M 2022.8 1632.3 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -0.0 -6.0 L 5.2 -9.0 " transform="matrix(1, 0, 0, -1, 2022.8, 1626.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.1 12.1" stroke-miterlimit="4" d="M -0.0 0.0 L 1624.6 -937.9 " transform="matrix(1, 0, 0, -1, 2038.4, 1641.4)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L 5.2 -3.0 L 5.2 3.0 " transform="matrix(1, 0, 0, -1, 3668.2, 2582.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M 0.0 0.0 L 0.4 155.0 " transform="matrix(1, 0, 0, -1, 3673.4, 2567.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L 0.0 6.0 L -5.2 9.0 " transform="matrix(1, 0, 0, -1, 3673.9, 2407.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.1 12.1" stroke-miterlimit="4" d="M 0.0 -0.0 L -1624.6 937.9 " transform="matrix(1, 0, 0, -1, 3658.3, 2392.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -5.2 3.0 L -5.2 -3.0 " transform="matrix(1, 0, 0, -1, 2028.5, 1451.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M 0.0 -0.0 L -0.4 -155.0 " transform="matrix(1, 0, 0, -1, 2023.2, 1465.6)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 2723.7 3137.2 L 1422.2 2386.7 L 1422.7 2202.5 L 2724.2 2953.0 Z M 2723.7 3137.2 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L -0.0 -6.0 L -5.2 -3.0 " transform="matrix(1, 0, 0, -1, 2723.7, 3131.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.9 11.9" stroke-miterlimit="4" d="M 0.0 0.0 L -1275.6 735.6 " transform="matrix(1, 0, 0, -1, 2708.1, 3128.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -5.2 3.0 L -5.2 9.0 " transform="matrix(1, 0, 0, -1, 1427.4, 2389.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 -0.0 L 0.4 155.0 " transform="matrix(1, 0, 0, -1, 1422.3, 2369.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 0.0 6.0 L 5.2 3.0 " transform="matrix(1, 0, 0, -1, 1422.7, 2208.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.9 11.9" stroke-miterlimit="4" d="M 0.0 0.0 L 1275.6 -735.6 " transform="matrix(1, 0, 0, -1, 1438.3, 2211.4)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L 5.2 -3.0 L 5.2 -9.0 " transform="matrix(1, 0, 0, -1, 2719.0, 2950.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 -0.0 L -0.4 -155.0 " transform="matrix(1, 0, 0, -1, 2724.1, 2970.5)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 3673.4 2585.3 L 2723.7 3137.2 L 2724.2 2953.0 L 3673.9 2401.1 Z M 3673.4 2585.3 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -0.0 -6.0 L -5.2 -9.0 " transform="matrix(1, 0, 0, -1, 3673.4, 2579.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.9 11.9" stroke-miterlimit="4" d="M -0.0 0.0 L -923.9 -536.9 " transform="matrix(1, 0, 0, -1, 3657.9, 2594.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -5.2 -3.0 L -5.2 3.0 " transform="matrix(1, 0, 0, -1, 2728.9, 3134.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 0.0 L 0.4 155.0 " transform="matrix(1, 0, 0, -1, 2723.7, 3119.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L 0.0 6.0 L 5.2 9.0 " transform="matrix(1, 0, 0, -1, 2724.2, 2959.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.9 11.9" stroke-miterlimit="4" d="M 0.0 0.0 L 923.9 536.9 " transform="matrix(1, 0, 0, -1, 2739.7, 2944.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L 5.2 3.0 L 5.2 -3.0 " transform="matrix(1, 0, 0, -1, 3668.7, 2404.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M 0.0 -0.0 L -0.4 -155.0 " transform="matrix(1, 0, 0, -1, 3673.9, 2418.6)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 3673.9 2401.1 L 2724.2 2953.0 L 1422.7 2202.5 L 1579.9 2005.4 L 1719.5 2086.0 L 1878.6 1993.6 L 1680.5 1879.2 L 2023.3 1448.1 Z M 3673.9 2401.1 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L 5.2 -3.0 L 0.0 -6.0 " transform="matrix(1, 0, 0, -1, 3668.7, 2398.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.9 11.9" stroke-miterlimit="4" d="M 0.0 0.0 L -923.9 -536.9 " transform="matrix(1, 0, 0, -1, 3658.4, 2410.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -5.2 -3.0 L -10.4 -0.0 " transform="matrix(1, 0, 0, -1, 2729.4, 2950.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.9 11.9" stroke-miterlimit="4" d="M -0.0 0.0 L -1275.6 735.6 " transform="matrix(1, 0, 0, -1, 2708.7, 2944.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -5.2 3.0 L -1.5 7.7 " transform="matrix(1, 0, 0, -1, 1427.9, 2205.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.4 11.4" stroke-miterlimit="4" d="M 0.0 -0.0 L 139.0 174.3 " transform="matrix(1, 0, 0, -1, 1433.6, 2188.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L 3.7 4.7 L 8.9 1.7 " transform="matrix(1, 0, 0, -1, 1576.2, 2010.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 0.0 L 114.3 -66.0 " transform="matrix(1, 0, 0, -1, 1595.0, 2014.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 5.2 -3.0 L 10.4 0.0 " transform="matrix(1, 0, 0, -1, 1714.3, 2083.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 0 L 133.8 77.8 " transform="matrix(1, 0, 0, -1, 1734.6, 2077.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L 5.2 3.0 L -0.0 6.0 " transform="matrix(1, 0, 0, -1, 1873.4, 1996.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.4 11.4" stroke-miterlimit="4" d="M 0.0 -0.0 L -172.9 99.8 " transform="matrix(1, 0, 0, -1, 1863.5, 1984.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -5.2 3.0 L -1.5 7.7 " transform="matrix(1, 0, 0, -1, 1685.7, 1882.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 -0.0 L 324.2 407.7 " transform="matrix(1, 0, 0, -1, 1691.7, 1865.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L 3.7 4.7 L 8.9 1.7 " transform="matrix(1, 0, 0, -1, 2019.6, 1452.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.1 12.1" stroke-miterlimit="4" d="M 0.0 0.0 L 1624.6 -937.9 " transform="matrix(1, 0, 0, -1, 2038.9, 1457.1)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 1810.1 1716.0 L 1680.5 1879.0 L 1180.2 1744.6 L 1394.1 1475.2 L 1502.5 1504.3 L 1451.8 1568.2 L 1578.8 1602.2 L 1545.4 1644.3 Z M 1810.1 1716.0 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 5.8 -1.6 L 2.1 -6.3 " transform="matrix(1, 0, 0, -1, 1804.4, 1714.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.5 11.5" stroke-miterlimit="4" d="M -0.0 0.0 L -111.4 -140.0 " transform="matrix(1, 0, 0, -1, 1799.2, 1729.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -3.7 -4.7 L -9.5 -3.1 " transform="matrix(1, 0, 0, -1, 1684.2, 1874.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.8 11.8" stroke-miterlimit="4" d="M 0.0 0.0 L -471.6 126.7 " transform="matrix(1, 0, 0, -1, 1663.3, 1874.4)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -5.8 1.6 L -2.1 6.3 " transform="matrix(1, 0, 0, -1, 1186.0, 1746.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.3 12.3" stroke-miterlimit="4" d="M 0.0 -0.0 L 195.0 245.5 " transform="matrix(1, 0, 0, -1, 1191.6, 1730.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 3.7 4.7 L 9.5 3.1 " transform="matrix(1, 0, 0, -1, 1390.4, 1479.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.1 11.1" stroke-miterlimit="4" d="M 0.0 0.0 L 80.6 -21.6 " transform="matrix(1, 0, 0, -1, 1410.7, 1479.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 5.8 -1.6 L 2.1 -6.3 " transform="matrix(1, 0, 0, -1, 1496.7, 1502.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="13.9 13.9" stroke-miterlimit="4" d="M 0.0 -0.0 L -30.2 -38.2 " transform="matrix(1, 0, 0, -1, 1490.1, 1519.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -3.7 -4.7 L 2.1 -6.3 " transform="matrix(1, 0, 0, -1, 1455.6, 1563.5)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="10.9 10.9" stroke-miterlimit="4" d="M -0.0 -0.0 L 99.7 -26.7 " transform="matrix(1, 0, 0, -1, 1468.1, 1572.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 5.8 -1.6 L 2.1 -6.3 " transform="matrix(1, 0, 0, -1, 1573.0, 1600.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="13.9 13.9" stroke-miterlimit="4" d="M 0.0 -0.0 L -13.0 -16.4 " transform="matrix(1, 0, 0, -1, 1566.5, 1617.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -3.7 -4.7 L 2.1 -6.3 " transform="matrix(1, 0, 0, -1, 1549.1, 1639.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.5 12.5" stroke-miterlimit="4" d="M -0.0 -0.0 L 235.1 -63.7 " transform="matrix(1, 0, 0, -1, 1563.3, 1649.2)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 2173.2 1822.1 L 1878.6 1993.3 L 1760.1 1924.9 L 2054.7 1753.7 Z M 2173.2 1822.1 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L 5.2 -3.0 L 0.0 -6.0 " transform="matrix(1, 0, 0, -1, 2168.0, 1819.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.2 12.2" stroke-miterlimit="4" d="M -0.0 0.0 L -268.5 -156.0 " transform="matrix(1, 0, 0, -1, 2157.5, 1831.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -5.2 -3.0 L -10.4 -0.0 " transform="matrix(1, 0, 0, -1, 1883.8, 1990.3)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.3 11.3" stroke-miterlimit="4" d="M -0.0 -0.0 L -93.3 53.9 " transform="matrix(1, 0, 0, -1, 1863.6, 1984.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L -5.2 3.0 L -0.0 6.0 " transform="matrix(1, 0, 0, -1, 1765.3, 1927.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.2 12.2" stroke-miterlimit="4" d="M 0.0 0.0 L 268.5 156.0 " transform="matrix(1, 0, 0, -1, 1775.8, 1915.8)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L 5.2 3.0 L 10.4 0.0 " transform="matrix(1, 0, 0, -1, 2049.5, 1756.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.3 11.3" stroke-miterlimit="4" d="M -0.0 -0.0 L 93.4 -53.9 " transform="matrix(1, 0, 0, -1, 2069.7, 1762.4)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 2672.5 2114.4 L 2362.3 2294.6 L 2243.8 2226.2 L 2554.0 2045.9 Z M 2672.5 2114.4 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L 5.2 -3.0 L 0.0 -6.0 " transform="matrix(1, 0, 0, -1, 2667.3, 2111.4)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 -0.0 L -284.3 -165.2 " transform="matrix(1, 0, 0, -1, 2657.0, 2123.4)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L -5.2 -3.0 L -10.4 -0.0 " transform="matrix(1, 0, 0, -1, 2367.5, 2291.6)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.3 11.3" stroke-miterlimit="4" d="M 0.0 0.0 L -93.4 53.9 " transform="matrix(1, 0, 0, -1, 2347.3, 2285.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L -5.2 3.0 L -0.0 6.0 " transform="matrix(1, 0, 0, -1, 2249.0, 2229.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 0.0 L 284.3 165.2 " transform="matrix(1, 0, 0, -1, 2259.4, 2217.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 0.0 L 5.2 3.0 L 10.4 0.0 " transform="matrix(1, 0, 0, -1, 2548.8, 2049.0)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.3 11.3" stroke-miterlimit="4" d="M -0.0 -0.0 L 93.4 -53.9 " transform="matrix(1, 0, 0, -1, 2569.0, 2054.6)"/>
-<path fill-rule="nonzero" fill="rgb(96.1%, 96.1%, 96.1%)" fill-opacity="1" d="M 3160.0 2392.1 L 2849.9 2572.4 L 2731.3 2503.9 L 3041.5 2323.7 Z M 3160.0 2392.1 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 0.0 L 5.2 -3.0 L 0.0 -6.0 " transform="matrix(1, 0, 0, -1, 3154.8, 2389.1)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M 0.0 -0.0 L -284.3 -165.2 " transform="matrix(1, 0, 0, -1, 3144.5, 2401.2)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0 -0.0 L -5.2 -3.0 L -10.4 -0.0 " transform="matrix(1, 0, 0, -1, 2855.0, 2569.4)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.4 11.4" stroke-miterlimit="4" d="M -0.0 0.0 L -93.4 53.9 " transform="matrix(1, 0, 0, -1, 2834.8, 2563.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L -5.2 3.0 L -0.0 6.0 " transform="matrix(1, 0, 0, -1, 2736.5, 2506.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="12.0 12.0" stroke-miterlimit="4" d="M -0.0 0.0 L 284.3 165.2 " transform="matrix(1, 0, 0, -1, 2746.9, 2494.9)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.0 -0.0 L 5.2 3.0 L 10.4 0.0 " transform="matrix(1, 0, 0, -1, 3036.3, 2326.7)"/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="11.3 11.3" stroke-miterlimit="4" d="M -0.0 -0.0 L 93.4 -53.9 " transform="matrix(1, 0, 0, -1, 3056.6, 2332.4)"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</g>
-
-</g>
-    <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 643.9, 1875.9)">UG</text>
+  <g class="iso-floor" data-iso-floor="UG" id="UG">
+    <g id="Gewerbe" data-iso-part="gewerbe">
+      <g>
+        <polygon class="st50 iso-face" points="1422.21 2386.46 591.82 1907.03 592.34 1722.81 1422.73 2202.23 1422.21 2386.46 1422.21 2386.46"/>
+        <g>
+          <polyline class="st2" points="1422.23 2380.46 1422.21 2386.46 1417.01 2383.46"/>
+          <line class="st6" x1="1406.63" y1="2377.47" x2="602.2" y2="1913.03"/>
+          <polyline class="st2" points="597.01 1910.03 591.82 1907.03 591.84 1901.03"/>
+          <line class="st12" x1="591.87" y1="1889.55" x2="592.31" y2="1734.55"/>
+          <polyline class="st2" points="592.32 1728.81 592.34 1722.81 597.54 1725.81"/>
+          <line class="st6" x1="607.92" y1="1731.8" x2="1412.35" y2="2196.24"/>
+          <polyline class="st2" points="1417.54 2199.23 1422.73 2202.23 1422.71 2208.23"/>
+          <line class="st12" x1="1422.68" y1="2219.71" x2="1422.24" y2="2374.72"/>
+        </g>
+      </g>
+      <g>
+        <path class="st50 iso-face" d="M1878.58,1993.34l-159.04,92.42-139.64-80.62-157.17,197.09-830.39-479.43,600.12-754.64,830.82,479.68-213.14,268.19-264.73-71.69,33.43-42.13-127.02-34.01,50.65-63.92-108.34-29.03-213.91,269.36c99.48,26.72,198.96,53.44,298.45,80.16,56.54,15.18,113.08,30.37,169.61,45.55,10.34,2.78,21.96,4.52,31.9,8.57,13.6,5.54,26.61,15.27,39.3,22.59,53.03,30.62,106.07,61.24,159.1,91.86h0Z"/>
+        <g>
+          <path class="st2" d="M1873.39,1990.34c1.73,1,3.46,2,5.2,3l-5.19,3.01"/>
+          <line class="st3" x1="1863.48" y1="2002.11" x2="1729.69" y2="2079.87"/>
+          <polyline class="st2" points="1724.73 2082.75 1719.54 2085.76 1714.35 2082.76"/>
+          <line class="st19" x1="1704.4" y1="2077.02" x2="1590.07" y2="2011.01"/>
+          <polyline class="st2" points="1585.1 2008.14 1579.9 2005.14 1576.16 2009.83"/>
+          <line class="st11" x1="1569.03" y1="2018.77" x2="1430.04" y2="2193.07"/>
+          <polyline class="st2" points="1426.47 2197.54 1422.73 2202.23 1417.54 2199.23"/>
+          <line class="st6" x1="1407.16" y1="2193.24" x2="602.73" y2="1728.8"/>
+          <polyline class="st2" points="597.54 1725.81 592.34 1722.81 596.08 1718.11"/>
+          <line class="st15" x1="603.58" y1="1708.68" x2="1184.98" y2="977.58"/>
+          <polyline class="st2" points="1188.73 972.86 1192.46 968.16 1197.66 971.16"/>
+          <line class="st10" x1="1208.05" y1="977.16" x2="2012.9" y2="1441.84"/>
+          <polyline class="st2" points="2018.09 1444.84 2023.29 1447.84 2019.55 1452.54"/>
+          <line class="st37" x1="2011.94" y1="1462.12" x2="1817.69" y2="1706.53"/>
+          <polyline class="st2" points="1813.88 1711.33 1810.15 1716.02 1804.36 1714.46"/>
+          <line class="st41" x1="1792.3" y1="1711.19" x2="1557.24" y2="1647.53"/>
+          <polyline class="st2" points="1551.21 1645.9 1545.42 1644.33 1549.15 1639.63"/>
+          <line class="st36" x1="1557.8" y1="1628.72" x2="1570.79" y2="1612.36"/>
+          <polyline class="st2" points="1575.12 1606.9 1578.85 1602.2 1573.05 1600.65"/>
+          <line class="st24" x1="1562.56" y1="1597.84" x2="1462.87" y2="1571.15"/>
+          <polyline class="st2" points="1457.62 1569.75 1451.83 1568.2 1455.55 1563.49"/>
+          <line class="st39" x1="1464.19" y1="1552.59" x2="1494.43" y2="1514.43"/>
+          <polyline class="st2" points="1498.75 1508.98 1502.48 1504.28 1496.68 1502.73"/>
+          <line class="st18" x1="1485.93" y1="1499.84" x2="1405.31" y2="1478.24"/>
+          <polyline class="st2" points="1399.93 1476.8 1394.13 1475.25 1390.4 1479.95"/>
+          <line class="st27" x1="1382.76" y1="1489.58" x2="1187.78" y2="1735.1"/>
+          <path class="st2" d="M1183.96,1739.91l-3.73,4.7c1.93.52,3.86,1.04,5.79,1.56"/>
+          <path class="st22" d="M1197.65,1749.29c93.67,25.16,187.35,50.32,281.02,75.47,56.54,15.18,113.08,30.37,169.61,45.55,10.34,2.78,21.96,4.52,31.9,8.57,13.6,5.54,26.61,15.27,39.3,22.59,49.56,28.62,99.13,57.23,148.69,85.85"/>
+        </g>
+      </g>
+    </g>
+    <g id="Boden">
+      <g>
+        <polygon class="st70" points="2022.76 1632.33 3673.39 2585.32 3673.91 2401.09 2023.29 1448.1 2022.76 1632.33 2022.76 1632.33"/>
+        <g>
+          <polyline class="st2" points="2022.78 1626.33 2022.76 1632.33 2027.96 1635.33"/>
+          <line class="st29" x1="2038.41" y1="1641.36" x2="3662.97" y2="2579.3"/>
+          <polyline class="st2" points="3668.19 2582.32 3673.39 2585.32 3673.41 2579.32"/>
+          <line class="st12" x1="3673.44" y1="2567.83" x2="3673.88" y2="2412.83"/>
+          <polyline class="st2" points="3673.9 2407.09 3673.91 2401.09 3668.72 2398.09"/>
+          <line class="st30" x1="3658.27" y1="2392.06" x2="2033.71" y2="1454.11"/>
+          <polyline class="st2" points="2028.48 1451.1 2023.29 1448.1 2023.27 1454.1"/>
+          <line class="st12" x1="2023.24" y1="1465.58" x2="2022.8" y2="1620.58"/>
+        </g>
+      </g>
+      <g>
+        <polygon class="st70" points="2723.67 3137.23 1422.21 2386.72 1422.73 2202.49 2724.19 2953.01 2723.67 3137.23 2723.67 3137.23"/>
+        <g>
+          <polyline class="st2" points="2723.69 3131.23 2723.67 3137.23 2718.47 3134.24"/>
+          <line class="st33" x1="2708.14" y1="3128.28" x2="1432.57" y2="2392.69"/>
+          <polyline class="st2" points="1427.41 2389.72 1422.21 2386.72 1422.23 2380.72"/>
+          <line class="st12" x1="1422.26" y1="2369.24" x2="1422.7" y2="2214.23"/>
+          <polyline class="st2" points="1422.71 2208.49 1422.73 2202.49 1427.93 2205.49"/>
+          <line class="st34" x1="1438.26" y1="2211.45" x2="2713.83" y2="2947.03"/>
+          <polyline class="st2" points="2718.99 2950.01 2724.19 2953.01 2724.17 2959.01"/>
+          <line class="st12" x1="2724.14" y1="2970.49" x2="2723.7" y2="3125.49"/>
+        </g>
+      </g>
+      <g>
+        <polygon class="st70" points="3673.39 2585.32 2723.67 3137.23 2724.19 2953.01 3673.91 2401.09 3673.39 2585.32 3673.39 2585.32"/>
+        <g>
+          <polyline class="st2" points="3673.41 2579.32 3673.39 2585.32 3668.2 2588.33"/>
+          <line class="st31" x1="3657.88" y1="2594.33" x2="2734.02" y2="3131.22"/>
+          <polyline class="st2" points="2728.86 3134.22 2723.67 3137.23 2723.69 3131.23"/>
+          <line class="st12" x1="2723.72" y1="3119.75" x2="2724.16" y2="2964.75"/>
+          <polyline class="st2" points="2724.17 2959.01 2724.19 2953.01 2729.38 2949.99"/>
+          <line class="st31" x1="2739.7" y1="2943.99" x2="3663.56" y2="2407.1"/>
+          <polyline class="st2" points="3668.72 2404.1 3673.91 2401.09 3673.9 2407.09"/>
+          <line class="st12" x1="3673.86" y1="2418.57" x2="3673.42" y2="2573.57"/>
+        </g>
+      </g>
+      <g>
+        <polygon class="st70" points="3673.91 2401.09 2724.19 2953.01 1422.73 2202.49 1579.9 2005.4 1719.54 2086.02 1878.58 1993.6 1680.49 1879.23 2023.29 1448.1 3673.91 2401.09 3673.91 2401.09"/>
+        <g>
+          <polyline class="st2" points="3668.72 2398.09 3673.91 2401.09 3668.72 2404.1"/>
+          <line class="st31" x1="3658.4" y1="2410.1" x2="2734.54" y2="2946.99"/>
+          <polyline class="st2" points="2729.38 2949.99 2724.19 2953.01 2718.99 2950.01"/>
+          <line class="st34" x1="2708.67" y1="2944.05" x2="1433.09" y2="2208.47"/>
+          <polyline class="st2" points="1427.93 2205.49 1422.73 2202.49 1426.47 2197.8"/>
+          <line class="st43" x1="1433.6" y1="2188.86" x2="1572.6" y2="2014.56"/>
+          <polyline class="st2" points="1576.16 2010.09 1579.9 2005.4 1585.1 2008.4"/>
+          <line class="st19" x1="1595.04" y1="2014.14" x2="1709.38" y2="2080.15"/>
+          <polyline class="st2" points="1714.35 2083.02 1719.54 2086.02 1724.73 2083.01"/>
+          <line class="st3" x1="1734.64" y1="2077.25" x2="1868.44" y2="1999.5"/>
+          <polyline class="st2" points="1873.39 1996.62 1878.58 1993.6 1873.39 1990.6"/>
+          <line class="st8" x1="1863.51" y1="1984.9" x2="1690.62" y2="1885.08"/>
+          <polyline class="st2" points="1685.68 1882.23 1680.49 1879.23 1684.22 1874.54"/>
+          <line class="st16" x1="1691.67" y1="1865.16" x2="2015.83" y2="1457.48"/>
+          <polyline class="st2" points="2019.55 1452.8 2023.29 1448.1 2028.48 1451.1"/>
+          <line class="st30" x1="2038.93" y1="1457.13" x2="3663.49" y2="2395.07"/>
+        </g>
+      </g>
+    </g>
+    <g id="Gang">
+      <g>
+        <polygon class="st70" points="1810.15 1716.02 1680.49 1878.97 1180.22 1744.61 1394.13 1475.25 1502.48 1504.28 1451.83 1568.2 1578.85 1602.2 1545.42 1644.33 1810.15 1716.02 1810.15 1716.02"/>
+        <g>
+          <polyline class="st2" points="1804.35 1714.45 1810.15 1716.02 1806.41 1720.72"/>
+          <line class="st7" x1="1799.22" y1="1729.75" x2="1687.82" y2="1869.76"/>
+          <polyline class="st2" points="1684.22 1874.27 1680.49 1878.97 1674.69 1877.41"/>
+          <line class="st9" x1="1663.33" y1="1874.36" x2="1191.7" y2="1747.69"/>
+          <polyline class="st2" points="1186.02 1746.17 1180.22 1744.61 1183.96 1739.91"/>
+          <line class="st27" x1="1191.6" y1="1730.28" x2="1386.58" y2="1484.76"/>
+          <polyline class="st2" points="1390.4 1479.95 1394.13 1475.25 1399.93 1476.8"/>
+          <line class="st18" x1="1410.68" y1="1479.68" x2="1491.31" y2="1501.28"/>
+          <polyline class="st2" points="1496.68 1502.72 1502.48 1504.28 1498.75 1508.98"/>
+          <line class="st39" x1="1490.11" y1="1519.88" x2="1459.87" y2="1558.04"/>
+          <polyline class="st2" points="1455.55 1563.49 1451.82 1568.2 1457.62 1569.75"/>
+          <line class="st24" x1="1468.11" y1="1572.56" x2="1567.8" y2="1599.25"/>
+          <polyline class="st2" points="1573.05 1600.65 1578.85 1602.2 1575.12 1606.9"/>
+          <line class="st44" x1="1566.46" y1="1617.81" x2="1553.47" y2="1634.18"/>
+          <polyline class="st2" points="1549.15 1639.63 1545.42 1644.33 1551.21 1645.9"/>
+          <line class="st42" x1="1563.26" y1="1649.16" x2="1798.33" y2="1712.82"/>
+        </g>
+      </g>
+    </g>
+    <g id="Lift">
+      <g>
+        <polygon class="st70" points="2173.22 1822.14 1878.58 1993.34 1760.1 1924.93 2054.72 1753.72 2173.22 1822.14 2173.22 1822.14"/>
+        <g>
+          <polyline class="st2" points="2168.03 1819.14 2173.22 1822.14 2168.04 1825.16"/>
+          <line class="st5" x1="2157.51" y1="1831.27" x2="1889.03" y2="1987.27"/>
+          <polyline class="st2" points="1883.77 1990.33 1878.58 1993.34 1873.39 1990.34"/>
+          <line class="st32" x1="1863.56" y1="1984.67" x2="1770.21" y2="1930.77"/>
+          <polyline class="st2" points="1765.3 1927.93 1760.1 1924.93 1765.29 1921.92"/>
+          <line class="st40" x1="1775.82" y1="1915.8" x2="2044.27" y2="1759.79"/>
+          <polyline class="st2" points="2049.54 1756.73 2054.72 1753.72 2059.92 1756.72"/>
+          <line class="st1" x1="2069.75" y1="1762.39" x2="2163.11" y2="1816.3"/>
+        </g>
+      </g>
+    </g>
+    <g id="Lift1" data-name="Lift">
+      <g>
+        <polygon class="st70" points="2672.51 2114.35 2362.34 2294.6 2243.85 2226.2 2554.01 2045.94 2672.51 2114.35 2672.51 2114.35"/>
+        <g>
+          <polyline class="st2" points="2667.31 2111.35 2672.51 2114.35 2667.32 2117.37"/>
+          <line class="st14" x1="2656.98" y1="2123.37" x2="2372.69" y2="2288.59"/>
+          <polyline class="st2" points="2367.52 2291.59 2362.34 2294.6 2357.14 2291.6"/>
+          <line class="st4" x1="2347.31" y1="2285.93" x2="2253.96" y2="2232.04"/>
+          <polyline class="st2" points="2249.04 2229.2 2243.85 2226.2 2249.03 2223.19"/>
+          <line class="st23" x1="2259.37" y1="2217.18" x2="2543.65" y2="2051.96"/>
+          <polyline class="st2" points="2548.82 2048.95 2554.01 2045.94 2559.21 2048.94"/>
+          <line class="st26" x1="2569.03" y1="2054.61" x2="2662.4" y2="2108.52"/>
+        </g>
+      </g>
+    </g>
+    <g id="Lift2" data-name="Lift">
+      <g>
+        <polygon class="st70" points="3160.03 2392.13 2849.86 2572.38 2731.33 2503.94 3041.53 2323.72 3160.03 2392.13 3160.03 2392.13"/>
+        <g>
+          <polyline class="st2" points="3154.84 2389.13 3160.03 2392.13 3154.84 2395.14"/>
+          <line class="st14" x1="3144.51" y1="2401.15" x2="2860.22" y2="2566.36"/>
+          <polyline class="st2" points="2855.05 2569.37 2849.86 2572.38 2844.66 2569.38"/>
+          <line class="st17" x1="2834.83" y1="2563.71" x2="2741.44" y2="2509.78"/>
+          <polyline class="st2" points="2736.52 2506.94 2731.33 2503.94 2736.51 2500.93"/>
+          <line class="st35" x1="2746.85" y1="2494.92" x2="3031.18" y2="2329.73"/>
+          <polyline class="st2" points="3036.35 2326.73 3041.54 2323.72 3046.73 2326.72"/>
+          <line class="st28" x1="3056.56" y1="2332.39" x2="3149.92" y2="2386.29"/>
+        </g>
+      </g>
+    </g>
+    <g>
+      <g>
+        <polygon class="st13" points="727.45 1874.85 725.98 1879.64 725.94 1879.66 727.41 1874.87 727.45 1874.85 727.45 1874.85"/>
+        <path class="st13" d="M722.56,1917.24h.27s-.04.03-.04.03c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.9,10.14,5.93,13.85,10.02l.04-.02c-5.2-5.72-17.22-15.68-25.07-9.57-9.64,7.5-2.08,27.47,3.64,34.94,4.3,5.6,10.93,10.91,18,12.23Z"/>
+        <polygon class="st13" points="722.83 1917.25 722.88 1901.3 722.84 1901.32 722.8 1917.27 722.83 1917.25 722.83 1917.25"/>
+        <polygon class="st13" points="722.88 1901.3 713.42 1895.84 713.38 1895.86 722.84 1901.32 722.88 1901.3 722.88 1901.3"/>
+        <polygon class="st13" points="713.42 1895.84 713.43 1890.28 713.4 1890.31 713.38 1895.86 713.42 1895.84 713.42 1895.84"/>
+        <polygon class="st13" points="713.43 1890.28 728.76 1899.13 728.73 1899.16 713.4 1890.31 713.43 1890.28 713.43 1890.28"/>
+        <path class="st13" d="M728.69,1924.85c-15.94-2.72-29.72-14.91-35.23-29.95-4.75-12.98-4.87-38.31,15.52-32.34,6.9,2.02,13.63,7.01,18.46,12.29l-.04.02c-7.3-7.99-25-20.39-33.84-8.41-10.76,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55l.04-.02h0Z"/>
+        <polygon class="st13" points="728.76 1899.13 728.69 1924.85 728.66 1924.87 728.73 1899.16 728.76 1899.13 728.76 1899.13"/>
+        <path class="st13" d="M728.73,1899.16l-.07,25.71c-15.94-2.72-29.72-14.91-35.23-29.95-4.75-12.98-4.87-38.31,15.52-32.34,6.9,2.02,13.63,7.01,18.46,12.29l-1.47,4.8c-5.27-5.79-17.52-15.88-25.33-9.34-9.29,7.78-1.73,27.47,4.09,34.94,4.29,5.51,11.03,10.93,18.09,12.01l.04-15.95-9.46-5.46.02-5.56,15.33,8.85h0Z"/>
+        <path class="st13" d="M728.69,1924.85l.07-25.71-15.33-8.85-.02,5.56,9.46,5.46-.04,15.95c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.9,10.14,5.93,13.85,10.02l1.47-4.8c-7.3-7.99-25-20.39-33.84-8.41-10.76,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55Z"/>
+      </g>
+      <g>
+        <polygon class="st13" points="648.65 1827.45 654.73 1830.96 654.69 1830.98 648.62 1827.47 648.65 1827.45 648.65 1827.45"/>
+        <path class="st13" d="M676.81,1875.42l.09-31.66-.04.02c-.02,5.95,6.22,54.91-13.17,41.07-14.72-10.51-9.04-39.82-9-53.87l.04-.02c-.04,13.96-4.54,36.7,4.77,49.5,7.62,10.48,17.49,8.23,17.31-5.03h0Z"/>
+        <polygon class="st13" points="676.9 1843.76 682.98 1847.27 682.94 1847.29 676.86 1843.78 676.9 1843.76 676.9 1843.76"/>
+        <path class="st13" d="M682.98,1847.27c-.02,7.7,6.84,46.99-9.97,47.02-10.88.02-20-13.1-22.71-22.16-4.17-13.97-1.69-30.44-1.65-44.68l-.04.02c-.05,18.12-4.74,43.27,9.19,58.17,5.67,6.07,17.47,13.56,23.15,3.9,6.26-10.62,1.95-31.11,1.98-42.26l.04-.02h0Z"/>
+        <path class="st13" d="M682.94,1847.29c-.02,7.7,6.84,46.99-9.97,47.02-10.88.02-20-13.1-22.71-22.16-4.17-13.97-1.69-30.44-1.65-44.68l6.08,3.51c-.04,14.07-5.71,43.33,9,53.87,19.37,13.87,13.15-35.14,13.17-41.07l6.08,3.51h0Z"/>
+        <path class="st13" d="M682.89,1878.45l.09-31.19-6.08-3.51c-.02,5.95,6.22,54.91-13.17,41.07-14.72-10.51-9.04-39.82-9-53.87l-6.08-3.51c-.05,17.12-4.3,40.37,6.93,55.46,4.13,5.55,14.69,14.82,22.23,10.39,4.68-2.75,5.11-10.11,5.07-14.85h0Z"/>
+      </g>
+      <g class="st72">
+        <g class="st61">
+          <g class="st45">
+            
+          </g>
+        </g>
+      </g>
+    </g>
+      <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 643.9, 1875.9)">UG</text>
   </g>
-  <g class="iso-floor" data-iso-floor="EG">
-<g transform="translate(-415, -340)">
-
-<g transform="translate(415, 340)">
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 599.6 755.0 L 185.2 994.2 L -414.9 239.6 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1006.8, 1961.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 600.1 754.6 L 600.6 938.9 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 591.8, 1721.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 414.4 -239.2 L 414.9 -55.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1191.9, 967.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -414.9 239.6 L -414.4 423.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1006.8, 1961.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -599.6 -755.0 L -599.0 -570.7 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1606.3, 1206.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -599.6 -755.0 L -1014.5 -515.4 L -414.4 239.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1606.8, 1022.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 230.3 289.7 L 9.5 417.2 L -265.0 71.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1792.5, 1736.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 274.6 346.0 L 275.1 530.2 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1527.4, 1665.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 220.8 -127.5 L 221.3 56.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1802.0, 1319.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -265.0 71.2 L -264.5 255.4 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1792.5, 1736.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -230.3 -289.7 L -229.8 -105.5 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2022.8, 1446.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -230.3 -289.7 L -495.4 -218.5 L -220.8 127.5 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2023.3, 1262.5)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -70.2 -88.4 L -336.3 -18.0 L -377.7 -70.1 L -612.8 -7.1 L -186.1 530.1 L 9.5 417.2 L -265.0 71.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1793.0, 1552.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 300.1 376.3 L 33.9 446.7 L -7.5 394.6 L -242.5 457.6 L -415.4 239.9 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1422.2, 2201.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 172.9 217.8 L 173.5 402.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1006.8, 1961.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 235.0 -63.0 L 235.5 121.2 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1179.7, 1743.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 41.4 52.1 L 42.0 236.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1414.7, 1806.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 266.1 -70.4 L 266.7 113.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1456.1, 1754.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -300.1 -376.3 L -299.5 -192.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.3, 1824.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -415.4 239.9 L -414.9 424.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1422.2, 2201.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1722.8 1640.5 L 1422.7 2016.9 L 1007.3 1777.0 L 1180.2 1559.2 L 1415.2 1622.2 L 1456.7 1570.1 L 1689.0 1631.6 C 1700.3 1634.6 1711.5 1637.5 1722.8 1640.5 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -300.1 -376.3 L -715.5 -136.5 L -542.6 81.3 L -307.6 18.3 L -266.1 70.4 L -33.8 8.9 C -22.5 6.0 -11.3 3.0 0.0 -0.0 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.8, 1640.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 476.1 276.7 L 176.5 449.7 L -124.0 71.6 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1846.3, 1896.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 300.5 378.1 L 301.0 562.3 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.3, 1824.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 299.6 -173.0 L 300.2 11.2 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2022.8, 1446.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -124.0 71.6 L -123.5 255.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1846.3, 1896.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -476.1 -276.7 L -475.6 -92.5 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2322.4, 1619.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -476.1 -276.7 L -600.1 -205.1 L -299.6 173.0 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2322.9, 1435.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 248.4 144.3 L 2.6 286.2 L -555.9 -38.4 L -674.4 30.1 L -592.0 78.0 L -716.0 149.6 L -1016.1 -226.7 L -702.1 -408.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2438.3, 1974.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 558.5 324.6 L 559.1 508.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1882.4, 2012.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -226.8 -131.8 L -226.3 52.4 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2314.6, 1902.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2087.8, 2034.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -475.3 -276.2 L -474.8 -92.0 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2211.5, 2106.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 300.1 376.3 L 300.6 560.6 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1422.2, 2201.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 124.0 -71.6 L 124.6 112.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.3, 1824.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -82.4 -47.9 L -81.9 136.3 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1846.3, 1896.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 118.6 -68.4 L 119.1 115.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1763.9, 1944.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 245.7 -141.9 L 246.2 42.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2441.0, 1688.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -123.7 71.4 L -123.2 255.7 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2438.3, 1974.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2686.7, 1830.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -314.0 181.3 L -313.5 365.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1736.2, 2382.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -372.1 -72.9 L -598.9 -204.7 L -475.2 -276.1 L -950.5 -552.4 L -1264.5 -371.1 L -964.4 5.2 L -840.4 -66.4 L -922.8 -114.3 L -804.3 -182.7 L -245.7 141.9 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2687.2, 1645.8)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -558.5 -324.6 L -677.1 -256.1 L -118.6 68.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2441.5, 1503.9)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2438.8, 1790.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 391.9 227.8 L 273.4 296.2 L 831.9 620.8 L 712.7 689.6 L -237.7 137.3 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1973.9, 2519.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 950.5 552.4 L 951.0 736.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1736.2, 2382.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 119.2 -68.8 L 119.7 115.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2686.7, 1830.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -558.5 -324.6 L -558.0 -140.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2805.9, 1898.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 118.6 -68.5 L 119.1 115.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2247.3, 2223.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -237.7 137.3 L -237.2 321.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1973.9, 2519.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -391.9 -227.8 L -391.4 -43.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2365.9, 2291.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -391.9 -227.8 L -629.7 -90.5 L 320.8 461.8 L 440.0 393.0 L -118.6 68.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2366.4, 2107.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -558.5 -324.6 L -677.1 -256.1 L -118.6 68.5 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2924.9, 1783.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 950.5 552.4 L 951.0 736.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1973.9, 2519.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 248.4 144.3 L 2.6 286.2 L -947.8 -266.2 L -702.1 -408.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2921.8, 2253.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2571.2, 2313.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -475.3 -276.2 L -474.8 -92.0 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2695.0, 2385.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -226.3 52.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2798.0, 2182.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 245.7 -141.9 L 246.2 42.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2924.4, 1967.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -123.7 71.4 L -123.2 255.7 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2921.8, 2253.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3170.1, 2109.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -245.7 141.9 L -245.2 326.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2219.7, 2661.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -372.1 -72.9 L -598.9 -204.7 L -475.2 -276.1 L -950.5 -552.4 L -1196.2 -410.5 L -245.7 141.9 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3170.7, 1924.9)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2922.3, 2069.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 391.9 227.8 L 273.4 296.2 L 831.9 620.8 L 712.7 689.6 L -237.7 137.3 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2457.4, 2798.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 950.5 552.4 L 951.0 736.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2219.7, 2661.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 119.2 -68.8 L 119.7 115.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3170.1, 2109.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -558.5 -324.6 L -558.0 -140.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3289.3, 2177.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 118.6 -68.5 L 119.1 115.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2730.8, 2502.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -237.7 137.3 L -237.2 321.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2457.4, 2798.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -391.9 -227.8 L -391.4 -43.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2849.3, 2571.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -391.9 -227.8 L -629.7 -90.5 L 320.8 461.8 L 440.0 393.0 L -118.6 68.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2849.9, 2386.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -558.5 -324.6 L -677.1 -256.1 L -118.6 68.5 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3408.4, 2062.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 2723.7 2951.6 L 3673.4 2399.7 L 3407.9 2246.4 L 2457.4 2798.7 C 2528.6 2839.6 2599.8 2880.5 2670.9 2921.3 C 2688.5 2931.4 2706.1 2941.5 2723.7 2951.6 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 949.7 551.9 L 684.2 705.2 L -266.3 152.8 C -195.1 112.0 -123.9 71.1 -52.7 30.3 C -35.2 20.2 -17.6 10.1 -0.0 -0.0 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2723.7, 2951.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 950.5 552.4 L 951.0 736.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2457.4, 2798.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 265.5 -153.3 L 266.0 30.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3407.9, 2246.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 C -71.2 40.9 -142.4 81.8 -213.7 122.6 C -231.2 132.7 -248.7 142.8 -266.3 152.8 L -265.8 337.1 C -194.6 296.2 -123.4 255.4 -52.2 214.5 C -34.6 204.4 -17.1 194.3 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2723.7, 2951.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -949.7 -551.9 L -949.2 -367.7 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3673.4, 2399.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -949.7 -551.9 C -1020.9 -511.0 -1092.2 -470.2 -1163.4 -429.3 C -1180.9 -419.2 -1198.5 -409.1 -1216.0 -399.1 L -265.5 153.3 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3673.9, 2215.4)"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</g>
-
-</g>
-    <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 648.3, 1695.1)">EG</text>
+  <g class="iso-floor" data-iso-floor="EG" id="EG">
+    <g id="Gewerbe1" data-name="Gewerbe" data-iso-part="gewerbe">
+      <polygon class="st48 iso-face" points="1006.76 1961.22 1606.32 1206.25 1191.94 967.01 591.82 1721.65 1006.76 1961.22 1006.76 1961.22"/>
+      <polygon class="st48 iso-face" points="591.82 1721.65 1191.94 967.01 1192.46 782.78 592.34 1537.43 591.82 1721.65 591.82 1721.65"/>
+      <polygon class="st48 iso-face" points="1191.94 967.01 1606.32 1206.25 1606.84 1022.02 1192.46 782.78 1191.94 967.01 1191.94 967.01"/>
+      <polygon class="st48 iso-face" points="1006.76 1961.22 591.82 1721.65 592.34 1537.43 1007.28 1776.99 1006.76 1961.22 1006.76 1961.22"/>
+      <polygon class="st48 iso-face" points="1606.32 1206.25 1006.76 1961.22 1007.28 1776.99 1606.84 1022.02 1606.32 1206.25 1606.32 1206.25"/>
+      <polygon class="st48 iso-face" points="1606.84 1022.02 1007.28 1776.99 592.34 1537.43 1192.46 782.78 1606.84 1022.02 1606.84 1022.02"/>
+    </g>
+    <g id="V1">
+      <polygon class="st48 iso-face" points="1792.46 1736.36 2022.76 1446.68 1801.97 1319.21 1527.41 1665.21 1792.46 1736.36 1792.46 1736.36"/>
+      <polygon class="st48 iso-face" points="1527.41 1665.21 1801.97 1319.21 1802.49 1134.98 1527.93 1480.99 1527.41 1665.21 1527.41 1665.21"/>
+      <polygon class="st48 iso-face" points="1801.97 1319.21 2022.76 1446.68 2023.29 1262.46 1802.49 1134.98 1801.97 1319.21 1801.97 1319.21"/>
+      <polygon class="st48 iso-face" points="1792.46 1736.36 1527.41 1665.21 1527.93 1480.99 1792.98 1552.14 1792.46 1736.36 1792.46 1736.36"/>
+      <polygon class="st48 iso-face" points="2022.76 1446.68 1792.46 1736.36 1792.98 1552.14 2023.29 1262.46 2022.76 1446.68 2022.76 1446.68"/>
+      <polygon class="st48 iso-face" points="2023.29 1262.46 1792.98 1552.14 1527.93 1480.99 1802.49 1134.98 2023.29 1262.46 2023.29 1262.46"/>
+    </g>
+    <g id="Gang1" data-name="Gang">
+      <polygon class="st47 iso-top" points="1792.98 1552.14 1722.8 1640.52 1456.67 1570.13 1415.23 1622.25 1180.23 1559.23 1606.84 1022.02 1802.49 1134.98 1527.93 1480.99 1792.98 1552.14 1792.98 1552.14"/>
+    </g>
+    <g id="V2">
+      <polygon class="st48 iso-face" points="1422.21 2201.08 1722.27 1824.75 1456.14 1754.36 1414.71 1806.47 1179.7 1743.46 1006.76 1961.22 1422.21 2201.08 1422.21 2201.08"/>
+      <polygon class="st48 iso-face" points="1006.76 1961.22 1179.7 1743.46 1180.23 1559.23 1007.28 1776.99 1006.76 1961.22 1006.76 1961.22"/>
+      <polygon class="st48 iso-face" points="1179.7 1743.46 1414.71 1806.47 1415.23 1622.25 1180.23 1559.23 1179.7 1743.46 1179.7 1743.46"/>
+      <polygon class="st48 iso-face" points="1414.71 1806.47 1456.14 1754.36 1456.67 1570.13 1415.23 1622.25 1414.71 1806.47 1414.71 1806.47"/>
+      <polygon class="st48 iso-face" points="1456.14 1754.36 1722.27 1824.75 1722.8 1640.52 1456.67 1570.13 1456.14 1754.36 1456.14 1754.36"/>
+      <polygon class="st48 iso-face" points="1722.27 1824.75 1422.21 2201.08 1422.73 2016.85 1722.8 1640.52 1722.27 1824.75 1722.27 1824.75"/>
+      <polygon class="st48 iso-face" points="1422.21 2201.08 1006.76 1961.22 1007.28 1776.99 1422.73 2016.85 1422.21 2201.08 1422.21 2201.08"/>
+      <path class="st48 iso-face" d="M1722.8,1640.52l-300.06,376.33-415.45-239.86,172.94-217.76,235.01,63.02,41.43-52.11c77.45,20.48,154.89,40.97,232.34,61.45,11.26,2.98,22.53,5.96,33.79,8.94Z"/>
+    </g>
+    <g id="HA2">
+      <polygon class="st48 iso-face" points="1846.3 1896.36 2322.4 1619.68 2022.76 1446.68 1722.27 1824.75 1846.3 1896.36 1846.3 1896.36"/>
+      <polygon class="st48 iso-face" points="1722.27 1824.75 2022.76 1446.68 2023.29 1262.46 1722.79 1640.52 1722.27 1824.75 1722.27 1824.75"/>
+      <polygon class="st48 iso-face" points="2022.76 1446.68 2322.4 1619.68 2322.92 1435.45 2023.29 1262.46 2022.76 1446.68 2022.76 1446.68"/>
+      <polygon class="st48 iso-face" points="1846.3 1896.36 1722.27 1824.75 1722.79 1640.52 1846.83 1712.13 1846.3 1896.36 1846.3 1896.36"/>
+      <polygon class="st48 iso-face" points="2322.4 1619.68 1846.3 1896.36 1846.83 1712.13 2322.92 1435.45 2322.4 1619.68 2322.4 1619.68"/>
+      <polygon class="st48 iso-face" points="2322.92 1435.45 1846.83 1712.13 1722.79 1640.52 2023.29 1262.46 2322.92 1435.45 2322.92 1435.45"/>
+    </g>
+    <g id="HA1">
+      <polygon class="st48 iso-face" points="2438.31 1974.33 2686.68 1830 2440.96 1688.13 1882.42 2012.72 1763.86 1944.27 1846.3 1896.36 1722.27 1824.75 1422.21 2201.08 1736.2 2382.36 2211.51 2106.14 2087.77 2034.69 2314.57 1902.89 2438.31 1974.33 2438.31 1974.33"/>
+      <polygon class="st48 iso-face" points="1882.42 2012.72 2440.96 1688.13 2441.48 1503.9 1882.94 1828.49 1882.42 2012.72 1882.42 2012.72"/>
+      <polygon class="st48 iso-face" points="2314.57 1902.89 2087.77 2034.69 2088.29 1850.47 2315.09 1718.66 2314.57 1902.89 2314.57 1902.89"/>
+      <polygon class="st48 iso-face" points="2087.77 2034.69 2211.51 2106.14 2212.03 1921.91 2088.29 1850.47 2087.77 2034.69 2087.77 2034.69"/>
+      <polygon class="st48 iso-face" points="2211.51 2106.14 1736.2 2382.36 1736.72 2198.13 2212.03 1921.91 2211.51 2106.14 2211.51 2106.14"/>
+      <polygon class="st48 iso-face" points="1422.21 2201.08 1722.27 1824.75 1722.8 1640.52 1422.73 2016.85 1422.21 2201.08 1422.21 2201.08"/>
+      <polygon class="st48 iso-face" points="1722.27 1824.75 1846.3 1896.36 1846.83 1712.13 1722.8 1640.52 1722.27 1824.75 1722.27 1824.75"/>
+      <polygon class="st48 iso-face" points="1846.3 1896.36 1763.86 1944.27 1764.38 1760.04 1846.83 1712.13 1846.3 1896.36 1846.3 1896.36"/>
+      <polygon class="st48 iso-face" points="1763.86 1944.27 1882.42 2012.72 1882.94 1828.49 1764.38 1760.04 1763.86 1944.27 1763.86 1944.27"/>
+      <polygon class="st48 iso-face" points="2440.96 1688.13 2686.68 1830 2687.2 1645.77 2441.48 1503.9 2440.96 1688.13 2440.96 1688.13"/>
+      <polygon class="st48 iso-face" points="2438.31 1974.33 2314.57 1902.89 2315.09 1718.66 2438.83 1790.11 2438.31 1974.33 2438.31 1974.33"/>
+      <polygon class="st48 iso-face" points="2686.68 1830 2438.31 1974.33 2438.83 1790.11 2687.2 1645.77 2686.68 1830 2686.68 1830"/>
+      <polygon class="st48 iso-face" points="1736.2 2382.36 1422.21 2201.08 1422.73 2016.85 1736.72 2198.13 1736.2 2382.36 1736.2 2382.36"/>
+      <polygon class="st48 iso-face" points="2687.2 1645.77 2438.83 1790.11 2315.09 1718.66 2088.29 1850.47 2212.03 1921.91 1736.72 2198.13 1422.73 2016.85 1722.8 1640.52 1846.83 1712.13 1764.38 1760.04 1882.94 1828.49 2441.48 1503.9 2687.2 1645.77 2687.2 1645.77"/>
+    </g>
+    <g id="Gang2" data-name="Gang">
+      <polygon class="st47 iso-top" points="2441.48 1503.9 1882.94 1828.49 1764.38 1760.04 2322.92 1435.45 2441.48 1503.9 2441.48 1503.9"/>
+    </g>
+    <g id="Lichthof">
+      <polygon class="st47 iso-top" points="2438.83 1790.11 2212.03 1921.91 2088.29 1850.47 2315.09 1718.66 2438.83 1790.11 2438.83 1790.11"/>
+    </g>
+    <g id="HB2">
+      <polygon class="st48 iso-face" points="1973.93 2519.62 2365.88 2291.84 2247.32 2223.39 2805.86 1898.81 2686.68 1830 1736.2 2382.36 1973.93 2519.62 1973.93 2519.62"/>
+      <polygon class="st48 iso-face" points="1736.2 2382.36 2686.68 1830 2687.2 1645.77 1736.72 2198.13 1736.2 2382.36 1736.2 2382.36"/>
+      <polygon class="st48 iso-face" points="2686.68 1830 2805.86 1898.81 2806.38 1714.58 2687.2 1645.77 2686.68 1830 2686.68 1830"/>
+      <polygon class="st48 iso-face" points="2805.86 1898.81 2247.32 2223.39 2247.84 2039.17 2806.38 1714.58 2805.86 1898.81 2805.86 1898.81"/>
+      <polygon class="st48 iso-face" points="2247.32 2223.39 2365.88 2291.84 2366.4 2107.62 2247.84 2039.17 2247.32 2223.39 2247.32 2223.39"/>
+      <polygon class="st48 iso-face" points="1973.93 2519.62 1736.2 2382.36 1736.72 2198.13 1974.45 2335.39 1973.93 2519.62 1973.93 2519.62"/>
+      <polygon class="st48 iso-face" points="2365.88 2291.84 1973.93 2519.62 1974.45 2335.39 2366.4 2107.62 2365.88 2291.84 2365.88 2291.84"/>
+      <polygon class="st48 iso-face" points="2366.4 2107.62 1974.45 2335.39 1736.72 2198.13 2687.2 1645.77 2806.38 1714.58 2247.84 2039.17 2366.4 2107.62 2366.4 2107.62"/>
+    </g>
+    <g id="Gang3" data-name="Gang">
+      <polygon class="st47 iso-top" points="2924.94 1783.03 2366.4 2107.62 2247.84 2039.17 2806.38 1714.58 2924.94 1783.03 2924.94 1783.03"/>
+    </g>
+    <g id="HB1">
+      <polygon class="st48 iso-face" points="1973.93 2519.62 2924.42 1967.25 2924.94 1783.03 1974.45 2335.39 1973.93 2519.62 1973.93 2519.62"/>
+      <polygon class="st48 iso-face" points="2921.77 2253.46 3170.14 2109.12 2924.42 1967.25 1973.93 2519.62 2219.65 2661.48 2694.97 2385.26 2571.23 2313.82 2798.03 2182.02 2921.77 2253.46 2921.77 2253.46"/>
+      <polygon class="st48 iso-face" points="2571.23 2313.82 2694.97 2385.26 2695.49 2201.03 2571.75 2129.59 2571.23 2313.82 2571.23 2313.82"/>
+      <polygon class="st48 iso-face" points="2694.97 2385.26 2219.65 2661.48 2220.18 2477.26 2695.49 2201.03 2694.97 2385.26 2694.97 2385.26"/>
+      <polygon class="st48 iso-face" points="2798.03 2182.02 2571.23 2313.82 2571.75 2129.59 2798.55 1997.79 2798.03 2182.02 2798.03 2182.02"/>
+      <polygon class="st48 iso-face" points="2924.42 1967.25 3170.14 2109.12 3170.66 1924.9 2924.94 1783.03 2924.42 1967.25 2924.42 1967.25"/>
+      <polygon class="st48 iso-face" points="2921.77 2253.46 2798.03 2182.02 2798.55 1997.79 2922.29 2069.23 2921.77 2253.46 2921.77 2253.46"/>
+      <polygon class="st48 iso-face" points="3170.14 2109.12 2921.77 2253.46 2922.29 2069.23 3170.66 1924.9 3170.14 2109.12 3170.14 2109.12"/>
+      <polygon class="st48 iso-face" points="2219.65 2661.48 1973.93 2519.62 1974.45 2335.39 2220.18 2477.26 2219.65 2661.48 2219.65 2661.48"/>
+      <polygon class="st48 iso-face" points="3170.66 1924.9 2922.29 2069.23 2798.55 1997.79 2571.75 2129.59 2695.49 2201.03 2220.18 2477.26 1974.45 2335.39 2924.94 1783.03 3170.66 1924.9 3170.66 1924.9"/>
+    </g>
+    <g id="Lichthof1" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2922.29 2069.23 2695.49 2201.03 2571.75 2129.59 2798.55 1997.79 2922.29 2069.23 2922.29 2069.23"/>
+    </g>
+    <g id="HC2">
+      <polygon class="st48 iso-face" points="2457.39 2798.74 2849.34 2570.97 2730.78 2502.52 3289.32 2177.93 3170.14 2109.12 2219.65 2661.48 2457.39 2798.74 2457.39 2798.74"/>
+      <polygon class="st48 iso-face" points="2219.65 2661.48 3170.14 2109.12 3170.66 1924.9 2220.18 2477.26 2219.65 2661.48 2219.65 2661.48"/>
+      <polygon class="st48 iso-face" points="3170.14 2109.12 3289.32 2177.93 3289.84 1993.7 3170.66 1924.9 3170.14 2109.12 3170.14 2109.12"/>
+      <polygon class="st48 iso-face" points="3289.32 2177.93 2730.78 2502.52 2731.3 2318.29 3289.84 1993.7 3289.32 2177.93 3289.32 2177.93"/>
+      <polygon class="st48 iso-face" points="2730.78 2502.52 2849.34 2570.97 2849.86 2386.74 2731.3 2318.29 2730.78 2502.52 2730.78 2502.52"/>
+      <polygon class="st48 iso-face" points="2457.39 2798.74 2219.65 2661.48 2220.18 2477.26 2457.91 2614.51 2457.39 2798.74 2457.39 2798.74"/>
+      <polygon class="st48 iso-face" points="2849.34 2570.97 2457.39 2798.74 2457.91 2614.51 2849.86 2386.74 2849.34 2570.97 2849.34 2570.97"/>
+      <polygon class="st48 iso-face" points="2849.86 2386.74 2457.91 2614.51 2220.18 2477.26 3170.66 1924.9 3289.84 1993.7 2731.3 2318.29 2849.86 2386.74 2849.86 2386.74"/>
+    </g>
+    <g id="Gang4" data-name="Gang">
+      <polygon class="st47 iso-top" points="3408.4 2062.15 2849.86 2386.74 2731.3 2318.29 3289.84 1993.7 3408.4 2062.15 3408.4 2062.15"/>
+    </g>
+    <g id="HC1">
+      <path class="st48 iso-face" d="M2723.67,2951.59l949.72-551.92-265.51-153.29-950.49,552.36c71.18,40.86,142.36,81.71,213.54,122.57,17.58,10.09,35.16,20.18,52.74,30.28h0Z"/>
+      <polygon class="st48 iso-face" points="2457.39 2798.74 3407.88 2246.38 3408.4 2062.15 2457.91 2614.51 2457.39 2798.74 2457.39 2798.74"/>
+      <polygon class="st48 iso-face" points="3407.88 2246.38 3673.39 2399.67 3673.91 2215.45 3408.4 2062.15 3407.88 2246.38 3407.88 2246.38"/>
+      <path class="st48 iso-face" d="M2723.67,2951.59c-71.2-40.92-142.44-81.76-213.65-122.64-17.54-10.07-35.08-20.14-52.62-30.21l.52-184.23c71.18,40.86,142.36,81.71,213.54,122.57,17.58,10.09,35.16,20.18,52.74,30.28l-.52,184.23h0Z"/>
+      <polygon class="st48 iso-face" points="3673.39 2399.67 2723.67 2951.59 2724.19 2767.37 3673.91 2215.45 3673.39 2399.67 3673.39 2399.67"/>
+      <path class="st48 iso-face" d="M3673.91,2215.45l-949.72,551.92c-71.2-40.92-142.44-81.76-213.65-122.64-17.54-10.07-35.08-20.14-52.62-30.21l950.49-552.36,265.51,153.29h0Z"/>
+    </g>
+    <g>
+      <g>
+        <polygon class="st13" points="716.48 1685.22 715.02 1690.02 714.98 1690.04 716.45 1685.24 716.48 1685.22 716.48 1685.22"/>
+        <path class="st13" d="M711.59,1727.62h.27s-.04.03-.04.03c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.9,10.14,5.93,13.85,10.02l.04-.02c-5.2-5.71-17.22-15.68-25.07-9.57-9.64,7.5-2.09,27.47,3.64,34.94,4.3,5.6,10.93,10.91,18,12.23Z"/>
+        <polygon class="st13" points="711.87 1727.63 711.91 1711.68 711.88 1711.7 711.83 1727.65 711.87 1727.63 711.87 1727.63"/>
+        <polygon class="st13" points="711.91 1711.68 702.45 1706.21 702.42 1706.23 711.88 1711.7 711.91 1711.68 711.91 1711.68"/>
+        <polygon class="st13" points="702.45 1706.21 702.47 1700.66 702.43 1700.68 702.42 1706.23 702.45 1706.21 702.45 1706.21"/>
+        <polygon class="st13" points="702.47 1700.66 717.8 1709.51 717.76 1709.53 702.43 1700.68 702.47 1700.66 702.47 1700.66"/>
+        <path class="st13" d="M717.73,1735.22c-15.94-2.72-29.72-14.92-35.23-29.96-4.75-12.98-4.87-38.31,15.53-32.34,6.9,2.02,13.63,7.01,18.46,12.29l-.04.02c-7.3-7.99-25-20.39-33.84-8.41-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55l.04-.02h0Z"/>
+        <polygon class="st13" points="717.8 1709.51 717.73 1735.22 717.69 1735.24 717.76 1709.53 717.8 1709.51 717.8 1709.51"/>
+        <path class="st13" d="M717.76,1709.53l-.07,25.71c-15.94-2.72-29.72-14.92-35.23-29.96-4.75-12.98-4.87-38.31,15.53-32.34,6.9,2.02,13.63,7.01,18.46,12.29l-1.47,4.8c-5.27-5.79-17.52-15.88-25.33-9.34-9.29,7.78-1.73,27.47,4.09,34.94,4.29,5.51,11.03,10.93,18.09,12.01l.04-15.95-9.46-5.46.02-5.56,15.33,8.85h0Z"/>
+        <path class="st13" d="M717.73,1735.22l.07-25.71-15.33-8.85-.02,5.56,9.46,5.46-.04,15.95c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.9,10.14,5.93,13.85,10.02l1.47-4.8c-7.3-8-25-20.39-33.84-8.41-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55Z"/>
+      </g>
+      <g>
+        <polygon class="st13" points="648.31 1697.53 648.46 1644.04 648.43 1644.06 648.28 1697.55 648.31 1697.53 648.31 1697.53"/>
+        <polygon class="st13" points="648.46 1644.04 673.6 1658.56 673.57 1658.58 648.43 1644.06 648.46 1644.04 648.46 1644.04"/>
+        <polygon class="st13" points="673.6 1658.56 673.58 1664.35 673.55 1664.37 673.57 1658.58 673.6 1658.56 673.6 1658.56"/>
+        <polygon class="st13" points="673.58 1664.35 654.45 1653.31 654.42 1653.33 673.55 1664.37 673.58 1664.35 673.58 1664.35"/>
+        <polygon class="st13" points="654.45 1653.31 654.41 1670.21 654.37 1670.23 654.42 1653.33 654.45 1653.31 654.45 1653.31"/>
+        <polygon class="st13" points="654.41 1670.21 672.5 1680.66 672.47 1680.68 654.37 1670.23 654.41 1670.21 654.41 1670.21"/>
+        <polygon class="st13" points="672.5 1680.66 672.48 1686.37 672.45 1686.39 672.47 1680.68 672.5 1680.66 672.5 1680.66"/>
+        <polygon class="st13" points="672.48 1686.37 654.39 1675.92 654.35 1675.94 672.45 1686.39 672.48 1686.37 672.48 1686.37"/>
+        <polygon class="st13" points="654.39 1675.92 654.34 1695.21 654.3 1695.23 654.35 1675.94 654.39 1675.92 654.39 1675.92"/>
+        <polygon class="st13" points="654.34 1695.21 674.5 1706.85 674.47 1706.87 654.3 1695.23 654.34 1695.21 654.34 1695.21"/>
+        <polygon class="st13" points="674.49 1712.64 648.31 1697.53 648.28 1697.55 674.45 1712.66 674.49 1712.64 674.49 1712.64"/>
+        <polygon class="st13" points="674.5 1706.85 674.49 1712.64 674.45 1712.66 674.47 1706.87 674.5 1706.85 674.5 1706.85"/>
+        <polygon class="st13" points="674.47 1706.87 674.45 1712.66 648.28 1697.55 648.43 1644.06 673.57 1658.58 673.55 1664.37 654.42 1653.33 654.37 1670.23 672.47 1680.68 672.45 1686.39 654.35 1675.94 654.3 1695.23 674.47 1706.87 674.47 1706.87"/>
+        <polygon class="st13" points="674.49 1712.64 674.5 1706.85 654.34 1695.21 654.39 1675.92 672.48 1686.37 672.5 1680.66 654.41 1670.21 654.45 1653.31 673.58 1664.35 673.6 1658.56 648.46 1644.04 648.31 1697.53 674.49 1712.64 674.49 1712.64"/>
+      </g>
+      <g class="st62">
+        <g class="st63">
+          <g class="st55">
+            
+          </g>
+        </g>
+      </g>
+    </g>
+      <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 648.3, 1695.1)">EG</text>
   </g>
-  <g class="iso-floor" data-iso-floor="1.OG">
-<g transform="translate(-415, -340)">
-
-<g transform="translate(415, 340)">
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1305.6 1401.4 L 1606.8 1022.0 L 1192.5 782.8 L 820.8 1250.1 L 1091.9 1322.2 L 1077.6 1340.3 C 1153.6 1360.6 1229.6 1381.0 1305.6 1401.4 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 301.2 379.3 L -113.2 618.6 L -484.8 151.2 L -213.7 79.2 L -228.0 61.1 C -152.0 40.7 -76.0 20.4 -0.0 0.0 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1305.6, 1401.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 14.3 18.1 L 14.8 202.3 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1077.6, 1340.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 371.7 467.4 L 372.2 651.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 820.8, 1250.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 414.4 -239.2 L 414.9 -55.0 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1192.5, 782.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -301.2 -379.3 L -300.7 -195.1 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1606.8, 1022.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -271.1 72.0 L -270.6 256.3 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1091.9, 1322.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -228.0 61.1 L -227.5 245.3 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1305.6, 1401.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -301.2 -379.3 L -529.2 -318.2 L -514.9 -300.1 L -786.0 -228.1 L -414.4 239.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1607.4, 837.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 298.3 375.6 L 70.3 436.7 L 84.6 454.8 L -186.5 526.9 L -414.9 239.6 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1007.3, 1777.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 228.5 287.3 L 229.0 471.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 592.3, 1537.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 228.0 -61.1 L 228.5 123.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1077.6, 1340.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -414.9 239.6 L -414.4 423.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1007.3, 1777.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -298.3 -375.6 L -297.8 -191.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1305.6, 1401.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1306.1 1217.1 L 1007.8 1592.8 L 592.9 1353.2 L 821.3 1065.9 L 1092.4 1137.9 L 1078.1 1156.0 C 1154.1 1176.4 1230.1 1196.8 1306.1 1217.1 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -298.3 -375.6 L -713.3 -136.1 L -484.8 151.2 L -213.7 79.2 L -228.0 61.1 C -152.0 40.7 -76.0 20.4 0.0 0.0 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.1, 1217.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 230.3 289.7 L -186.2 530.1 L -398.9 262.3 L -290.5 233.3 L -341.2 169.3 L -214.2 135.3 L -265.1 71.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1793.0, 1552.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 50.9 64.2 L 51.4 248.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1527.9, 1481.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 50.7 63.9 L 51.2 248.1 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1451.8, 1382.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 212.7 267.8 L 213.2 452.1 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1394.1, 1289.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 416.4 -240.4 L 417.0 -56.2 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1606.8, 1022.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -108.3 29.0 L -107.8 213.3 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1502.5, 1318.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -127.0 34.0 L -126.5 218.2 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1578.8, 1416.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -265.1 71.2 L -264.6 255.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1793.0, 1552.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -230.3 -289.7 L -229.7 -105.5 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2023.3, 1262.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -230.3 -289.7 L -495.4 -218.5 L -444.4 -154.4 L -571.5 -120.4 L -520.8 -56.4 L -629.2 -27.4 L -416.4 240.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2023.8, 1078.2)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -70.2 -88.4 L -336.4 -18.0 L -377.8 -70.1 L -612.8 -7.1 L -398.9 262.3 L -290.6 233.3 L -341.2 169.3 L -214.2 135.3 L -265.1 71.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1793.6, 1367.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 300.1 376.3 L 33.9 446.7 L -7.5 394.6 L -242.5 457.6 L -415.4 239.9 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1422.7, 2016.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 172.9 217.8 L 173.5 402.0 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1007.3, 1777.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 235.0 -63.0 L 235.5 121.2 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1180.2, 1559.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 41.4 52.1 L 42.0 236.3 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1415.2, 1622.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 266.1 -70.4 L 266.7 113.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1456.7, 1570.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -415.4 239.9 L -414.9 424.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1422.7, 2016.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -300.1 -376.3 L -299.5 -192.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.8, 1640.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1723.3 1456.3 L 1423.3 1832.6 L 1007.8 1592.8 L 1180.7 1375.0 L 1415.8 1438.0 L 1457.2 1385.9 C 1534.6 1406.4 1612.1 1426.9 1689.5 1447.4 C 1700.8 1450.3 1712.1 1453.3 1723.3 1456.3 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -300.1 -376.3 L -715.5 -136.5 L -542.6 81.3 L -307.6 18.3 L -266.1 70.4 C -188.7 49.9 -111.2 29.4 -33.8 8.9 C -22.5 6.0 -11.3 3.0 -0.0 -0.0 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1723.3, 1456.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.4 144.3 L -169.8 385.8 L -470.3 7.7 L -346.2 -63.9 L -118.5 68.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2193.1, 1648.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -227.7 -132.3 L -227.2 51.9 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2074.6, 1579.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 300.5 378.1 L 301.0 562.3 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.8, 1640.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 418.2 -241.4 L 418.7 -57.2 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2023.3, 1262.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -118.5 68.4 L -118.0 252.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2193.1, 1648.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.9 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2441.5, 1503.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -124.1 71.6 L -123.5 255.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1846.9, 1712.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -366.9 -75.9 L -594.6 -208.2 L -718.7 -136.6 L -418.2 241.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2442.0, 1319.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 248.4 144.3 L 2.6 286.2 L -555.9 -38.4 L -674.4 30.0 L -592.0 78.0 L -716.0 149.6 L -1016.1 -226.8 L -702.1 -408.0 L -453.7 -263.6 L -577.4 -192.2 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2438.8, 1790.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 558.6 324.6 L 559.1 508.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1882.9, 1828.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1861.4, 1982.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 300.0 376.3 L 300.6 560.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1422.8, 2016.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 124.1 -71.6 L 124.6 112.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1722.8, 1640.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -82.4 -47.9 L -81.9 136.3 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1846.9, 1712.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1764.4, 1760.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -453.7 -263.6 L -453.1 -79.4 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2315.1, 1718.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -248.5 -144.4 L -247.9 39.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1985.2, 2053.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 245.7 -141.9 L 246.2 42.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2441.5, 1503.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -123.7 71.4 L -123.2 255.7 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2438.8, 1790.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2687.2, 1645.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -314.0 181.3 L -313.4 365.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1736.7, 2198.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -372.1 -72.9 L -825.8 -336.5 L -702.0 -408.0 L -950.5 -552.4 L -1264.4 -371.1 L -964.4 5.2 L -840.3 -66.4 L -922.8 -114.3 L -804.3 -182.7 L -245.7 141.9 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2687.7, 1461.5)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -310.2 -180.2 L -428.7 -111.8 L -118.5 68.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2193.6, 1464.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 248.4 144.3 L 10.6 281.6 L -464.5 5.5 L -588.3 76.9 L -815.1 -54.9 L -691.4 -126.4 L -939.9 -270.8 L -702.1 -408.0 L -453.7 -263.6 L -572.2 -195.2 L -118.6 68.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2676.6, 1927.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 475.2 276.1 L 475.7 460.4 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2212.0, 1921.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2088.3, 1850.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -453.7 -263.6 L -453.1 -79.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2558.0, 1858.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 118.6 -68.5 L 119.1 115.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2104.4, 2122.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -248.5 -144.4 L -247.9 39.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2222.9, 2191.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1736.7, 2198.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 237.7 -137.3 L 238.3 47.0 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2687.2, 1645.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -118.6 68.4 L -118.0 252.7 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2676.6, 1927.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2924.9, 1783.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -237.7 137.3 L -237.2 321.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1974.5, 2335.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -366.9 -75.9 L -820.6 -339.5 L -702.0 -408.0 L -950.5 -552.4 L -1188.2 -415.1 L -939.8 -270.7 L -1063.5 -199.3 L -836.6 -67.4 L -712.9 -138.9 L -237.7 137.3 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2925.5, 1598.8)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -310.2 -180.2 L -428.7 -111.9 L -118.5 68.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2677.1, 1743.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 248.4 144.3 L 2.6 286.2 L -556.0 -38.3 L -674.5 30.1 L -817.9 -53.3 L -699.4 -121.8 L -947.8 -266.2 L -702.1 -408.0 L -453.7 -263.6 L -577.4 -192.2 L -123.7 71.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2922.3, 2069.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2247.8, 2039.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 558.6 324.5 L 559.1 508.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2366.3, 2107.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -453.7 -263.6 L -453.1 -79.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2798.6, 1997.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2344.9, 2261.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -248.5 -144.4 L -247.9 39.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2468.6, 2332.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1974.5, 2335.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 245.7 -141.9 L 246.2 42.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2924.9, 1783.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -123.7 71.4 L -123.2 255.7 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2922.3, 2069.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3170.7, 1924.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -245.7 141.9 L -245.2 326.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2220.2, 2477.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -372.1 -72.9 L -825.8 -336.5 L -702.0 -408.0 L -950.5 -552.4 L -1196.2 -410.5 L -947.8 -266.1 L -1066.3 -197.7 L -922.8 -114.3 L -804.3 -182.7 L -245.7 141.9 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3171.2, 1740.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 248.5 144.4 L 129.9 212.8 L 583.6 476.5 L 702.1 408.0 L 950.5 552.4 L 712.7 689.6 L 237.6 413.5 L 113.8 484.9 L -113.0 353.1 L 10.7 281.6 L -237.7 137.3 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2457.9, 2614.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2220.2, 2477.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2571.7, 2129.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 475.2 276.1 L 475.7 460.4 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2695.5, 2201.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 237.7 -137.3 L 238.3 47.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3170.7, 1924.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3408.4, 2062.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -118.6 68.5 L -118.0 252.7 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3160.0, 2206.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -453.6 -263.7 L -453.1 -79.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3041.5, 2138.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 118.6 -68.4 L 119.1 115.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2587.8, 2401.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -237.7 137.3 L -237.2 321.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2457.9, 2614.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.5 -144.4 L -248.0 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2706.4, 2470.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.5 -144.4 L -486.2 -7.1 L -237.8 137.3 L -361.5 208.7 L -134.6 340.6 L -10.9 269.1 L 464.3 545.3 L 702.0 408.0 L 453.6 263.7 L 335.1 332.1 L -118.6 68.5 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2706.9, 2285.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 475.2 276.2 L 209.7 429.5 L -135.0 229.1 L -49.5 179.8 L -180.0 103.9 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3198.7, 2491.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 130.5 75.8 L 131.0 260.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3018.7, 2387.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -85.5 49.4 L -85.0 233.6 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3149.2, 2311.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 344.7 200.4 L 345.2 384.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3063.7, 2262.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 265.5 -153.3 L 266.0 30.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3408.4, 2062.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -180.0 103.9 L -179.5 288.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3198.7, 2491.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -475.2 -276.2 L -474.7 -92.0 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3673.9, 2215.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -475.2 -276.2 L -655.2 -172.3 L -524.7 -96.4 L -610.2 -47.1 L -265.5 153.3 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3674.4, 2031.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 474.5 275.7 L 209.0 429.0 L 125.7 380.6 L 7.1 449.1 L -136.3 365.7 L -17.8 297.2 L -266.3 152.8 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2724.2, 2767.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2457.9, 2614.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 118.5 -68.4 L 119.1 115.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2731.3, 2318.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 83.3 48.4 L 83.8 232.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2849.9, 2386.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 265.5 -153.3 L 266.0 30.9 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2933.2, 2338.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -266.3 152.8 L -265.8 337.1 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2724.2, 2767.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -474.5 -275.7 L -474.0 -91.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3198.7, 2491.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -474.5 -275.7 L -740.8 -122.9 L -492.3 21.5 L -610.8 89.9 L -467.3 173.3 L -348.8 104.9 L -265.5 153.3 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3199.2, 2307.4)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -130.5 -75.8 L -216.1 -26.5 L -299.3 -74.9 L -417.9 -6.4 L -107.7 173.8 L 10.8 105.4 L -85.5 49.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3149.7, 2127.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2439.4, 1605.9)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2922.8, 1885.0)"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</g>
-
-</g>
-    <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 645.2, 1508.5)">1. OG</text>
+  <g class="iso-floor" data-iso-floor="1.OG" id="_x31_._OG">
+    <g id="V104">
+      <path class="st48 iso-face" d="M1305.62,1401.36l301.23-379.34-414.38-239.24-371.66,467.35,271.12,72.03-14.32,18.1c76.01,20.36,152.01,40.72,228.02,61.09Z"/>
+      <polygon class="st48 iso-face" points="1077.6 1340.27 1091.92 1322.17 1092.45 1137.94 1078.12 1156.05 1077.6 1340.27 1077.6 1340.27"/>
+      <polygon class="st48 iso-face" points="820.81 1250.14 1192.46 782.78 1192.99 598.56 821.33 1065.91 820.81 1250.14 820.81 1250.14"/>
+      <polygon class="st48 iso-face" points="1192.46 782.78 1606.84 1022.02 1607.37 837.8 1192.99 598.56 1192.46 782.78 1192.46 782.78"/>
+      <polygon class="st48 iso-face" points="1606.84 1022.02 1305.62 1401.36 1306.14 1217.13 1607.37 837.8 1606.84 1022.02 1606.84 1022.02"/>
+      <polygon class="st48 iso-face" points="1091.92 1322.17 820.81 1250.14 821.33 1065.91 1092.45 1137.94 1091.92 1322.17 1091.92 1322.17"/>
+      <polygon class="st48 iso-face" points="1305.62 1401.36 1077.6 1340.27 1078.12 1156.05 1306.14 1217.13 1305.62 1401.36 1305.62 1401.36"/>
+      <polygon class="st48 iso-face" points="1607.37 837.8 1306.14 1217.13 1078.12 1156.05 1092.45 1137.94 821.33 1065.91 1192.99 598.56 1607.37 837.8 1607.37 837.8"/>
+    </g>
+    <g id="V103">
+      <polygon class="st48 iso-face" points="1007.28 1776.99 1305.62 1401.36 1077.6 1340.27 1091.92 1322.17 820.81 1250.14 592.34 1537.43 1007.28 1776.99 1007.28 1776.99"/>
+      <polygon class="st48 iso-face" points="592.34 1537.43 820.81 1250.14 821.33 1065.91 592.86 1353.2 592.34 1537.43 592.34 1537.43"/>
+      <polygon class="st48 iso-face" points="1077.6 1340.27 1305.62 1401.36 1306.14 1217.13 1078.12 1156.05 1077.6 1340.27 1077.6 1340.27"/>
+      <polygon class="st48 iso-face" points="1007.28 1776.99 592.34 1537.43 592.86 1353.2 1007.81 1592.77 1007.28 1776.99 1007.28 1776.99"/>
+      <polygon class="st48 iso-face" points="1305.62 1401.36 1007.28 1776.99 1007.81 1592.77 1306.14 1217.13 1305.62 1401.36 1305.62 1401.36"/>
+      <path class="st48 iso-face" d="M1306.14,1217.13l-298.33,375.63-414.94-239.57,228.47-287.29,271.12,72.03-14.32,18.1c76.01,20.36,152.01,40.72,228.02,61.09Z"/>
+    </g>
+    <g id="V101">
+      <polygon class="st48 iso-face" points="1793.03 1552.16 2023.29 1262.46 1606.84 1022.02 1394.13 1289.87 1502.48 1318.9 1451.83 1382.82 1578.85 1416.82 1527.93 1480.99 1793.03 1552.16 1793.03 1552.16"/>
+      <polygon class="st48 iso-face" points="1527.93 1480.99 1578.85 1416.82 1579.37 1232.6 1528.46 1296.76 1527.93 1480.99 1527.93 1480.99"/>
+      <polygon class="st48 iso-face" points="1451.83 1382.82 1502.48 1318.9 1503 1134.67 1452.35 1198.59 1451.83 1382.82 1451.83 1382.82"/>
+      <polygon class="st48 iso-face" points="1394.13 1289.87 1606.84 1022.02 1607.37 837.8 1394.66 1105.64 1394.13 1289.87 1394.13 1289.87"/>
+      <polygon class="st48 iso-face" points="1606.84 1022.02 2023.29 1262.46 2023.81 1078.23 1607.37 837.8 1606.84 1022.02 1606.84 1022.02"/>
+      <polygon class="st48 iso-face" points="1502.48 1318.9 1394.13 1289.87 1394.66 1105.64 1503 1134.67 1502.48 1318.9 1502.48 1318.9"/>
+      <polygon class="st48 iso-face" points="1578.85 1416.82 1451.83 1382.82 1452.35 1198.59 1579.37 1232.6 1578.85 1416.82 1578.85 1416.82"/>
+      <polygon class="st48 iso-face" points="1793.03 1552.16 1527.93 1480.99 1528.46 1296.76 1793.55 1367.93 1793.03 1552.16 1793.03 1552.16"/>
+      <polygon class="st48 iso-face" points="2023.29 1262.46 1793.03 1552.16 1793.55 1367.93 2023.81 1078.23 2023.29 1262.46 2023.29 1262.46"/>
+      <polygon class="st48 iso-face" points="2023.81 1078.23 1793.55 1367.93 1528.46 1296.76 1579.37 1232.6 1452.35 1198.59 1503 1134.67 1394.66 1105.64 1607.37 837.8 2023.81 1078.23 2023.81 1078.23"/>
+    </g>
+    <g id="Gang5" data-name="Gang">
+      <polygon class="st47 iso-top" points="1793.55 1367.93 1723.32 1456.3 1457.19 1385.91 1415.76 1438.02 1180.75 1375.01 1394.66 1105.64 1503 1134.67 1452.35 1198.59 1579.37 1232.6 1528.46 1296.76 1793.55 1367.93 1793.55 1367.93"/>
+    </g>
+    <g id="V102">
+      <polygon class="st48 iso-face" points="1422.73 2016.85 1722.79 1640.52 1456.67 1570.13 1415.23 1622.25 1180.23 1559.23 1007.28 1776.99 1422.73 2016.85 1422.73 2016.85"/>
+      <polygon class="st48 iso-face" points="1007.28 1776.99 1180.23 1559.23 1180.75 1375.01 1007.81 1592.77 1007.28 1776.99 1007.28 1776.99"/>
+      <polygon class="st48 iso-face" points="1180.23 1559.23 1415.23 1622.25 1415.76 1438.02 1180.75 1375.01 1180.23 1559.23 1180.23 1559.23"/>
+      <polygon class="st48 iso-face" points="1415.23 1622.25 1456.67 1570.13 1457.19 1385.91 1415.76 1438.02 1415.23 1622.25 1415.23 1622.25"/>
+      <polygon class="st48 iso-face" points="1456.67 1570.13 1722.79 1640.52 1723.32 1456.3 1457.19 1385.91 1456.67 1570.13 1456.67 1570.13"/>
+      <polygon class="st48 iso-face" points="1422.73 2016.85 1007.28 1776.99 1007.81 1592.77 1423.25 1832.62 1422.73 2016.85 1422.73 2016.85"/>
+      <polygon class="st48 iso-face" points="1722.79 1640.52 1422.73 2016.85 1423.25 1832.62 1723.32 1456.3 1722.79 1640.52 1722.79 1640.52"/>
+      <path class="st48 iso-face" d="M1723.32,1456.3l-300.06,376.33-415.45-239.86,172.94-217.76,235.01,63.02,41.43-52.11c77.45,20.48,154.89,40.97,232.34,61.45,11.26,2.98,22.53,5.96,33.79,8.94Z"/>
+    </g>
+    <g id="HA102">
+      <polygon class="st48 iso-face" points="2193.09 1648.23 2441.48 1503.9 2023.29 1262.46 1722.79 1640.52 1846.86 1712.15 2074.59 1579.81 2193.09 1648.23 2193.09 1648.23"/>
+      <polygon class="st48 iso-face" points="2074.59 1579.81 1846.86 1712.15 1847.38 1527.92 2075.11 1395.58 2074.59 1579.81 2074.59 1579.81"/>
+      <polygon class="st48 iso-face" points="1722.79 1640.52 2023.29 1262.46 2023.81 1078.23 1723.32 1456.3 1722.79 1640.52 1722.79 1640.52"/>
+      <polygon class="st48 iso-face" points="2023.29 1262.46 2441.48 1503.9 2442 1319.68 2023.81 1078.23 2023.29 1262.46 2023.29 1262.46"/>
+      <polygon class="st48 iso-face" points="2193.09 1648.23 2074.59 1579.81 2075.11 1395.58 2193.61 1464 2193.09 1648.23 2193.09 1648.23"/>
+      <polygon class="st48 iso-face" points="2441.48 1503.9 2193.09 1648.23 2193.61 1464 2442 1319.68 2441.48 1503.9 2441.48 1503.9"/>
+      <polygon class="st48 iso-face" points="1846.86 1712.15 1722.79 1640.52 1723.32 1456.3 1847.38 1527.92 1846.86 1712.15 1846.86 1712.15"/>
+      <polygon class="st48 iso-face" points="2442 1319.68 2193.61 1464 2075.11 1395.58 1847.38 1527.92 1723.32 1456.3 2023.81 1078.23 2442 1319.68 2442 1319.68"/>
+    </g>
+    <g id="HA101">
+      <polygon class="st48 iso-face" points="2438.83 1790.11 2687.2 1645.77 2441.48 1503.9 1882.9 1828.46 1764.42 1760.06 1846.86 1712.15 1722.79 1640.52 1422.76 2016.87 1736.72 2198.13 1985.17 2053.75 1861.43 1982.3 2315.09 1718.66 2438.83 1790.11 2438.83 1790.11"/>
+      <polygon class="st48 iso-face" points="1882.9 1828.46 2441.48 1503.9 2442 1319.68 1883.42 1644.24 1882.9 1828.46 1882.9 1828.46"/>
+      <polygon class="st48 iso-face" points="1861.43 1982.3 1985.17 2053.75 1985.7 1869.52 1861.95 1798.08 1861.43 1982.3 1861.43 1982.3"/>
+      <polygon class="st48 iso-face" points="1422.76 2016.87 1722.79 1640.52 1723.32 1456.3 1423.28 1832.64 1422.76 2016.87 1422.76 2016.87"/>
+      <polygon class="st48 iso-face" points="1722.79 1640.52 1846.86 1712.15 1847.38 1527.92 1723.32 1456.3 1722.79 1640.52 1722.79 1640.52"/>
+      <polygon class="st48 iso-face" points="1846.86 1712.15 1764.42 1760.06 1764.94 1575.83 1847.38 1527.92 1846.86 1712.15 1846.86 1712.15"/>
+      <polygon class="st48 iso-face" points="1764.42 1760.06 1882.9 1828.46 1883.42 1644.24 1764.94 1575.83 1764.42 1760.06 1764.42 1760.06"/>
+      <polygon class="st48 iso-face" points="2315.09 1718.66 1861.43 1982.3 1861.95 1798.08 2315.61 1534.44 2315.09 1718.66 2315.09 1718.66"/>
+      <polygon class="st48 iso-face" points="1985.17 2053.75 1736.72 2198.13 1737.24 2013.91 1985.7 1869.52 1985.17 2053.75 1985.17 2053.75"/>
+      <polygon class="st48 iso-face" points="2441.48 1503.9 2687.2 1645.77 2687.72 1461.54 2442 1319.68 2441.48 1503.9 2441.48 1503.9"/>
+      <polygon class="st48 iso-face" points="2438.83 1790.11 2315.09 1718.66 2315.61 1534.44 2439.36 1605.88 2438.83 1790.11 2438.83 1790.11"/>
+      <polygon class="st48 iso-face" points="2687.2 1645.77 2438.83 1790.11 2439.36 1605.88 2687.72 1461.54 2687.2 1645.77 2687.2 1645.77"/>
+      <polygon class="st48 iso-face" points="1736.72 2198.13 1422.76 2016.87 1423.28 1832.64 1737.24 2013.91 1736.72 2198.13 1736.72 2198.13"/>
+      <polygon class="st48 iso-face" points="2687.72 1461.54 2439.36 1605.88 2315.61 1534.44 1861.95 1798.08 1985.7 1869.52 1737.24 2013.91 1423.28 1832.64 1723.32 1456.3 1847.38 1527.92 1764.94 1575.83 1883.42 1644.24 2442 1319.68 2687.72 1461.54 2687.72 1461.54"/>
+    </g>
+    <g id="Gang6" data-name="Gang">
+      <polygon class="st47 iso-top" points="2193.61 1464 1883.42 1644.24 1764.94 1575.83 2075.11 1395.58 2193.61 1464 2193.61 1464"/>
+    </g>
+    <g id="HB102">
+      <polygon class="st48 iso-face" points="2676.57 1927.36 2924.94 1783.03 2687.2 1645.77 2212.03 1921.91 2088.29 1850.47 1861.43 1982.3 1985.17 2053.74 1736.72 2198.13 1974.45 2335.39 2222.91 2191 2104.35 2122.55 2558.01 1858.91 2676.57 1927.36 2676.57 1927.36"/>
+      <polygon class="st48 iso-face" points="2212.03 1921.91 2687.2 1645.77 2687.72 1461.54 2212.55 1737.68 2212.03 1921.91 2212.03 1921.91"/>
+      <polygon class="st48 iso-face" points="2088.29 1850.47 2212.03 1921.91 2212.55 1737.68 2088.81 1666.24 2088.29 1850.47 2088.29 1850.47"/>
+      <polygon class="st48 iso-face" points="2558.01 1858.91 2104.35 2122.55 2104.88 1938.33 2558.54 1674.69 2558.01 1858.91 2558.01 1858.91"/>
+      <polygon class="st48 iso-face" points="2104.35 2122.55 2222.91 2191 2223.43 2006.78 2104.88 1938.33 2104.35 2122.55 2104.35 2122.55"/>
+      <polygon class="st48 iso-face" points="2222.91 2191 1974.45 2335.39 1974.98 2151.16 2223.43 2006.78 2222.91 2191 2222.91 2191"/>
+      <polygon class="st48 iso-face" points="1736.72 2198.13 1985.17 2053.74 1985.7 1869.52 1737.24 2013.91 1736.72 2198.13 1736.72 2198.13"/>
+      <polygon class="st48 iso-face" points="2687.2 1645.77 2924.94 1783.03 2925.46 1598.8 2687.72 1461.54 2687.2 1645.77 2687.2 1645.77"/>
+      <polygon class="st48 iso-face" points="2676.57 1927.36 2558.01 1858.91 2558.54 1674.69 2677.09 1743.14 2676.57 1927.36 2676.57 1927.36"/>
+      <polygon class="st48 iso-face" points="2924.94 1783.03 2676.57 1927.36 2677.09 1743.14 2925.46 1598.8 2924.94 1783.03 2924.94 1783.03"/>
+      <polygon class="st48 iso-face" points="1974.45 2335.39 1736.72 2198.13 1737.24 2013.91 1974.98 2151.16 1974.45 2335.39 1974.45 2335.39"/>
+      <polygon class="st48 iso-face" points="2925.46 1598.8 2677.09 1743.14 2558.54 1674.69 2104.88 1938.33 2223.43 2006.78 1974.98 2151.16 1737.24 2013.91 1985.7 1869.52 1861.95 1798.08 2088.81 1666.24 2212.55 1737.68 2687.72 1461.54 2925.46 1598.8 2925.46 1598.8"/>
+    </g>
+    <g id="Gang7" data-name="Gang">
+      <polygon class="st47 iso-top" points="2677.09 1743.14 2366.92 1923.39 2248.43 1854.99 2558.6 1674.72 2677.09 1743.14 2677.09 1743.14"/>
+    </g>
+    <g id="HB101">
+      <polygon class="st48 iso-face" points="2922.29 2069.23 3170.66 1924.9 2924.94 1783.03 2366.32 2107.57 2247.83 2039.17 2104.35 2122.55 2222.91 2191 1974.45 2335.39 2220.18 2477.26 2468.63 2332.87 2344.89 2261.43 2798.55 1997.79 2922.29 2069.23 2922.29 2069.23"/>
+      <polygon class="st48 iso-face" points="2247.83 2039.17 2366.32 2107.57 2366.85 1923.34 2248.36 1854.95 2247.83 2039.17 2247.83 2039.17"/>
+      <polygon class="st48 iso-face" points="2366.32 2107.57 2924.94 1783.03 2925.46 1598.8 2366.85 1923.34 2366.32 2107.57 2366.32 2107.57"/>
+      <polygon class="st48 iso-face" points="2798.55 1997.79 2344.89 2261.43 2345.41 2077.2 2799.07 1813.56 2798.55 1997.79 2798.55 1997.79"/>
+      <polygon class="st48 iso-face" points="2344.89 2261.43 2468.63 2332.87 2469.15 2148.64 2345.41 2077.2 2344.89 2261.43 2344.89 2261.43"/>
+      <polygon class="st48 iso-face" points="2468.63 2332.87 2220.18 2477.26 2220.7 2293.03 2469.15 2148.64 2468.63 2332.87 2468.63 2332.87"/>
+      <polygon class="st48 iso-face" points="1974.45 2335.39 2222.91 2191 2223.43 2006.78 1974.98 2151.16 1974.45 2335.39 1974.45 2335.39"/>
+      <polygon class="st48 iso-face" points="2924.94 1783.03 3170.66 1924.9 3171.18 1740.67 2925.46 1598.8 2924.94 1783.03 2924.94 1783.03"/>
+      <polygon class="st48 iso-face" points="2922.29 2069.23 2798.55 1997.79 2799.07 1813.56 2922.82 1885 2922.29 2069.23 2922.29 2069.23"/>
+      <polygon class="st48 iso-face" points="3170.66 1924.9 2922.29 2069.23 2922.82 1885 3171.18 1740.67 3170.66 1924.9 3170.66 1924.9"/>
+      <polygon class="st48 iso-face" points="2220.18 2477.26 1974.45 2335.39 1974.98 2151.16 2220.7 2293.03 2220.18 2477.26 2220.18 2477.26"/>
+      <polygon class="st48 iso-face" points="3171.18 1740.67 2922.82 1885 2799.07 1813.56 2345.41 2077.2 2469.15 2148.64 2220.7 2293.03 1974.98 2151.16 2223.43 2006.78 2104.88 1938.33 2248.36 1854.95 2366.85 1923.34 2925.46 1598.8 3171.18 1740.67 3171.18 1740.67"/>
+    </g>
+    <g id="HC103">
+      <polygon class="st48 iso-face" points="2457.91 2614.51 2706.4 2470.15 2587.84 2401.7 3041.47 2138.04 3160.03 2206.49 3408.4 2062.15 3170.66 1924.9 2695.49 2201.03 2571.75 2129.59 2344.89 2261.43 2468.63 2332.87 2220.18 2477.26 2457.91 2614.51 2457.91 2614.51"/>
+      <polygon class="st48 iso-face" points="2220.18 2477.26 2468.63 2332.87 2469.15 2148.64 2220.7 2293.03 2220.18 2477.26 2220.18 2477.26"/>
+      <polygon class="st48 iso-face" points="2571.75 2129.59 2695.49 2201.03 2696.01 2016.81 2572.27 1945.36 2571.75 2129.59 2571.75 2129.59"/>
+      <polygon class="st48 iso-face" points="2695.49 2201.03 3170.66 1924.9 3171.18 1740.67 2696.01 2016.81 2695.49 2201.03 2695.49 2201.03"/>
+      <polygon class="st48 iso-face" points="3170.66 1924.9 3408.4 2062.15 3408.92 1877.93 3171.18 1740.67 3170.66 1924.9 3170.66 1924.9"/>
+      <polygon class="st48 iso-face" points="3408.4 2062.15 3160.03 2206.49 3160.55 2022.26 3408.92 1877.93 3408.4 2062.15 3408.4 2062.15"/>
+      <polygon class="st48 iso-face" points="3160.03 2206.49 3041.47 2138.04 3042 1953.81 3160.55 2022.26 3160.03 2206.49 3160.03 2206.49"/>
+      <polygon class="st48 iso-face" points="3041.47 2138.04 2587.84 2401.7 2588.37 2217.47 3042 1953.81 3041.47 2138.04 3041.47 2138.04"/>
+      <polygon class="st48 iso-face" points="2587.84 2401.7 2706.4 2470.15 2706.92 2285.92 2588.37 2217.47 2587.84 2401.7 2587.84 2401.7"/>
+      <polygon class="st48 iso-face" points="2457.91 2614.51 2220.18 2477.26 2220.7 2293.03 2458.44 2430.29 2457.91 2614.51 2457.91 2614.51"/>
+      <polygon class="st48 iso-face" points="2706.4 2470.15 2457.91 2614.51 2458.44 2430.29 2706.92 2285.92 2706.4 2470.15 2706.4 2470.15"/>
+      <polygon class="st48 iso-face" points="2706.92 2285.92 2458.44 2430.29 2220.7 2293.03 2469.15 2148.64 2345.41 2077.2 2572.27 1945.36 2696.01 2016.81 3171.18 1740.67 3408.92 1877.93 3160.55 2022.26 3042 1953.81 2588.37 2217.47 2706.92 2285.92 2706.92 2285.92"/>
+    </g>
+    <g id="HC101">
+      <polygon class="st48 iso-face" points="3198.67 2491.63 3673.91 2215.45 3408.4 2062.15 3063.7 2262.51 3149.21 2311.88 3018.7 2387.72 3198.67 2491.63 3198.67 2491.63"/>
+      <polygon class="st48 iso-face" points="3018.7 2387.72 3149.21 2311.88 3149.73 2127.65 3019.22 2203.49 3018.7 2387.72 3018.7 2387.72"/>
+      <polygon class="st48 iso-face" points="3149.21 2311.88 3063.7 2262.51 3064.22 2078.28 3149.73 2127.65 3149.21 2311.88 3149.21 2311.88"/>
+      <polygon class="st48 iso-face" points="3063.7 2262.51 3408.4 2062.15 3408.92 1877.93 3064.22 2078.28 3063.7 2262.51 3063.7 2262.51"/>
+      <polygon class="st48 iso-face" points="3408.4 2062.15 3673.91 2215.45 3674.43 2031.22 3408.92 1877.93 3408.4 2062.15 3408.4 2062.15"/>
+      <polygon class="st48 iso-face" points="3198.67 2491.63 3018.7 2387.72 3019.22 2203.49 3199.19 2307.4 3198.67 2491.63 3198.67 2491.63"/>
+      <polygon class="st48 iso-face" points="3673.91 2215.45 3198.67 2491.63 3199.19 2307.4 3674.43 2031.22 3673.91 2215.45 3673.91 2215.45"/>
+      <polygon class="st48 iso-face" points="3674.43 2031.22 3199.19 2307.4 3019.22 2203.49 3149.73 2127.65 3064.22 2078.28 3408.92 1877.93 3674.43 2031.22 3674.43 2031.22"/>
+    </g>
+    <g id="HC102">
+      <polygon class="st48 iso-face" points="2724.19 2767.37 3198.67 2491.63 2933.16 2338.33 2849.86 2386.74 2731.33 2318.3 2587.84 2401.7 2706.4 2470.15 2457.91 2614.51 2724.19 2767.37 2724.19 2767.37"/>
+      <polygon class="st48 iso-face" points="2457.91 2614.51 2706.4 2470.15 2706.92 2285.92 2458.44 2430.29 2457.91 2614.51 2457.91 2614.51"/>
+      <polygon class="st48 iso-face" points="2731.33 2318.3 2849.86 2386.74 2850.38 2202.51 2731.85 2134.08 2731.33 2318.3 2731.33 2318.3"/>
+      <polygon class="st48 iso-face" points="2849.86 2386.74 2933.16 2338.33 2933.68 2154.11 2850.38 2202.51 2849.86 2386.74 2849.86 2386.74"/>
+      <polygon class="st48 iso-face" points="2933.16 2338.33 3198.67 2491.63 3199.19 2307.4 2933.68 2154.11 2933.16 2338.33 2933.16 2338.33"/>
+      <polygon class="st48 iso-face" points="2724.19 2767.37 2457.91 2614.51 2458.44 2430.29 2724.71 2583.14 2724.19 2767.37 2724.19 2767.37"/>
+      <polygon class="st48 iso-face" points="3198.67 2491.63 2724.19 2767.37 2724.71 2583.14 3199.19 2307.4 3198.67 2491.63 3198.67 2491.63"/>
+      <polygon class="st48 iso-face" points="3199.19 2307.4 2724.71 2583.14 2458.44 2430.29 2706.92 2285.92 2588.37 2217.47 2731.85 2134.08 2850.38 2202.51 2933.68 2154.11 3199.19 2307.4 3199.19 2307.4"/>
+    </g>
+    <g id="Gang8" data-name="Gang">
+      <polygon class="st47 iso-top" points="3149.73 2127.65 3019.22 2203.49 2933.68 2154.11 2850.38 2202.51 2731.85 2134.08 3042.06 1953.85 3160.55 2022.26 3064.22 2078.28 3149.73 2127.65 3149.73 2127.65"/>
+    </g>
+    <g id="Lichthof2" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2439.36 1605.88 2212.55 1737.68 2088.81 1666.24 2315.61 1534.44 2439.36 1605.88 2439.36 1605.88"/>
+    </g>
+    <g id="Lichthof3" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2922.82 1885 2696.01 2016.81 2572.27 1945.37 2799.07 1813.56 2922.82 1885 2922.82 1885"/>
+    </g>
+    <g>
+      <g>
+        <polygon class="st13" points="789.35 1542.4 787.88 1547.2 787.85 1547.22 789.31 1542.42 789.35 1542.4 789.35 1542.4"/>
+        <path class="st13" d="M784.46,1584.8h.27s-.04.03-.04.03c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.91,10.14,5.93,13.85,10.02l.04-.02c-5.2-5.72-17.22-15.68-25.07-9.57-9.64,7.5-2.09,27.47,3.64,34.94,4.3,5.6,10.93,10.91,18,12.23Z"/>
+        <polygon class="st13" points="784.74 1584.81 784.78 1568.86 784.74 1568.88 784.7 1584.83 784.74 1584.81 784.74 1584.81"/>
+        <polygon class="st13" points="784.78 1568.86 775.32 1563.4 775.28 1563.42 784.74 1568.88 784.78 1568.86 784.78 1568.86"/>
+        <polygon class="st13" points="775.32 1563.4 775.33 1557.84 775.3 1557.86 775.28 1563.42 775.32 1563.4 775.32 1563.4"/>
+        <polygon class="st13" points="775.33 1557.84 790.67 1566.69 790.63 1566.71 775.3 1557.86 775.33 1557.84 775.33 1557.84"/>
+        <path class="st13" d="M790.59,1592.4c-15.94-2.72-29.72-14.92-35.23-29.96-4.75-12.98-4.87-38.31,15.53-32.33,6.9,2.02,13.63,7.01,18.46,12.29l-.04.02c-7.3-7.99-25-20.39-33.84-8.42-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55l.04-.02h0Z"/>
+        <polygon class="st13" points="790.67 1566.69 790.59 1592.4 790.56 1592.42 790.63 1566.71 790.67 1566.69 790.67 1566.69"/>
+        <path class="st13" d="M790.63,1566.71l-.07,25.71c-15.94-2.72-29.72-14.92-35.23-29.96-4.75-12.98-4.87-38.31,15.53-32.33,6.9,2.02,13.63,7.01,18.46,12.29l-1.47,4.8c-5.27-5.79-17.52-15.88-25.33-9.34-9.29,7.78-1.73,27.47,4.09,34.94,4.29,5.51,11.03,10.94,18.09,12.01l.04-15.95-9.46-5.46.02-5.56,15.33,8.85h0Z"/>
+        <path class="st13" d="M790.59,1592.4l.07-25.71-15.33-8.85-.02,5.56,9.46,5.46-.04,15.95c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.91,10.14,5.93,13.85,10.02l1.47-4.8c-7.3-7.99-25-20.39-33.84-8.42-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55Z"/>
+      </g>
+      <g>
+        <path class="st13" d="M747.39,1542.55c.03-13.23-18.75-56.5-37.72-39.25-16.41,14.93,3.15,51.44,20.36,56.99,12.5,4.03,17.41-6.76,17.36-17.74h0Z"/>
+        <path class="st13" d="M747.43,1541.78c.58,31.54-28.92,16.7-37.74-1.73-8.13-17-4.53-53.63,20.9-33.96,10.73,8.3,16.65,22.31,16.84,35.69h0Z"/>
+        <path class="st13" d="M741.04,1538.69c.42,23.56-19.99,15.58-26.61-.32-4.64-11.14-4.04-42.74,14.92-27.32,7.88,6.41,11.54,17.78,11.69,27.64h0Z"/>
+        <path class="st13" d="M741.07,1539.17c0-9.46-13.61-44.78-26.87-28.93-9.44,11.29.88,41.16,15.27,44.03,9.17,1.83,11.65-7.66,11.6-15.1h0Z"/>
+        <path class="st13" d="M747.39,1541.8c.58,31.54-28.92,16.7-37.74-1.73-8.13-17-4.53-53.63,20.9-33.96,10.73,8.3,16.65,22.31,16.84,35.69h0Z"/>
+        <path class="st13" d="M747.43,1542.52c.03-13.23-18.75-56.5-37.72-39.25-16.41,14.93,3.15,51.44,20.36,56.99,12.5,4.03,17.41-6.76,17.36-17.74h0Z"/>
+        <path class="st13" d="M741.04,1539.19c0-9.46-13.61-44.78-26.87-28.93-9.44,11.29.88,41.16,15.27,44.03,9.17,1.83,11.65-7.66,11.6-15.1h0Z"/>
+        <path class="st13" d="M741.07,1538.67c.42,23.56-19.99,15.58-26.61-.32-4.64-11.14-4.04-42.74,14.92-27.32,7.88,6.41,11.54,17.78,11.69,27.64h0Z"/>
+      </g>
+      <g>
+        <polygon class="st13" points="654.26 1516.07 654.38 1471 654.35 1471.02 654.22 1516.1 654.26 1516.07 654.26 1516.07"/>
+        <polygon class="st13" points="654.25 1470.92 646.43 1471.26 646.39 1471.28 654.21 1470.94 654.35 1471.02 654.38 1471 654.25 1470.92 654.25 1470.92"/>
+        <polygon class="st13" points="646.43 1471.26 645.27 1465.26 645.24 1465.28 646.39 1471.28 646.43 1471.26 646.43 1471.26"/>
+        <path class="st13" d="M655.09,1464.89l5.18,2.99-.04.02-5.18-2.99-9.82.37.04-.02,9.82-.37Z"/>
+        <polygon class="st13" points="660.13 1519.46 654.26 1516.07 654.22 1516.1 660.09 1519.48 660.13 1519.46 660.13 1519.46"/>
+        <polygon class="st13" points="660.27 1467.88 660.13 1519.46 660.09 1519.48 660.24 1467.9 660.27 1467.88 660.27 1467.88"/>
+        <polygon class="st13" points="660.24 1467.9 660.09 1519.48 654.22 1516.1 654.35 1471.02 654.21 1470.94 646.39 1471.28 645.24 1465.28 655.06 1464.91 660.24 1467.9 660.24 1467.9"/>
+        <polygon class="st13" points="660.13 1519.46 660.27 1467.88 655.09 1464.89 645.27 1465.26 646.43 1471.26 654.25 1470.92 654.38 1471 654.26 1516.07 660.13 1519.46 660.13 1519.46"/>
+      </g>
+      <g>
+        <path class="st13" d="M685.17,1529.96c-.02-2.79-3.34-10.3-7.24-7.66-3.09,2.09.61,10.33,3.89,10.52,2.33.14,3.07-.32,3.35-2.86h0Z"/>
+        <path class="st13" d="M685.21,1529.81c-.96,12.58-15.69-13.75-3.19-6.76,2.13,1.19,3.14,4.51,3.19,6.76h0Z"/>
+        <path class="st13" d="M685.17,1529.83c-.96,12.58-15.69-13.75-3.19-6.76,2.13,1.19,3.14,4.51,3.19,6.76h0Z"/>
+        <path class="st13" d="M685.21,1529.94c-.02-2.79-3.34-10.3-7.24-7.66-3.09,2.1.61,10.33,3.89,10.52,2.33.14,3.07-.32,3.35-2.86h0Z"/>
+      </g>
+      <g class="st66">
+        <g class="st65">
+          <g class="st52">
+            
+          </g>
+        </g>
+      </g>
+    </g>
+      <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 645.2, 1508.5)">1. OG</text>
   </g>
-  <g class="iso-floor" data-iso-floor="2.OG">
-<g transform="translate(-415, -340)">
-
-<g transform="translate(415, 340)">
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1306.1 1217.1 L 1607.4 837.8 L 1193.0 598.6 L 821.3 1065.9 L 1092.4 1137.9 L 1078.1 1156.0 C 1154.1 1176.4 1230.1 1196.8 1306.1 1217.1 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 301.2 379.3 L -113.2 618.6 L -484.8 151.2 L -213.7 79.2 L -228.0 61.1 C -152.0 40.7 -76.0 20.4 0.0 0.0 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.1, 1217.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 14.3 18.1 L 14.8 202.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1078.1, 1156.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 371.7 467.4 L 372.2 651.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 821.3, 1065.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 414.4 -239.2 L 414.9 -55.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1193.0, 598.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -301.2 -379.3 L -300.7 -195.1 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1607.4, 837.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -271.1 72.0 L -270.6 256.3 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1092.4, 1137.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -228.0 61.1 L -227.5 245.3 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.1, 1217.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -301.2 -379.3 L -529.2 -318.2 L -514.9 -300.1 L -786.0 -228.1 L -414.4 239.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1607.9, 653.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 298.3 375.6 L 70.3 436.7 L 84.6 454.8 L -186.5 526.9 L -414.9 239.6 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1007.8, 1592.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 228.5 287.3 L 229.0 471.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 592.9, 1353.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 228.0 -61.1 L 228.5 123.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1078.1, 1156.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -414.9 239.6 L -414.4 423.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1007.8, 1592.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -298.3 -375.6 L -297.8 -191.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.1, 1217.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1306.7 1032.9 L 1008.3 1408.5 L 593.4 1169.0 L 821.9 881.7 L 1093.0 953.7 L 1078.6 971.8 C 1154.6 992.2 1230.7 1012.5 1306.7 1032.9 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -298.3 -375.6 L -713.3 -136.1 L -484.8 151.2 L -213.7 79.2 L -228.0 61.1 C -152.0 40.7 -76.0 20.4 -0.0 -0.0 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1306.7, 1032.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 230.3 289.7 L -186.2 530.1 L -398.9 262.3 L -290.6 233.3 L -341.2 169.3 L -214.2 135.3 L -265.1 71.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1793.6, 1367.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 50.9 64.2 L 51.4 248.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1528.5, 1296.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 50.7 63.9 L 51.2 248.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1452.3, 1198.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 212.7 267.8 L 213.2 452.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1394.7, 1105.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 416.4 -240.4 L 417.0 -56.2 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1607.4, 837.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -108.3 29.0 L -107.8 213.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1503.0, 1134.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -127.0 34.0 L -126.5 218.2 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1579.4, 1232.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -265.1 71.2 L -264.6 255.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1793.6, 1367.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -230.3 -289.7 L -229.7 -105.5 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2023.8, 1078.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -230.3 -289.7 L -495.4 -218.5 L -444.4 -154.4 L -571.5 -120.4 L -520.8 -56.4 L -629.2 -27.4 L -416.4 240.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2024.3, 894.0)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -70.2 -88.4 L -336.4 -18.0 L -377.8 -70.1 L -612.8 -7.1 L -398.9 262.3 L -290.6 233.3 L -341.2 169.3 L -214.2 135.3 L -265.1 71.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1794.1, 1183.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 300.1 376.3 L 33.9 446.7 L -7.5 394.6 L -242.5 457.6 L -415.4 239.9 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1423.3, 1832.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 172.9 217.8 L 173.5 402.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1007.8, 1592.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 235.0 -63.0 L 235.5 121.2 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1180.7, 1375.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 41.4 52.1 L 42.0 236.3 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1415.8, 1438.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 266.1 -70.4 L 266.7 113.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1457.2, 1385.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -415.4 239.9 L -414.9 424.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1423.3, 1832.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -300.1 -376.3 L -299.5 -192.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1723.3, 1456.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1723.8 1272.1 L 1423.8 1648.4 L 1008.3 1408.5 L 1181.3 1190.8 L 1416.3 1253.8 L 1457.7 1201.7 L 1690.0 1263.1 C 1701.3 1266.1 1712.6 1269.1 1723.8 1272.1 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -300.1 -376.3 L -715.5 -136.5 L -542.6 81.3 L -307.6 18.3 L -266.1 70.4 L -33.8 8.9 C -22.5 6.0 -11.3 3.0 0.0 -0.0 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1723.8, 1272.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.4 144.3 L -169.8 385.8 L -470.3 7.7 L -346.2 -63.9 L -118.5 68.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2193.6, 1464.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -227.7 -132.3 L -227.2 51.9 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2075.1, 1395.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 300.5 378.1 L 301.0 562.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1723.3, 1456.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 418.2 -241.4 L 418.7 -57.2 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2023.8, 1078.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -118.5 68.4 L -118.0 252.7 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2193.6, 1464.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -247.9 39.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2442.0, 1319.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -124.1 71.6 L -123.5 255.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1847.4, 1527.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -248.4 -144.3 L -366.9 -75.9 L -594.6 -208.2 L -718.7 -136.6 L -418.2 241.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2442.5, 1135.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 248.4 144.3 L 2.6 286.2 L -555.9 -38.4 L -674.4 30.0 L -592.0 78.0 L -716.0 149.6 L -1016.1 -226.8 L -702.1 -408.0 L -453.7 -263.6 L -577.4 -192.2 L -123.7 71.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2439.4, 1605.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 558.6 324.6 L 559.1 508.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1883.4, 1644.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1862.0, 1798.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 300.0 376.3 L 300.6 560.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1423.3, 1832.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 124.1 -71.6 L 124.6 112.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1723.3, 1456.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -82.4 -47.9 L -81.9 136.3 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1847.4, 1527.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1764.9, 1575.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -453.7 -263.6 L -453.1 -79.4 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2315.6, 1534.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -248.5 -144.4 L -247.9 39.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1985.7, 1869.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 245.7 -141.9 L 246.2 42.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2442.0, 1319.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -123.7 71.4 L -123.2 255.7 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2439.4, 1605.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2687.7, 1461.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -314.0 181.3 L -313.4 365.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1737.2, 2013.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -372.1 -72.9 L -825.8 -336.5 L -702.0 -408.0 L -950.5 -552.4 L -1264.4 -371.1 L -964.4 5.2 L -840.3 -66.4 L -922.8 -114.3 L -804.3 -182.7 L -245.7 141.9 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2688.2, 1277.3)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -310.2 -180.2 L -428.7 -111.8 L -118.5 68.4 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2194.1, 1279.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 248.4 144.3 L 10.6 281.6 L -464.5 5.5 L -588.3 76.9 L -815.1 -54.9 L -691.4 -126.4 L -939.9 -270.8 L -702.1 -408.0 L -453.7 -263.6 L -572.2 -195.2 L -118.6 68.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2677.1, 1743.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 475.2 276.1 L 475.7 460.4 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2212.6, 1737.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2088.8, 1666.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -453.7 -263.6 L -453.1 -79.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2558.5, 1674.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 118.6 -68.5 L 119.1 115.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2104.9, 1938.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -248.5 -144.4 L -247.9 39.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2223.4, 2006.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1737.2, 2013.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 237.7 -137.3 L 238.3 47.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2687.7, 1461.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -118.6 68.4 L -118.0 252.7 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2677.1, 1743.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2925.5, 1598.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -237.7 137.3 L -237.2 321.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1975.0, 2151.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -366.9 -75.9 L -820.6 -339.5 L -702.0 -408.0 L -950.5 -552.4 L -1188.2 -415.1 L -939.8 -270.7 L -1063.5 -199.3 L -836.6 -67.4 L -712.9 -138.9 L -237.7 137.3 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2926.0, 1414.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -310.2 -180.2 L -428.7 -111.9 L -118.5 68.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2677.6, 1558.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 248.4 144.3 L 2.6 286.2 L -556.0 -38.3 L -674.5 30.1 L -817.9 -53.3 L -699.4 -121.8 L -947.8 -266.2 L -702.1 -408.0 L -453.7 -263.6 L -577.4 -192.2 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2922.8, 1885.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2248.4, 1854.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 558.6 324.5 L 559.1 508.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2366.8, 1923.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -453.7 -263.6 L -453.1 -79.4 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2799.1, 1813.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2345.4, 2077.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -248.5 -144.4 L -247.9 39.8 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2469.2, 2148.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1975.0, 2151.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 245.7 -141.9 L 246.2 42.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2925.5, 1598.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -123.7 71.4 L -123.2 255.7 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2922.8, 1885.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3171.2, 1740.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -245.7 141.9 L -245.2 326.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2220.7, 2293.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -372.1 -72.9 L -825.8 -336.5 L -702.0 -408.0 L -950.5 -552.4 L -1196.2 -410.5 L -947.7 -266.1 L -1066.3 -197.7 L -922.8 -114.3 L -804.3 -182.7 L -245.7 141.9 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3171.7, 1556.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 248.5 144.4 L 129.9 212.8 L 583.6 476.5 L 702.1 408.0 L 950.5 552.4 L 712.7 689.6 L 237.6 413.5 L 113.8 484.9 L -113.0 353.1 L 10.7 281.6 L -237.7 137.3 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2458.4, 2430.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2220.7, 2293.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 123.7 -71.4 L 124.3 112.8 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2572.3, 1945.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 475.2 276.1 L 475.7 460.4 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2696.0, 2016.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 237.7 -137.3 L 238.3 47.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3171.2, 1740.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.4 -144.3 L -247.8 39.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3408.9, 1877.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -118.6 68.5 L -118.0 252.7 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3160.6, 2022.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -453.6 -263.7 L -453.1 -79.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3042.0, 1953.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 118.6 -68.4 L 119.1 115.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2588.4, 2217.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -237.7 137.3 L -237.2 321.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2458.4, 2430.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -248.5 -144.4 L -248.0 39.9 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2706.9, 2285.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -248.5 -144.4 L -486.2 -7.1 L -237.8 137.3 L -361.5 208.7 L -134.7 340.6 L -10.9 269.1 L 464.3 545.3 L 702.0 408.0 L 453.6 263.7 L 335.1 332.1 L -118.6 68.5 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2707.4, 2101.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 475.2 276.2 L 209.7 429.5 L -135.0 229.1 L -49.5 179.8 L -180.0 103.9 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3199.2, 2307.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 130.5 75.8 L 131.0 260.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3019.2, 2203.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -85.5 49.4 L -85.0 233.6 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3149.7, 2127.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 344.7 200.4 L 345.2 384.6 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3064.2, 2078.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 265.5 -153.3 L 266.0 30.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3408.9, 1877.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -180.0 103.9 L -179.4 288.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3199.2, 2307.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -475.2 -276.2 L -474.7 -92.0 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3674.4, 2031.2)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -475.2 -276.2 L -655.2 -172.3 L -524.7 -96.4 L -610.2 -47.1 L -265.5 153.3 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3675.0, 1847.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 474.5 275.7 L 209.0 429.0 L 125.7 380.6 L 7.1 449.1 L -136.3 365.7 L -17.8 297.2 L -266.3 152.8 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2724.7, 2583.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 248.5 144.4 L 249.0 328.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2458.4, 2430.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 118.5 -68.4 L 119.1 115.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2731.8, 2134.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 83.3 48.4 L 83.8 232.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2850.4, 2202.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 265.5 -153.3 L 266.0 30.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2933.7, 2154.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -266.3 152.8 L -265.8 337.1 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2724.7, 2583.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -474.5 -275.7 L -474.0 -91.5 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3199.2, 2307.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -474.5 -275.7 L -740.8 -122.9 L -492.3 21.5 L -610.8 89.9 L -467.3 173.3 L -348.8 104.9 L -265.5 153.3 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 3199.7, 2123.2)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -130.5 -75.8 L -216.1 -26.5 L -299.3 -74.9 L -417.9 -6.4 L -107.7 173.8 L 10.8 105.4 L -85.5 49.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 3150.3, 1943.4)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2439.9, 1421.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2923.3, 1700.8)"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</g>
-
-</g>
-    <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 650.4, 1327.2)">2. OG</text>
+  <g class="iso-floor" data-iso-floor="2.OG" id="_x32_._OG">
+    <g id="V204">
+      <path class="st48 iso-face" d="M1306.14,1217.13l301.23-379.34-414.38-239.24-371.66,467.35,271.12,72.03-14.32,18.1c76.01,20.36,152.01,40.72,228.02,61.09Z"/>
+      <polygon class="st48 iso-face" points="1078.12 1156.05 1092.45 1137.94 1092.97 953.71 1078.64 971.82 1078.12 1156.05 1078.12 1156.05"/>
+      <polygon class="st48 iso-face" points="821.33 1065.91 1192.99 598.56 1193.51 414.33 821.85 881.68 821.33 1065.91 821.33 1065.91"/>
+      <polygon class="st48 iso-face" points="1192.99 598.56 1607.37 837.8 1607.89 653.57 1193.51 414.33 1192.99 598.56 1192.99 598.56"/>
+      <polygon class="st48 iso-face" points="1607.37 837.8 1306.14 1217.13 1306.66 1032.91 1607.89 653.57 1607.37 837.8 1607.37 837.8"/>
+      <polygon class="st48 iso-face" points="1092.45 1137.94 821.33 1065.91 821.85 881.68 1092.97 953.71 1092.45 1137.94 1092.45 1137.94"/>
+      <polygon class="st48 iso-face" points="1306.14 1217.13 1078.12 1156.05 1078.64 971.82 1306.66 1032.91 1306.14 1217.13 1306.14 1217.13"/>
+      <polygon class="st48 iso-face" points="1607.89 653.57 1306.66 1032.91 1078.64 971.82 1092.97 953.71 821.85 881.68 1193.51 414.33 1607.89 653.57 1607.89 653.57"/>
+    </g>
+    <g id="V203">
+      <polygon class="st48 iso-face" points="1007.81 1592.77 1306.14 1217.13 1078.12 1156.05 1092.45 1137.94 821.33 1065.91 592.86 1353.2 1007.81 1592.77 1007.81 1592.77"/>
+      <polygon class="st48 iso-face" points="592.86 1353.2 821.33 1065.91 821.85 881.68 593.38 1168.97 592.86 1353.2 592.86 1353.2"/>
+      <polygon class="st48 iso-face" points="1078.12 1156.05 1306.14 1217.13 1306.66 1032.91 1078.64 971.82 1078.12 1156.05 1078.12 1156.05"/>
+      <polygon class="st48 iso-face" points="1007.81 1592.77 592.86 1353.2 593.38 1168.97 1008.33 1408.54 1007.81 1592.77 1007.81 1592.77"/>
+      <polygon class="st48 iso-face" points="1306.14 1217.13 1007.81 1592.77 1008.33 1408.54 1306.66 1032.91 1306.14 1217.13 1306.14 1217.13"/>
+      <path class="st48 iso-face" d="M1306.66,1032.91l-298.33,375.63-414.94-239.57,228.47-287.29,271.12,72.03-14.32,18.1c76.01,20.36,152.01,40.72,228.02,61.09Z"/>
+    </g>
+    <g id="V201">
+      <polygon class="st48 iso-face" points="1793.55 1367.93 2023.81 1078.23 1607.37 837.8 1394.66 1105.64 1503 1134.67 1452.35 1198.59 1579.37 1232.6 1528.46 1296.76 1793.55 1367.93 1793.55 1367.93"/>
+      <polygon class="st48 iso-face" points="1528.46 1296.76 1579.37 1232.6 1579.89 1048.37 1528.98 1112.53 1528.46 1296.76 1528.46 1296.76"/>
+      <polygon class="st48 iso-face" points="1452.35 1198.59 1503 1134.67 1503.52 950.44 1452.87 1014.36 1452.35 1198.59 1452.35 1198.59"/>
+      <polygon class="st48 iso-face" points="1394.66 1105.64 1607.37 837.8 1607.89 653.57 1395.18 921.42 1394.66 1105.64 1394.66 1105.64"/>
+      <polygon class="st48 iso-face" points="1607.37 837.8 2023.81 1078.23 2024.33 894 1607.89 653.57 1607.37 837.8 1607.37 837.8"/>
+      <polygon class="st48 iso-face" points="1503 1134.67 1394.66 1105.64 1395.18 921.42 1503.52 950.44 1503 1134.67 1503 1134.67"/>
+      <polygon class="st48 iso-face" points="1579.37 1232.6 1452.35 1198.59 1452.87 1014.36 1579.89 1048.37 1579.37 1232.6 1579.37 1232.6"/>
+      <polygon class="st48 iso-face" points="1793.55 1367.93 1528.46 1296.76 1528.98 1112.53 1794.07 1183.7 1793.55 1367.93 1793.55 1367.93"/>
+      <polygon class="st48 iso-face" points="2023.81 1078.23 1793.55 1367.93 1794.07 1183.7 2024.33 894 2023.81 1078.23 2023.81 1078.23"/>
+      <polygon class="st48 iso-face" points="2024.33 894 1794.07 1183.7 1528.98 1112.53 1579.89 1048.37 1452.87 1014.36 1503.52 950.44 1395.18 921.42 1607.89 653.57 2024.33 894 2024.33 894"/>
+    </g>
+    <g id="Gang9" data-name="Gang">
+      <polygon class="st47 iso-top" points="1794.07 1183.7 1723.84 1272.07 1457.71 1201.68 1416.28 1253.79 1181.27 1190.78 1395.18 921.42 1503.52 950.44 1452.87 1014.36 1579.89 1048.37 1528.98 1112.53 1794.07 1183.7 1794.07 1183.7"/>
+    </g>
+    <g id="V202">
+      <polygon class="st48 iso-face" points="1423.25 1832.62 1723.32 1456.3 1457.19 1385.91 1415.76 1438.02 1180.75 1375.01 1007.81 1592.77 1423.25 1832.62 1423.25 1832.62"/>
+      <polygon class="st48 iso-face" points="1007.81 1592.77 1180.75 1375.01 1181.27 1190.78 1008.33 1408.54 1007.81 1592.77 1007.81 1592.77"/>
+      <polygon class="st48 iso-face" points="1180.75 1375.01 1415.76 1438.02 1416.28 1253.79 1181.27 1190.78 1180.75 1375.01 1180.75 1375.01"/>
+      <polygon class="st48 iso-face" points="1415.76 1438.02 1457.19 1385.91 1457.71 1201.68 1416.28 1253.79 1415.76 1438.02 1415.76 1438.02"/>
+      <polygon class="st48 iso-face" points="1457.19 1385.91 1723.32 1456.3 1723.84 1272.07 1457.71 1201.68 1457.19 1385.91 1457.19 1385.91"/>
+      <polygon class="st48 iso-face" points="1423.25 1832.62 1007.81 1592.77 1008.33 1408.54 1423.78 1648.4 1423.25 1832.62 1423.25 1832.62"/>
+      <polygon class="st48 iso-face" points="1723.32 1456.3 1423.25 1832.62 1423.78 1648.4 1723.84 1272.07 1723.32 1456.3 1723.32 1456.3"/>
+      <path class="st48 iso-face" d="M1723.84,1272.07l-300.06,376.33-415.45-239.86,172.94-217.76,235.01,63.02,41.43-52.11c77.45,20.48,154.89,40.97,232.34,61.45,11.26,2.98,22.53,5.96,33.79,8.94Z"/>
+    </g>
+    <g id="HA202">
+      <polygon class="st48 iso-face" points="2193.61 1464 2442 1319.68 2023.81 1078.23 1723.32 1456.3 1847.38 1527.92 2075.11 1395.58 2193.61 1464 2193.61 1464"/>
+      <polygon class="st48 iso-face" points="2075.11 1395.58 1847.38 1527.92 1847.9 1343.7 2075.63 1211.35 2075.11 1395.58 2075.11 1395.58"/>
+      <polygon class="st48 iso-face" points="1723.32 1456.3 2023.81 1078.23 2024.33 894 1723.84 1272.07 1723.32 1456.3 1723.32 1456.3"/>
+      <polygon class="st48 iso-face" points="2023.81 1078.23 2442 1319.68 2442.52 1135.45 2024.33 894 2023.81 1078.23 2023.81 1078.23"/>
+      <polygon class="st48 iso-face" points="2193.61 1464 2075.11 1395.58 2075.63 1211.35 2194.13 1279.78 2193.61 1464 2193.61 1464"/>
+      <polygon class="st48 iso-face" points="2442 1319.68 2193.61 1464 2194.13 1279.78 2442.52 1135.45 2442 1319.68 2442 1319.68"/>
+      <polygon class="st48 iso-face" points="1847.38 1527.92 1723.32 1456.3 1723.84 1272.07 1847.9 1343.7 1847.38 1527.92 1847.38 1527.92"/>
+      <polygon class="st48 iso-face" points="2442.52 1135.45 2194.13 1279.78 2075.63 1211.35 1847.9 1343.7 1723.84 1272.07 2024.33 894 2442.52 1135.45 2442.52 1135.45"/>
+    </g>
+    <g id="HA201">
+      <polygon class="st48 iso-face" points="2439.36 1605.88 2687.72 1461.54 2442 1319.68 1883.42 1644.24 1764.94 1575.83 1847.38 1527.92 1723.32 1456.3 1423.28 1832.64 1737.24 2013.9 1985.7 1869.52 1861.95 1798.08 2315.61 1534.44 2439.36 1605.88 2439.36 1605.88"/>
+      <polygon class="st48 iso-face" points="1883.42 1644.24 2442 1319.68 2442.52 1135.45 1883.94 1460.01 1883.42 1644.24 1883.42 1644.24"/>
+      <polygon class="st48 iso-face" points="1861.95 1798.08 1985.7 1869.52 1986.22 1685.29 1862.48 1613.85 1861.95 1798.08 1861.95 1798.08"/>
+      <polygon class="st48 iso-face" points="1423.28 1832.64 1723.32 1456.3 1723.84 1272.07 1423.81 1648.42 1423.28 1832.64 1423.28 1832.64"/>
+      <polygon class="st48 iso-face" points="1723.32 1456.3 1847.38 1527.92 1847.9 1343.7 1723.84 1272.07 1723.32 1456.3 1723.32 1456.3"/>
+      <polygon class="st48 iso-face" points="1847.38 1527.92 1764.94 1575.83 1765.46 1391.6 1847.9 1343.7 1847.38 1527.92 1847.38 1527.92"/>
+      <polygon class="st48 iso-face" points="1764.94 1575.83 1883.42 1644.24 1883.94 1460.01 1765.46 1391.6 1764.94 1575.83 1764.94 1575.83"/>
+      <polygon class="st48 iso-face" points="2315.61 1534.44 1861.95 1798.08 1862.48 1613.85 2316.14 1350.21 2315.61 1534.44 2315.61 1534.44"/>
+      <polygon class="st48 iso-face" points="1985.7 1869.52 1737.24 2013.9 1737.76 1829.68 1986.22 1685.29 1985.7 1869.52 1985.7 1869.52"/>
+      <polygon class="st48 iso-face" points="2442 1319.68 2687.72 1461.54 2688.25 1277.32 2442.52 1135.45 2442 1319.68 2442 1319.68"/>
+      <polygon class="st48 iso-face" points="2439.36 1605.88 2315.61 1534.44 2316.14 1350.21 2439.88 1421.65 2439.36 1605.88 2439.36 1605.88"/>
+      <polygon class="st48 iso-face" points="2687.72 1461.54 2439.36 1605.88 2439.88 1421.65 2688.25 1277.32 2687.72 1461.54 2687.72 1461.54"/>
+      <polygon class="st48 iso-face" points="1737.24 2013.9 1423.28 1832.64 1423.81 1648.42 1737.76 1829.68 1737.24 2013.9 1737.24 2013.9"/>
+      <polygon class="st48 iso-face" points="2688.25 1277.32 2439.88 1421.65 2316.14 1350.21 1862.48 1613.85 1986.22 1685.29 1737.76 1829.68 1423.81 1648.42 1723.84 1272.07 1847.9 1343.7 1765.46 1391.6 1883.94 1460.01 2442.52 1135.45 2688.25 1277.32 2688.25 1277.32"/>
+    </g>
+    <g id="Gang10" data-name="Gang">
+      <polygon class="st47 iso-top" points="2194.13 1279.78 1883.94 1460.01 1765.46 1391.6 2075.63 1211.35 2194.13 1279.78 2194.13 1279.78"/>
+    </g>
+    <g id="HB202">
+      <polygon class="st48 iso-face" points="2677.09 1743.14 2925.46 1598.8 2687.72 1461.54 2212.55 1737.68 2088.81 1666.24 1861.95 1798.08 1985.7 1869.52 1737.24 2013.9 1974.98 2151.16 2223.43 2006.78 2104.88 1938.33 2558.54 1674.69 2677.09 1743.14 2677.09 1743.14"/>
+      <polygon class="st48 iso-face" points="2212.55 1737.68 2687.72 1461.54 2688.25 1277.32 2213.08 1553.46 2212.55 1737.68 2212.55 1737.68"/>
+      <polygon class="st48 iso-face" points="2088.81 1666.24 2212.55 1737.68 2213.08 1553.46 2089.34 1482.01 2088.81 1666.24 2088.81 1666.24"/>
+      <polygon class="st48 iso-face" points="2558.54 1674.69 2104.88 1938.33 2105.4 1754.1 2559.06 1490.46 2558.54 1674.69 2558.54 1674.69"/>
+      <polygon class="st48 iso-face" points="2104.88 1938.33 2223.43 2006.78 2223.95 1822.55 2105.4 1754.1 2104.88 1938.33 2104.88 1938.33"/>
+      <polygon class="st48 iso-face" points="2223.43 2006.78 1974.98 2151.16 1975.5 1966.94 2223.95 1822.55 2223.43 2006.78 2223.43 2006.78"/>
+      <polygon class="st48 iso-face" points="1737.24 2013.9 1985.7 1869.52 1986.22 1685.29 1737.76 1829.68 1737.24 2013.9 1737.24 2013.9"/>
+      <polygon class="st48 iso-face" points="2687.72 1461.54 2925.46 1598.8 2925.98 1414.57 2688.25 1277.32 2687.72 1461.54 2687.72 1461.54"/>
+      <polygon class="st48 iso-face" points="2677.09 1743.14 2558.54 1674.69 2559.06 1490.46 2677.62 1558.91 2677.09 1743.14 2677.09 1743.14"/>
+      <polygon class="st48 iso-face" points="2925.46 1598.8 2677.09 1743.14 2677.62 1558.91 2925.98 1414.57 2925.46 1598.8 2925.46 1598.8"/>
+      <polygon class="st48 iso-face" points="1974.98 2151.16 1737.24 2013.9 1737.76 1829.68 1975.5 1966.94 1974.98 2151.16 1974.98 2151.16"/>
+      <polygon class="st48 iso-face" points="2925.98 1414.57 2677.62 1558.91 2559.06 1490.46 2105.4 1754.1 2223.95 1822.55 1975.5 1966.94 1737.76 1829.68 1986.22 1685.29 1862.48 1613.85 2089.34 1482.01 2213.08 1553.46 2688.25 1277.32 2925.98 1414.57 2925.98 1414.57"/>
+    </g>
+    <g id="Gang11" data-name="Gang">
+      <polygon class="st47 iso-top" points="2677.62 1558.91 2367.45 1739.16 2248.96 1670.76 2559.12 1490.5 2677.62 1558.91 2677.62 1558.91"/>
+    </g>
+    <g id="HB201">
+      <polygon class="st48 iso-face" points="2922.82 1885 3171.18 1740.67 2925.46 1598.8 2366.85 1923.34 2248.36 1854.95 2104.88 1938.33 2223.43 2006.78 1974.98 2151.16 2220.7 2293.03 2469.15 2148.64 2345.41 2077.2 2799.07 1813.56 2922.82 1885 2922.82 1885"/>
+      <polygon class="st48 iso-face" points="2248.36 1854.95 2366.85 1923.34 2367.37 1739.12 2248.88 1670.72 2248.36 1854.95 2248.36 1854.95"/>
+      <polygon class="st48 iso-face" points="2366.85 1923.34 2925.46 1598.8 2925.98 1414.57 2367.37 1739.12 2366.85 1923.34 2366.85 1923.34"/>
+      <polygon class="st48 iso-face" points="2799.07 1813.56 2345.41 2077.2 2345.94 1892.97 2799.6 1629.34 2799.07 1813.56 2799.07 1813.56"/>
+      <polygon class="st48 iso-face" points="2345.41 2077.2 2469.15 2148.64 2469.68 1964.42 2345.94 1892.97 2345.41 2077.2 2345.41 2077.2"/>
+      <polygon class="st48 iso-face" points="2469.15 2148.64 2220.7 2293.03 2221.22 2108.8 2469.68 1964.42 2469.15 2148.64 2469.15 2148.64"/>
+      <polygon class="st48 iso-face" points="1974.98 2151.16 2223.43 2006.78 2223.95 1822.55 1975.5 1966.94 1974.98 2151.16 1974.98 2151.16"/>
+      <polygon class="st48 iso-face" points="2925.46 1598.8 3171.18 1740.67 3171.71 1556.44 2925.98 1414.57 2925.46 1598.8 2925.46 1598.8"/>
+      <polygon class="st48 iso-face" points="2922.82 1885 2799.07 1813.56 2799.6 1629.34 2923.34 1700.78 2922.82 1885 2922.82 1885"/>
+      <polygon class="st48 iso-face" points="3171.18 1740.67 2922.82 1885 2923.34 1700.78 3171.71 1556.44 3171.18 1740.67 3171.18 1740.67"/>
+      <polygon class="st48 iso-face" points="2220.7 2293.03 1974.98 2151.16 1975.5 1966.94 2221.22 2108.8 2220.7 2293.03 2220.7 2293.03"/>
+      <polygon class="st48 iso-face" points="3171.71 1556.44 2923.34 1700.78 2799.6 1629.34 2345.94 1892.97 2469.68 1964.42 2221.22 2108.8 1975.5 1966.94 2223.95 1822.55 2105.4 1754.1 2248.88 1670.72 2367.37 1739.12 2925.98 1414.57 3171.71 1556.44 3171.71 1556.44"/>
+    </g>
+    <g id="HC203">
+      <polygon class="st48 iso-face" points="2458.44 2430.29 2706.92 2285.92 2588.37 2217.47 3042 1953.81 3160.55 2022.26 3408.92 1877.93 3171.18 1740.67 2696.01 2016.81 2572.27 1945.36 2345.41 2077.2 2469.15 2148.64 2220.7 2293.03 2458.44 2430.29 2458.44 2430.29"/>
+      <polygon class="st48 iso-face" points="2220.7 2293.03 2469.15 2148.64 2469.68 1964.42 2221.22 2108.8 2220.7 2293.03 2220.7 2293.03"/>
+      <polygon class="st48 iso-face" points="2572.27 1945.36 2696.01 2016.81 2696.54 1832.58 2572.79 1761.14 2572.27 1945.36 2572.27 1945.36"/>
+      <polygon class="st48 iso-face" points="2696.01 2016.81 3171.18 1740.67 3171.71 1556.44 2696.54 1832.58 2696.01 2016.81 2696.01 2016.81"/>
+      <polygon class="st48 iso-face" points="3171.18 1740.67 3408.92 1877.93 3409.44 1693.7 3171.71 1556.44 3171.18 1740.67 3171.18 1740.67"/>
+      <polygon class="st48 iso-face" points="3408.92 1877.93 3160.55 2022.26 3161.08 1838.04 3409.44 1693.7 3408.92 1877.93 3408.92 1877.93"/>
+      <polygon class="st48 iso-face" points="3160.55 2022.26 3042 1953.81 3042.52 1769.59 3161.08 1838.04 3160.55 2022.26 3160.55 2022.26"/>
+      <polygon class="st48 iso-face" points="3042 1953.81 2588.37 2217.47 2588.89 2033.24 3042.52 1769.59 3042 1953.81 3042 1953.81"/>
+      <polygon class="st48 iso-face" points="2588.37 2217.47 2706.92 2285.92 2707.44 2101.69 2588.89 2033.24 2588.37 2217.47 2588.37 2217.47"/>
+      <polygon class="st48 iso-face" points="2458.44 2430.29 2220.7 2293.03 2221.22 2108.8 2458.96 2246.06 2458.44 2430.29 2458.44 2430.29"/>
+      <polygon class="st48 iso-face" points="2706.92 2285.92 2458.44 2430.29 2458.96 2246.06 2707.44 2101.69 2706.92 2285.92 2706.92 2285.92"/>
+      <polygon class="st48 iso-face" points="2707.44 2101.69 2458.96 2246.06 2221.22 2108.8 2469.68 1964.42 2345.94 1892.97 2572.79 1761.14 2696.54 1832.58 3171.71 1556.44 3409.44 1693.7 3161.08 1838.04 3042.52 1769.59 2588.89 2033.24 2707.44 2101.69 2707.44 2101.69"/>
+    </g>
+    <g id="HC201">
+      <polygon class="st48 iso-face" points="3199.19 2307.4 3674.43 2031.22 3408.92 1877.93 3064.22 2078.28 3149.73 2127.65 3019.22 2203.49 3199.19 2307.4 3199.19 2307.4"/>
+      <polygon class="st48 iso-face" points="3019.22 2203.49 3149.73 2127.65 3150.25 1943.42 3019.74 2019.27 3019.22 2203.49 3019.22 2203.49"/>
+      <polygon class="st48 iso-face" points="3149.73 2127.65 3064.22 2078.28 3064.74 1894.05 3150.25 1943.42 3149.73 2127.65 3149.73 2127.65"/>
+      <polygon class="st48 iso-face" points="3064.22 2078.28 3408.92 1877.93 3409.44 1693.7 3064.74 1894.05 3064.22 2078.28 3064.22 2078.28"/>
+      <polygon class="st48 iso-face" points="3408.92 1877.93 3674.43 2031.22 3674.96 1846.99 3409.44 1693.7 3408.92 1877.93 3408.92 1877.93"/>
+      <polygon class="st48 iso-face" points="3199.19 2307.4 3019.22 2203.49 3019.74 2019.27 3199.71 2123.17 3199.19 2307.4 3199.19 2307.4"/>
+      <polygon class="st48 iso-face" points="3674.43 2031.22 3199.19 2307.4 3199.71 2123.17 3674.96 1846.99 3674.43 2031.22 3674.43 2031.22"/>
+      <polygon class="st48 iso-face" points="3674.96 1846.99 3199.71 2123.17 3019.74 2019.27 3150.25 1943.42 3064.74 1894.05 3409.44 1693.7 3674.96 1846.99 3674.96 1846.99"/>
+    </g>
+    <g id="HC202">
+      <polygon class="st48 iso-face" points="2724.71 2583.14 3199.19 2307.4 2933.68 2154.11 2850.38 2202.51 2731.85 2134.08 2588.37 2217.47 2706.92 2285.92 2458.44 2430.29 2724.71 2583.14 2724.71 2583.14"/>
+      <polygon class="st48 iso-face" points="2458.44 2430.29 2706.92 2285.92 2707.44 2101.69 2458.96 2246.06 2458.44 2430.29 2458.44 2430.29"/>
+      <polygon class="st48 iso-face" points="2731.85 2134.08 2850.38 2202.51 2850.91 2018.29 2732.37 1949.85 2731.85 2134.08 2731.85 2134.08"/>
+      <polygon class="st48 iso-face" points="2850.38 2202.51 2933.68 2154.11 2934.2 1969.88 2850.91 2018.29 2850.38 2202.51 2850.38 2202.51"/>
+      <polygon class="st48 iso-face" points="2933.68 2154.11 3199.19 2307.4 3199.71 2123.17 2934.2 1969.88 2933.68 2154.11 2933.68 2154.11"/>
+      <polygon class="st48 iso-face" points="2724.71 2583.14 2458.44 2430.29 2458.96 2246.06 2725.24 2398.91 2724.71 2583.14 2724.71 2583.14"/>
+      <polygon class="st48 iso-face" points="3199.19 2307.4 2724.71 2583.14 2725.24 2398.91 3199.71 2123.17 3199.19 2307.4 3199.19 2307.4"/>
+      <polygon class="st48 iso-face" points="3199.71 2123.17 2725.24 2398.91 2458.96 2246.06 2707.44 2101.69 2588.89 2033.24 2732.37 1949.85 2850.91 2018.29 2934.2 1969.88 3199.71 2123.17 3199.71 2123.17"/>
+    </g>
+    <g id="Gang12" data-name="Gang">
+      <polygon class="st47 iso-top" points="3150.25 1943.42 3019.74 2019.27 2934.2 1969.88 2850.91 2018.29 2732.37 1949.85 3042.58 1769.62 3161.08 1838.04 3064.74 1894.05 3150.25 1943.42 3150.25 1943.42"/>
+    </g>
+    <g id="Lichthof4" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2439.88 1421.65 2213.08 1553.46 2089.34 1482.01 2316.14 1350.21 2439.88 1421.65 2439.88 1421.65"/>
+    </g>
+    <g id="Lichthof5" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2923.34 1700.78 2696.54 1832.58 2572.79 1761.14 2799.6 1629.34 2923.34 1700.78 2923.34 1700.78"/>
+    </g>
+    <g>
+      <g>
+        <polygon class="st13" points="798.7 1363.55 797.24 1368.34 797.2 1368.36 798.67 1363.57 798.7 1363.55 798.7 1363.55"/>
+        <path class="st13" d="M793.81,1405.94h.27s-.04.03-.04.03c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.91,10.14,5.93,13.85,10.02l.04-.02c-5.2-5.71-17.22-15.68-25.07-9.57-9.64,7.5-2.09,27.47,3.64,34.94,4.3,5.6,10.93,10.91,18,12.23Z"/>
+        <polygon class="st13" points="794.09 1405.95 794.13 1390 794.1 1390.02 794.05 1405.97 794.09 1405.95 794.09 1405.95"/>
+        <polygon class="st13" points="794.13 1390 784.67 1384.54 784.64 1384.56 794.1 1390.02 794.13 1390 794.13 1390"/>
+        <polygon class="st13" points="784.67 1384.54 784.69 1378.98 784.65 1379 784.64 1384.56 784.67 1384.54 784.67 1384.54"/>
+        <polygon class="st13" points="784.69 1378.98 800.02 1387.83 799.98 1387.85 784.65 1379 784.69 1378.98 784.69 1378.98"/>
+        <path class="st13" d="M799.95,1413.55c-15.94-2.72-29.72-14.92-35.23-29.96-4.75-12.98-4.87-38.31,15.53-32.33,6.9,2.02,13.63,7.01,18.46,12.29l-.04.02c-7.3-8-25-20.39-33.84-8.42-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55l.04-.02h0Z"/>
+        <polygon class="st13" points="800.02 1387.83 799.95 1413.55 799.91 1413.57 799.98 1387.85 800.02 1387.83 800.02 1387.83"/>
+        <path class="st13" d="M799.98,1387.85l-.07,25.71c-15.94-2.72-29.72-14.92-35.23-29.96-4.75-12.98-4.87-38.31,15.53-32.33,6.9,2.02,13.63,7.01,18.46,12.29l-1.47,4.8c-5.27-5.79-17.52-15.88-25.33-9.34-9.29,7.78-1.73,27.47,4.09,34.94,4.29,5.51,11.03,10.94,18.09,12.01l.04-15.95-9.46-5.46.02-5.56,15.33,8.85h0Z"/>
+        <path class="st13" d="M799.95,1413.55l.07-25.71-15.33-8.85-.02,5.56,9.46,5.46-.04,15.95c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.28,14.61-19.32,5.24,1.91,10.14,5.93,13.85,10.02l1.47-4.8c-7.3-8-25-20.39-33.84-8.42-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55Z"/>
+      </g>
+      <g>
+        <polygon class="st13" points="650.42 1329.6 650.43 1325.32 650.4 1325.34 650.39 1329.62 650.42 1329.6 650.42 1329.6"/>
+        <path class="st13" d="M653.78,1288.99c-.08.02-.16.05-.23.09,15.42-5.51,23.47,17.77,12.61,27.17-4.48,3.88-10.62,6.3-15.76,9.09,6.51-3.54,17.01-7.16,20.43-14.49,3.56-7.63-.99-17.69-8.46-21.05-2.79-1.26-5.62-1.78-8.59-.8h0Z"/>
+        <polygon class="st13" points="653.58 1289.06 651.66 1283.02 651.62 1283.04 653.54 1289.08 653.58 1289.06 653.58 1289.06"/>
+        <path class="st13" d="M662.53,1326.82c-1.21.58-2.43,1.17-3.64,1.76,8.42-3.85,18.05-8.77,19.09-18.99.92-9.02-4.6-18.42-11.89-23.35-4.18-2.82-9.46-4.94-14.47-3.2,17.18-6.18,33.2,21.8,23.07,35.12-2.97,3.91-7.9,6.45-12.16,8.66h0Z"/>
+        <polygon class="st13" points="658.93 1328.55 658.93 1328.71 658.9 1328.73 658.9 1328.58 658.93 1328.55 658.93 1328.55"/>
+        <polygon class="st13" points="658.93 1328.71 679.1 1340.36 679.06 1340.38 658.9 1328.73 658.93 1328.71 658.93 1328.71"/>
+        <polygon class="st13" points="679.08 1346.15 650.42 1329.6 650.39 1329.62 679.05 1346.17 679.08 1346.15 679.08 1346.15"/>
+        <polygon class="st13" points="679.1 1340.36 679.08 1346.15 679.05 1346.17 679.06 1340.38 679.1 1340.36 679.1 1340.36"/>
+        <path class="st13" d="M679.06,1340.38l-.02,5.79-28.66-16.55v-4.29c6.59-3.57,17.24-7.24,20.54-14.76,3.38-7.71-1.38-17.8-8.96-20.95-2.76-1.15-5.54-1.57-8.42-.55l-1.92-6.04c17.63-6.15,33.52,22.59,22.45,35.83-3.72,4.45-10.04,7.36-15.17,9.7v.16s20.17,11.64,20.17,11.64h0Z"/>
+        <path class="st13" d="M679.08,1346.15l.02-5.79-20.17-11.64v-.16c8.42-3.85,18.05-8.77,19.09-18.99.92-9.02-4.6-18.42-11.89-23.35-4.18-2.82-9.46-4.94-14.47-3.2l1.92,6.04c15.42-5.51,23.47,17.77,12.61,27.17-4.48,3.88-10.62,6.3-15.76,9.09v4.29s28.65,16.55,28.65,16.55h0Z"/>
+      </g>
+      <g>
+        <path class="st13" d="M756.75,1363.69c.02-13.23-18.75-56.5-37.72-39.25-16.41,14.93,3.15,51.44,20.36,56.99,12.5,4.03,17.41-6.76,17.36-17.74h0Z"/>
+        <path class="st13" d="M756.78,1362.92c.58,31.54-28.92,16.7-37.74-1.73-8.13-17-4.53-53.63,20.9-33.96,10.73,8.3,16.65,22.31,16.84,35.69h0Z"/>
+        <path class="st13" d="M750.39,1359.84c.42,23.56-19.99,15.58-26.61-.32-4.64-11.14-4.04-42.74,14.92-27.32,7.88,6.41,11.54,17.78,11.69,27.64h0Z"/>
+        <path class="st13" d="M750.43,1360.32c0-9.46-13.61-44.78-26.87-28.93-9.44,11.29.88,41.16,15.27,44.03,9.17,1.83,11.65-7.66,11.6-15.1h0Z"/>
+        <path class="st13" d="M756.74,1362.94c.58,31.54-28.92,16.7-37.74-1.73-8.14-17-4.53-53.63,20.9-33.96,10.73,8.3,16.65,22.31,16.84,35.69h0Z"/>
+        <path class="st13" d="M756.78,1363.67c.02-13.23-18.75-56.5-37.72-39.25-16.41,14.93,3.15,51.44,20.36,56.99,12.5,4.03,17.41-6.76,17.36-17.74h0Z"/>
+        <path class="st13" d="M750.39,1360.34c0-9.46-13.61-44.78-26.87-28.93-9.44,11.29.88,41.16,15.27,44.03,9.17,1.83,11.65-7.66,11.6-15.1h0Z"/>
+        <path class="st13" d="M750.43,1359.82c.42,23.56-19.99,15.58-26.61-.32-4.64-11.14-4.04-42.74,14.92-27.32,7.88,6.41,11.54,17.78,11.69,27.64h0Z"/>
+      </g>
+      <g>
+        <path class="st13" d="M694.53,1351.11c-.02-2.79-3.34-10.3-7.24-7.66-3.09,2.09.61,10.33,3.89,10.52,2.33.14,3.07-.32,3.35-2.86h0Z"/>
+        <path class="st13" d="M694.56,1350.95c-.96,12.58-15.69-13.75-3.19-6.76,2.13,1.19,3.14,4.51,3.19,6.76h0Z"/>
+        <path class="st13" d="M694.53,1350.97c-.96,12.58-15.69-13.75-3.19-6.76,2.13,1.19,3.14,4.51,3.19,6.76h0Z"/>
+        <path class="st13" d="M694.56,1351.09c-.02-2.79-3.34-10.3-7.24-7.66-3.09,2.1.61,10.33,3.89,10.52,2.33.14,3.07-.32,3.35-2.86h0Z"/>
+      </g>
+      <g class="st67">
+        <g class="st57">
+          <g class="st53">
+            
+          </g>
+        </g>
+      </g>
+    </g>
+      <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 650.4, 1327.2)">2. OG</text>
   </g>
-  <g class="iso-floor" data-iso-floor="3.OG">
-<g transform="translate(-415, -340)">
-
-<g transform="translate(415, 340)">
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 1301.5 -750.5 L 2251.2 -198.6 L 600.6 754.4 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1423.8, 1648.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1306.7 1032.9 L 1607.9 653.6 L 1193.5 414.3 L 821.9 881.7 L 1093.0 953.7 L 1078.6 971.8 C 1154.6 992.2 1230.7 1012.5 1306.7 1032.9 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 301.2 379.3 L -113.2 618.6 L -484.8 151.2 L -213.7 79.2 L -228.0 61.1 C -152.0 40.7 -76.0 20.4 0.0 0.0 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.7, 1032.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 14.3 18.1 L 14.8 202.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1078.6, 971.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -271.1 72.0 L -270.6 256.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1093.0, 953.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 371.7 467.4 L 372.2 651.6 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 821.9, 881.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 414.4 -239.2 L 414.9 -55.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1193.5, 414.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -228.0 61.1 L -227.5 245.3 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.7, 1032.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -301.2 -379.3 L -300.7 -195.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1607.9, 653.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -301.2 -379.3 L -529.2 -318.2 L -514.9 -300.1 L -786.0 -228.1 L -414.4 239.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1608.4, 469.3)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 230.3 289.7 L -186.2 530.1 L -398.9 262.3 L -290.6 233.3 L -341.2 169.3 L -214.2 135.3 L -265.1 71.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1794.1, 1183.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 50.9 64.2 L 51.4 248.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1529.0, 1112.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -127.0 34.0 L -126.5 218.2 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1579.9, 1048.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 50.7 63.9 L 51.2 248.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1452.9, 1014.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -108.3 29.0 L -107.8 213.3 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1503.5, 950.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 212.7 267.8 L 213.2 452.1 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1395.2, 921.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 416.4 -240.4 L 417.0 -56.2 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1607.9, 653.6)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -265.1 71.2 L -264.6 255.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1794.1, 1183.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -230.3 -289.7 L -229.7 -105.5 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2024.3, 894.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -230.3 -289.7 L -495.4 -218.5 L -444.4 -154.4 L -571.5 -120.4 L -520.8 -56.4 L -629.1 -27.4 L -416.4 240.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 2024.9, 709.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 169.8 213.6 L 169.8 213.6 L 0.0 0.0 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1794.1, 1183.7)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 228.6 -132.0 L 228.6 -131.9 L 0.0 0.0 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1963.9, 970.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L -132.3 73.1 L -132.3 73.1 L -0.0 0.0 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1926.3, 1256.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -266.1 -154.7 L -266.1 -154.6 L 0.0 0.0 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2192.5, 1102.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -266.1 -154.7 L -398.4 -81.6 L -228.6 132.0 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2192.5, 1102.1)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 266.1 154.7 L 37.5 286.6 L -132.3 73.1 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1926.3, 1256.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 298.3 375.6 L 70.3 436.7 L 84.6 454.8 L -186.5 526.9 L -414.9 239.6 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1008.3, 1408.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 228.5 287.3 L 229.0 471.5 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 593.4, 1169.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 228.0 -61.1 L 228.5 123.1 L 0.5 184.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1078.6, 971.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -414.9 239.6 L -414.4 423.8 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1008.3, 1408.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -298.3 -375.6 L -297.8 -191.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1306.7, 1032.9)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" d="M 1307.2 848.7 L 1008.9 1224.3 L 593.9 984.7 L 822.4 697.5 L 1093.5 769.5 L 1079.2 787.6 C 1155.2 808.0 1231.2 828.3 1307.2 848.7 "/>
-<path fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -298.3 -375.6 L -713.3 -136.1 L -484.8 151.2 L -213.7 79.2 L -228.0 61.1 C -152.0 40.7 -76.0 20.4 -0.0 0.0 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1307.2, 848.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -112.4 -141.3 L -111.9 42.9 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1794.1, 1183.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -112.4 -141.3 L -612.8 -7.1 L -398.9 262.3 L -290.5 233.3 L -341.2 169.3 L -214.2 135.3 L -265.1 71.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1794.6, 999.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 257.8 323.4 C 184.6 343.0 111.3 362.7 38.1 382.4 C -19.9 397.9 -77.8 413.5 -135.8 429.0 L -242.5 457.6 L -415.4 239.9 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1423.8, 1648.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 172.9 217.8 L 173.5 402.0 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1008.3, 1408.5)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 265.3 -71.2 L 265.9 113.0 C 192.6 132.7 119.4 152.3 46.1 172.0 C -11.8 187.5 -69.8 203.1 -127.7 218.6 L -234.5 247.2 L -235.0 63.0 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1416.3, 1253.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -415.4 239.9 L -414.9 424.1 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 1423.8, 1648.4)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -257.8 -323.4 L -257.3 -139.2 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 1681.6, 1325.0)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -257.9 -323.4 L -673.3 -83.5 L -500.4 134.2 C -427.9 114.8 -355.5 95.4 -283.0 76.0 C -221.8 59.5 -160.6 43.1 -99.4 26.7 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1682.1, 1140.8)"/>
-<path fill-rule="nonzero" class="iso-face" fill-opacity="1" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -209.9 -122.0 L -300.1 -69.9 L -167.3 96.6 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1742.2, 1555.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2439.9, 1421.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -123.7 71.4 L -124.3 -71.9 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2439.9, 1421.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -350.5 -60.4 L -123.7 71.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2923.3, 1700.8)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 102.8 59.8 L 103.1 203.2 L -123.7 71.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2696.5, 1832.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 226.8 131.8 L 108.3 200.2 L -118.5 68.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1967.3, 1411.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 226.8 131.8 L 227.4 251.0 L 0.5 119.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 1848.8, 1343.1)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 119.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2075.6, 1211.4)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -226.8 -131.8 L -226.3 52.4 L 0.5 184.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2194.1, 1279.8)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L -226.8 -131.8 L -345.3 -128.4 L -118.5 3.4 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2194.7, 1095.5)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 226.8 131.8 L 108.3 200.2 L -118.5 68.4 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2450.9, 1690.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 -0.0 L 226.8 131.8 L 227.4 251.0 L 0.5 119.2 Z M 0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2332.3, 1622.2)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 119.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2559.2, 1490.5)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -226.3 52.4 L 0.5 184.2 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2677.7, 1558.9)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0 0.0 L -226.8 -131.8 L -345.3 -128.4 L -118.5 3.4 Z M 0.0 0.0 " transform="matrix(1, 0, 0, -1, 2678.2, 1374.7)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 226.8 131.8 L 108.3 200.2 L -118.5 68.4 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2934.3, 1969.8)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 -0.0 L 226.8 131.8 L 227.4 251.0 L 0.5 119.2 Z M -0.0 -0.0 " transform="matrix(1, 0, 0, -1, 2815.7, 1901.4)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L 118.5 -68.4 L 119.0 115.8 L 0.5 119.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3042.6, 1769.6)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -226.8 -131.8 L -226.3 52.4 L 0.5 184.2 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3161.1, 1838.0)"/>
-<path fill-rule="nonzero" class="iso-top" fill-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.0 0.0 L -226.8 -131.8 L -345.3 -128.4 L -118.5 3.4 Z M -0.0 0.0 " transform="matrix(1, 0, 0, -1, 3161.6, 1653.8)"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</g>
-
-</g>
-    <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 653.8, 1165.6)">3. OG</text>
+  <g class="iso-floor" data-iso-floor="3.OG" id="_x33_._OG">
+    <polygon id="Boden1" data-name="Boden" class="st47 iso-top" points="1423.78 1648.4 2725.24 2398.91 3674.96 1846.99 2024.33 894 1423.78 1648.4"/>
+    <g id="V304">
+      <path class="st48 iso-face" d="M1306.66,1032.91l301.23-379.34-414.38-239.24-371.66,467.35,271.12,72.03-14.32,18.1c76.01,20.36,152.01,40.72,228.02,61.09Z"/>
+      <polygon class="st48 iso-face" points="1078.64 971.82 1092.97 953.71 1093.49 769.49 1079.17 787.59 1078.64 971.82 1078.64 971.82"/>
+      <polygon class="st48 iso-face" points="1092.97 953.71 821.85 881.68 822.37 697.46 1093.49 769.49 1092.97 953.71 1092.97 953.71"/>
+      <polygon class="st48 iso-face" points="821.85 881.68 1193.51 414.33 1194.03 230.1 822.37 697.46 821.85 881.68 821.85 881.68"/>
+      <polygon class="st48 iso-face" points="1193.51 414.33 1607.89 653.57 1608.41 469.34 1194.03 230.1 1193.51 414.33 1193.51 414.33"/>
+      <polygon class="st48 iso-face" points="1306.66 1032.91 1078.64 971.82 1079.17 787.59 1307.18 848.68 1306.66 1032.91 1306.66 1032.91"/>
+      <polygon class="st48 iso-face" points="1607.89 653.57 1306.66 1032.91 1307.18 848.68 1608.41 469.34 1607.89 653.57 1607.89 653.57"/>
+      <polygon class="st48 iso-face" points="1608.41 469.34 1307.18 848.68 1079.17 787.59 1093.49 769.49 822.37 697.46 1194.03 230.1 1608.41 469.34 1608.41 469.34"/>
+    </g>
+    <g id="V301">
+      <polygon class="st48 iso-face" points="1794.07 1183.7 2024.33 894 1607.89 653.57 1395.18 921.42 1503.52 950.44 1452.87 1014.36 1579.89 1048.37 1528.98 1112.53 1794.07 1183.7 1794.07 1183.7"/>
+      <polygon class="st48 iso-face" points="1528.98 1112.53 1579.89 1048.37 1580.41 864.14 1529.5 928.31 1528.98 1112.53 1528.98 1112.53"/>
+      <polygon class="st48 iso-face" points="1579.89 1048.37 1452.87 1014.36 1453.39 830.14 1580.41 864.14 1579.89 1048.37 1579.89 1048.37"/>
+      <polygon class="st48 iso-face" points="1452.87 1014.36 1503.52 950.44 1504.05 766.22 1453.39 830.14 1452.87 1014.36 1452.87 1014.36"/>
+      <polygon class="st48 iso-face" points="1503.52 950.44 1395.18 921.42 1395.7 737.19 1504.05 766.22 1503.52 950.44 1503.52 950.44"/>
+      <polygon class="st48 iso-face" points="1395.18 921.42 1607.89 653.57 1608.41 469.34 1395.7 737.19 1395.18 921.42 1395.18 921.42"/>
+      <polygon class="st48 iso-face" points="1607.89 653.57 2024.33 894 2024.85 709.78 1608.41 469.34 1607.89 653.57 1607.89 653.57"/>
+      <polygon class="st48 iso-face" points="1794.07 1183.7 1528.98 1112.53 1529.5 928.31 1794.6 999.48 1794.07 1183.7 1794.07 1183.7"/>
+      <polygon class="st48 iso-face" points="2024.33 894 1794.07 1183.7 1794.6 999.48 2024.85 709.78 2024.33 894 2024.33 894"/>
+      <polygon class="st48 iso-face" points="2024.85 709.78 1794.6 999.48 1529.5 928.31 1580.41 864.14 1453.39 830.14 1504.05 766.22 1395.7 737.19 1608.41 469.34 2024.85 709.78 2024.85 709.78"/>
+      <g>
+        <polygon class="st48 iso-face" points="1794.07 1183.7 1963.85 970.11 1963.85 970.07 1794.07 1183.66 1794.07 1183.7 1794.07 1183.7"/>
+        <polygon class="st48 iso-face" points="1963.85 970.11 2192.46 1102.09 2192.46 1102.05 1963.85 970.07 1963.85 970.11 1963.85 970.11"/>
+        <polygon class="st48 iso-face" points="1926.33 1256.75 1794.07 1183.7 1794.07 1183.66 1926.33 1256.71 1926.33 1256.75 1926.33 1256.75"/>
+        <polygon class="st48 iso-face" points="2192.46 1102.09 1926.33 1256.75 1926.33 1256.71 2192.46 1102.05 2192.46 1102.09 2192.46 1102.09"/>
+        <polygon class="st48 iso-face" points="2192.46 1102.05 1926.33 1256.71 1794.07 1183.66 1963.85 970.07 2192.46 1102.05 2192.46 1102.05"/>
+        <polygon class="st48 iso-face" points="1926.33 1256.75 2192.46 1102.09 1963.85 970.11 1794.07 1183.7 1926.33 1256.75 1926.33 1256.75"/>
+      </g>
+    </g>
+    <g id="V303">
+      <polygon class="st48 iso-face" points="1008.33 1408.54 1306.66 1032.91 1078.64 971.82 1092.97 953.71 821.85 881.68 593.39 1168.97 1008.33 1408.54 1008.33 1408.54"/>
+      <polygon class="st48 iso-face" points="593.39 1168.97 821.85 881.68 822.37 697.46 593.91 984.75 593.39 1168.97 593.39 1168.97"/>
+      <polygon class="st48 iso-face" points="1078.64 971.82 1306.66 1032.91 1307.18 848.68 1079.17 787.59 1078.64 971.82 1078.64 971.82"/>
+      <polygon class="st48 iso-face" points="1008.33 1408.54 593.39 1168.97 593.91 984.75 1008.85 1224.31 1008.33 1408.54 1008.33 1408.54"/>
+      <polygon class="st48 iso-face" points="1306.66 1032.91 1008.33 1408.54 1008.85 1224.31 1307.18 848.68 1306.66 1032.91 1306.66 1032.91"/>
+      <path class="st48 iso-face" d="M1307.18,848.68l-298.33,375.63-414.94-239.57,228.47-287.29,271.12,72.03-14.32,18.1c76.01,20.36,152.01,40.72,228.02,61.09Z"/>
+    </g>
+    <g id="Gang13" data-name="Gang">
+      <polygon class="st47 iso-top" points="1794.07 1183.7 1681.63 1325.01 1682.15 1140.79 1794.6 999.48 1794.07 1183.7 1794.07 1183.7"/>
+      <polygon class="st47 iso-top" points="1794.6 999.48 1682.15 1140.79 1181.79 1006.55 1395.7 737.19 1504.05 766.22 1453.39 830.14 1580.41 864.14 1529.5 928.31 1794.6 999.48 1794.6 999.48"/>
+    </g>
+    <g id="V302">
+      <path class="st48 iso-face" d="M1423.78,1648.4l257.85-323.39c-73.26-19.66-146.52-39.33-219.78-58.99-57.94-15.55-115.88-31.08-173.82-46.62-35.58-9.54-71.17-19.08-106.75-28.63l-172.94,217.76,415.45,239.86h0Z"/>
+      <polygon class="st48 iso-face" points="1008.33 1408.54 1181.27 1190.78 1181.79 1006.55 1008.85 1224.31 1008.33 1408.54 1008.33 1408.54"/>
+      <path class="st48 iso-face" d="M1416.28,1253.79l265.35,71.22.52-184.23c-73.26-19.66-146.52-39.33-219.78-58.99-57.94-15.55-115.88-31.08-173.82-46.62-35.58-9.54-71.17-19.08-106.75-28.63l-.52,184.23,235.01,63.02h0Z"/>
+      <polygon class="st48 iso-face" points="1423.78 1648.4 1008.33 1408.54 1008.85 1224.31 1424.3 1464.17 1423.78 1648.4 1423.78 1648.4"/>
+      <polygon class="st48 iso-face" points="1681.63 1325.01 1423.78 1648.4 1424.3 1464.17 1682.15 1140.79 1681.63 1325.01 1681.63 1325.01"/>
+      <path class="st48 iso-face" d="M1682.15,1140.79l-257.85,323.39-415.45-239.86,172.94-217.76c72.45,19.43,144.9,38.85,217.35,58.28,61.21,16.41,122.42,32.85,183.63,49.28,33.13,8.89,66.25,17.78,99.38,26.67h0Z"/>
+      <polygon class="st46 iso-face" points="1742.16 1555.64 1532.26 1677.62 1442.04 1625.54 1574.81 1459.03 1742.16 1555.64 1742.16 1555.64"/>
+    </g>
+    <g id="Lichthof6" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2439.88 1421.65 2213.08 1553.46 2089.34 1482.01 2316.14 1350.21 2439.88 1421.65 2439.88 1421.65"/>
+      <polygon class="st47 iso-top" points="2439.88 1421.65 2439.88 1421.65 2316.14 1350.21 2315.62 1493.56 2439.88 1421.65"/>
+    </g>
+    <g id="Lichthof7" data-name="Lichthof">
+      <polygon class="st47 iso-top" points="2923.34 1700.78 2696.54 1832.58 2572.79 1761.14 2799.6 1629.34 2923.34 1700.78 2923.34 1700.78"/>
+      <polygon class="st47 iso-top" points="2696.54 1832.58 2799.38 1772.81 2799.6 1629.34 2572.79 1761.14 2572.79 1761.14 2696.54 1832.58"/>
+    </g>
+    <g id="Treppe">
+      <polygon class="st47 iso-top" points="1967.33 1411.58 2194.13 1279.78 2075.64 1211.36 1848.8 1343.14 1967.33 1411.58 1967.33 1411.58"/>
+      <polygon class="st47 iso-top" points="1848.8 1343.14 2075.64 1211.36 2076.16 1092.16 1849.32 1223.94 1848.8 1343.14 1848.8 1343.14"/>
+      <polygon class="st47 iso-top" points="2075.64 1211.36 2194.13 1279.78 2194.65 1095.55 2076.16 1092.16 2075.64 1211.36 2075.64 1211.36"/>
+      <polygon class="st47 iso-top" points="2194.13 1279.78 1967.33 1411.58 1967.85 1227.35 2194.65 1095.55 2194.13 1279.78 2194.13 1279.78"/>
+      <polygon class="st47 iso-top" points="2194.65 1095.55 1967.85 1227.35 1849.32 1223.94 2076.16 1092.16 2194.65 1095.55 2194.65 1095.55"/>
+    </g>
+    <g id="Treppe1" data-name="Treppe">
+      <polygon class="st47 iso-top" points="2450.87 1690.68 2677.67 1558.88 2559.17 1490.47 2332.33 1622.25 2450.87 1690.68 2450.87 1690.68"/>
+      <polygon class="st47 iso-top" points="2332.33 1622.25 2559.17 1490.47 2559.69 1371.27 2332.85 1503.05 2332.33 1622.25 2332.33 1622.25"/>
+      <polygon class="st47 iso-top" points="2559.17 1490.47 2677.67 1558.88 2678.19 1374.65 2559.69 1371.27 2559.17 1490.47 2559.17 1490.47"/>
+      <polygon class="st47 iso-top" points="2677.67 1558.88 2450.87 1690.68 2451.39 1506.46 2678.19 1374.65 2677.67 1558.88 2677.67 1558.88"/>
+      <polygon class="st47 iso-top" points="2678.19 1374.65 2451.39 1506.46 2332.85 1503.05 2559.69 1371.27 2678.19 1374.65 2678.19 1374.65"/>
+    </g>
+    <g id="Treppe2" data-name="Treppe">
+      <polygon class="st47 iso-top" points="2934.27 1969.84 3161.08 1838.04 3042.58 1769.62 2815.74 1901.4 2934.27 1969.84 2934.27 1969.84"/>
+      <polygon class="st47 iso-top" points="2815.74 1901.4 3042.58 1769.62 3043.1 1650.42 2816.26 1782.2 2815.74 1901.4 2815.74 1901.4"/>
+      <polygon class="st47 iso-top" points="3042.58 1769.62 3161.08 1838.04 3161.6 1653.81 3043.1 1650.42 3042.58 1769.62 3042.58 1769.62"/>
+      <polygon class="st47 iso-top" points="3161.08 1838.04 2934.27 1969.84 2934.8 1785.61 3161.6 1653.81 3161.08 1838.04 3161.08 1838.04"/>
+      <polygon class="st47 iso-top" points="3161.6 1653.81 2934.8 1785.61 2816.26 1782.2 3043.1 1650.42 3161.6 1653.81 3161.6 1653.81"/>
+    </g>
+    <g>
+      <g>
+        <polygon class="st13" points="653.84 1165.43 655.51 1160.99 655.47 1161.01 653.8 1165.45 653.84 1165.43 653.84 1165.43"/>
+        <path class="st13" d="M664.05,1148.83l-3.38-1.95-.04.02c5.38,2.86,22.3,16.5,13.3,23.96-5.67,4.7-15.24-5.75-18.46-9.85l.04-.02c3.15,4.02,12.33,14.14,18.05,10.18,8.36-5.79-4.51-19.44-9.51-22.34h0Z"/>
+        <polygon class="st13" points="660.67 1146.88 660.68 1141.64 660.65 1141.66 660.63 1146.9 660.67 1146.88 660.67 1146.88"/>
+        <path class="st13" d="M657.45,1126.51l-.19.04-.04.02c17.1-3.1,23.36,28.13,3.42,15.09l.04-.02c19.82,12.91,13.82-17.8-3.23-15.13h0Z"/>
+        <polygon class="st13" points="657.27 1126.55 655.69 1120.56 655.66 1120.58 657.23 1126.57 657.27 1126.55 657.27 1126.55"/>
+        <path class="st13" d="M672.44,1150.51l-.51-.07-.04.02c15.89,3.48,2.93-33.08-16.24-29.88l.04-.02c18.55-3.15,32.4,32.67,16.75,29.96h0Z"/>
+        <polygon class="st13" points="671.93 1150.44 671.93 1150.6 671.9 1150.62 671.9 1150.46 671.93 1150.44 671.93 1150.44"/>
+        <path class="st13" d="M681.91,1169.63c.7,19.03-23.08,2.27-28.07-4.21l-.04.02c4.3,5.57,15.89,16.75,23.9,12.65,10.73-5.5.09-22.68-5.8-27.47l.04-.02c5.64,4.59,9.92,11.62,9.98,19.03h0Z"/>
+        <path class="st13" d="M681.87,1169.65c.7,19.03-23.08,2.27-28.07-4.21l1.67-4.44c3.21,4.1,12.78,14.55,18.46,9.85,9.01-7.47-7.93-21.1-13.3-23.96v-5.24c20.01,13.01,13.66-18.18-3.4-15.09l-1.57-6c19.17-3.19,32.13,33.36,16.24,29.88v.16c5.64,4.59,9.92,11.62,9.98,19.03h0Z"/>
+        <path class="st13" d="M681.9,1170.02c.11-7.55-4.24-14.75-9.97-19.42v-.16c15.89,3.48,2.93-33.08-16.24-29.88l1.57,6c17.11-3.1,23.36,28.13,3.42,15.09v5.24c5.37,2.86,22.29,16.5,13.28,23.96-5.67,4.7-15.24-5.75-18.46-9.85l-1.67,4.44c4.85,6.28,28.35,23.22,28.07,4.59h0Z"/>
+      </g>
+      <g>
+        <polygon class="st13" points="802.32 1202.11 800.85 1206.91 800.82 1206.93 802.28 1202.13 802.32 1202.11 802.32 1202.11"/>
+        <path class="st13" d="M797.43,1244.5h.27s-.04.03-.04.03c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.27,14.61-19.32,5.24,1.91,10.14,5.93,13.85,10.02l.04-.02c-5.2-5.72-17.22-15.68-25.07-9.58-9.64,7.5-2.09,27.47,3.64,34.94,4.3,5.6,10.93,10.91,18,12.23Z"/>
+        <polygon class="st13" points="797.7 1244.52 797.75 1228.57 797.71 1228.59 797.67 1244.54 797.7 1244.52 797.7 1244.52"/>
+        <polygon class="st13" points="797.75 1228.57 788.29 1223.1 788.25 1223.12 797.71 1228.59 797.75 1228.57 797.75 1228.57"/>
+        <polygon class="st13" points="788.29 1223.1 788.3 1217.55 788.27 1217.57 788.25 1223.12 788.29 1223.1 788.29 1223.1"/>
+        <polygon class="st13" points="788.3 1217.55 803.63 1226.4 803.6 1226.42 788.27 1217.57 788.3 1217.55 788.3 1217.55"/>
+        <path class="st13" d="M803.56,1252.11c-15.94-2.72-29.72-14.92-35.22-29.96-4.75-12.98-4.87-38.31,15.53-32.33,6.9,2.02,13.63,7.01,18.46,12.29l-.04.02c-7.3-8-25-20.39-33.84-8.42-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55l.04-.02h0Z"/>
+        <polygon class="st13" points="803.63 1226.4 803.56 1252.11 803.53 1252.13 803.6 1226.42 803.63 1226.4 803.63 1226.4"/>
+        <path class="st13" d="M803.6,1226.42l-.07,25.71c-15.94-2.72-29.72-14.92-35.22-29.96-4.75-12.98-4.87-38.31,15.53-32.33,6.9,2.02,13.63,7.01,18.46,12.29l-1.47,4.8c-5.27-5.79-17.52-15.88-25.33-9.34-9.29,7.78-1.73,27.47,4.09,34.93,4.29,5.51,11.03,10.94,18.09,12.01l.05-15.95-9.46-5.46.02-5.56,15.33,8.85h0Z"/>
+        <path class="st13" d="M803.56,1252.11l.07-25.71-15.33-8.85-.02,5.56,9.46,5.46-.05,15.95c-13.19-2.01-23.11-15.98-25.32-28.3-1.96-10.96.98-24.27,14.61-19.32,5.24,1.91,10.14,5.93,13.85,10.02l1.47-4.8c-7.3-8-25-20.39-33.84-8.42-10.77,14.59,2.82,39.48,14.54,48.87,5.91,4.73,13.05,8.27,20.54,9.55Z"/>
+      </g>
+      <g>
+        <path class="st13" d="M760.36,1202.25c.03-13.23-18.75-56.5-37.72-39.25-16.41,14.93,3.15,51.44,20.36,56.99,12.5,4.03,17.41-6.76,17.36-17.74h0Z"/>
+        <path class="st13" d="M760.39,1201.49c.58,31.54-28.92,16.7-37.74-1.73-8.13-17-4.53-53.63,20.9-33.96,10.73,8.3,16.65,22.31,16.84,35.69h0Z"/>
+        <path class="st13" d="M754.01,1198.4c.42,23.56-19.99,15.58-26.61-.32-4.64-11.14-4.04-42.74,14.92-27.32,7.88,6.41,11.54,17.78,11.69,27.64h0Z"/>
+        <path class="st13" d="M754.04,1198.88c0-9.46-13.61-44.78-26.87-28.93-9.44,11.29.88,41.16,15.27,44.03,9.17,1.83,11.65-7.66,11.6-15.1h0Z"/>
+        <path class="st13" d="M760.36,1201.51c.58,31.54-28.92,16.7-37.74-1.73-8.13-17-4.53-53.63,20.9-33.96,10.73,8.3,16.65,22.31,16.84,35.69h0Z"/>
+        <path class="st13" d="M760.4,1202.23c.03-13.23-18.75-56.5-37.72-39.25-16.41,14.93,3.15,51.44,20.36,56.99,12.5,4.03,17.41-6.76,17.36-17.74h0Z"/>
+        <path class="st13" d="M754.01,1198.9c0-9.46-13.61-44.78-26.87-28.93-9.44,11.29.88,41.16,15.27,44.03,9.17,1.83,11.65-7.66,11.6-15.1h0Z"/>
+        <path class="st13" d="M754.04,1198.38c.42,23.56-19.99,15.58-26.61-.32-4.64-11.14-4.04-42.74,14.92-27.32,7.88,6.41,11.54,17.78,11.69,27.64h0Z"/>
+      </g>
+      <g>
+        <path class="st13" d="M698.14,1189.67c-.02-2.79-3.34-10.31-7.24-7.66-3.09,2.09.61,10.33,3.89,10.52,2.33.14,3.07-.32,3.35-2.86h0Z"/>
+        <path class="st13" d="M698.18,1189.52c-.96,12.58-15.69-13.75-3.19-6.76,2.13,1.19,3.14,4.51,3.19,6.76h0Z"/>
+        <path class="st13" d="M698.14,1189.54c-.96,12.58-15.69-13.75-3.19-6.76,2.13,1.19,3.14,4.51,3.19,6.76h0Z"/>
+        <path class="st13" d="M698.18,1189.65c-.02-2.79-3.34-10.31-7.24-7.66-3.09,2.1.61,10.33,3.89,10.52,2.33.14,3.07-.32,3.35-2.86h0Z"/>
+      </g>
+      <g class="st60">
+        <g class="st58">
+          <g class="st54">
+            
+          </g>
+        </g>
+      </g>
+    </g>
+      <text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 653.8, 1165.6)">3. OG</text>
   </g>
 </svg>

@@ -8,7 +8,7 @@
       </p>
     </div>
   @else
-    <x-headings.h2>Kontaktformular</x-headings.h2>
+    <x-headings.h2 class="mb-29! md:mb-43!">Kontaktformular</x-headings.h2>
 
     <form wire:submit="submit" class="flex flex-col gap-24 md:gap-28">
 
@@ -19,7 +19,7 @@
             <x-form.checkbox
               id="size-{{ \Illuminate\Support\Str::slug($value) }}"
               value="{{ $value }}"
-              wire:model="apartment_sizes"
+              wire:model.live="apartment_sizes"
               nowrap
               :error="$errors->has('apartment_sizes')">
               {{ $label }}
@@ -27,46 +27,49 @@
           @endforeach
         </div>
         @error('apartment_sizes')
-          <p class="mt-8 text-sm text-red-600">{{ $message }}</p>
+          <p class="mt-8 text-sm text-error">{{ $message }}</p>
         @enderror
       </fieldset>
 
       <div class="grid grid-cols-1 gap-20 md:gap-24 sm:grid-cols-2">
-        <x-form.input name="first_name" label="Vorname*" wire:model="first_name" autocomplete="given-name" />
-        <x-form.input name="last_name" label="Name*" wire:model="last_name" autocomplete="family-name" />
+        <x-form.input name="first_name" label="Vorname*" wire:model.blur="first_name" autocomplete="given-name" />
+        <x-form.input name="last_name" label="Name*" wire:model.blur="last_name" autocomplete="family-name" />
       </div>
 
       <div class="grid grid-cols-1 gap-20 md:gap-24 sm:grid-cols-2">
-        <x-form.input name="street" label="Strasse/Nr.*" wire:model="street" autocomplete="street-address" />
-        <x-form.input name="zip_city" label="PLZ/Ort*" wire:model="zip_city" autocomplete="postal-code" />
+        <x-form.input name="street" label="Strasse/Nr.*" wire:model.blur="street" autocomplete="street-address" />
+        <x-form.input name="zip_city" label="PLZ/Ort*" wire:model.blur="zip_city" autocomplete="postal-code" />
       </div>
 
       <div class="grid grid-cols-1 gap-20 md:gap-24 sm:grid-cols-2">
-        <x-form.input name="email" label="E-Mail*" type="email" wire:model="email" autocomplete="email" />
-        <x-form.input name="phone" label="Telefon*" type="tel" wire:model="phone" autocomplete="tel" />
+        <x-form.input name="email" label="E-Mail*" type="email" wire:model.blur="email" autocomplete="email" />
+        <x-form.input name="phone" label="Telefon*" type="tel" wire:model.blur="phone" autocomplete="tel" />
       </div>
 
-      <x-form.textarea name="message" label="Nachricht*" wire:model="message" rows="7" />
+      <x-form.textarea name="message" label="Nachricht*" wire:model.blur="message" rows="7" />
 
-      <x-form.checkbox id="privacy" name="privacy" wire:model="privacy" multiline :error="$errors->has('privacy')">
-        Ich habe die
-        <a href="{{ route('page.privacy') }}" class="text-bordeaux hover:underline decoration-1 underline-offset-2">Datenschutzerklärung</a>
-        gelesen und akzeptiere diese.
-      </x-form.checkbox>
+      <div>
+        <x-form.checkbox id="privacy" name="privacy" wire:model.live="privacy" multiline :error="$errors->has('privacy')">
+          Ich habe die
+          <a href="{{ route('page.privacy') }}" class="text-bordeaux hover:underline decoration-1 underline-offset-2">Datenschutzerklärung</a>
+          gelesen und akzeptiere diese.
+        </x-form.checkbox>
+        @error('privacy')
+          <p class="mt-8 text-sm text-error">{{ $message }}</p>
+        @enderror
+      </div>
 
       @error('turnstileToken')
-        <p class="text-sm text-red-600">{{ $message }}</p>
+        <p class="text-sm text-error">{{ $message }}</p>
       @enderror
 
       <div>
-        <button
-          type="submit"
-          class="inline-flex items-center gap-10 bg-bordeaux hover:bg-ink text-white transition-colors font-bold uppercase tracking-wide text-[20.7px] md:text-[23px] leading-none pt-10 pb-11 px-13 rounded-[2px] group cursor-pointer disabled:opacity-60"
-          wire:loading.attr="disabled"
-          wire:target="submit">
+        <x-buttons.primary tag="button" type="submit" title="Absenden"
+          class="disabled:opacity-60"
+          wire:loading.attr="disabled" wire:target="submit">
           <span wire:loading.remove wire:target="submit">Absenden</span>
           <span wire:loading wire:target="submit">Wird gesendet…</span>
-        </button>
+        </x-buttons.primary>
       </div>
     </form>
 

@@ -20,13 +20,13 @@
   {{-- Menü steht direkt nach dem Logo und sitzt auf dessen Unterkante (siehe
        resources/design/…_Ansicht.pdf). Abstände dort im Verhältnis zur Logobreite:
        Logo→Menü 0.38, Menüpunkte 0.21 – hier auf w-130/150/170 umgerechnet. --}}
-  <x-layout.inner class="flex items-end md:gap-x-57 lg:gap-x-65 py-24 md:py-30">
+  <x-layout.inner class="flex items-end md:gap-x-46 lg:gap-x-65 py-24 md:py-30">
 
     <a href="{{ route('page.project') }}" aria-label="Hüningerstrasse 40 – Startseite" class="shrink-0 relative z-70">
-      <x-icons.logo class="w-130 md:w-150 lg:w-170 h-auto block" />
+      <x-icons.logo class="w-150 md:w-138 lg:w-196 h-auto block" />
     </a>
 
-    <x-menu.desktop.wrapper class="hidden md:block" />
+    <x-menu.desktop.wrapper class="hidden md:block translate-y-[3px]" />
     <x-menu.mobile.button class="md:hidden ml-auto" />
 
   </x-layout.inner>

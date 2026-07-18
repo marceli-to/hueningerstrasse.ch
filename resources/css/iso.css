@@ -21,8 +21,8 @@
 }
 
 /* Grundfarben der Gebäudeflächen (ersetzen die Inline-Fills aus dem Export) */
-.iso-svg .iso-face { fill: #d0dde0; }
-.iso-svg .iso-top  { fill: #e0e9eb; }
+.iso-svg .iso-face { fill: var(--color-iso-house); }
+.iso-svg .iso-top  { fill: var(--color-iso-inactive); }
 
 /* Etagen animieren ihre vertikale Position */
 .iso-floor {
@@ -39,8 +39,8 @@
 .iso-floor.is-active .iso-top {
   transition: fill .25s var(--iso-ease);
 }
-.iso-floor.is-active .iso-face { fill: #b06172; }
-.iso-floor.is-active .iso-top  { fill: #c17e8c; }
+.iso-floor.is-active .iso-face { fill: var(--color-iso-active-face); }
+.iso-floor.is-active .iso-top  { fill: var(--color-iso-active-top); }
 
 /* Benanntes Teilobjekt innerhalb einer Etage: nur dessen Flächen einfärben.
    Träger ist entweder der einzelne Pfad (data-iso-part am <path>) oder eine
@@ -52,15 +52,15 @@
   transition: fill .25s var(--iso-ease);
 }
 .iso-svg [data-iso-part].is-part-active .iso-face,
-.iso-svg .iso-face.is-part-active { fill: #b06172; }
+.iso-svg .iso-face.is-part-active { fill: var(--color-iso-active-face); }
 .iso-svg [data-iso-part].is-part-active .iso-top,
-.iso-svg .iso-top.is-part-active { fill: #c17e8c; }
+.iso-svg .iso-top.is-part-active { fill: var(--color-iso-active-top); }
 
 /* Etagen-Beschriftung. Sie steht als <text> in der Gruppe ihrer Etage (wird also
    mit angehoben) und ersetzt die Konturschrift aus dem AI – die läuft bei dieser
    Anzeigegrösse zu. Schnitt und Grösse deshalb hier steuern, nicht im AI. */
 .iso-label {
-  fill: #4b4b50;                       /* ink */
+  fill: var(--color-ink);
   font-family: "bio-sans", sans-serif;
   font-size: 66px;                     /* User-Units; entspricht der Höhe im AI */
   font-weight: 400;
@@ -71,6 +71,10 @@
 }
 .iso-floor.is-active .iso-label { fill: #fff; }   /* Kontrast auf Bordeaux */
 
+/* Gewerbe (Teilobjekt) aktiv: Etage bleibt neutral, aber das Label (UG/EG)
+   liegt auf der eingefärbten Fläche -> ebenfalls weiss. */
+.iso-floor:has(.is-part-active) .iso-label { fill: #fff; }
+
 /* Etagen im SVG sind (auf Desktop) interaktiv */
 @media (min-width: 1024px) {
   .iso-floor { cursor: pointer; }
@@ -78,5 +82,5 @@
 
 /* Zugehörige Listenzeile hervorheben */
 [data-object].is-active {
-  background-color: rgb(155 64 83 / 0.10);   /* bordeaux */
+  background-color: color-mix(in srgb, var(--color-bordeaux) 10%, transparent);
 }

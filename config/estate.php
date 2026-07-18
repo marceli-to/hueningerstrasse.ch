@@ -67,8 +67,8 @@ return [
     'commercial' => [
         [
             'object'  => 'Gewerbe EG',
-            'floor'   => 'EG',           // -> Isometrie data-iso-floor
-            'part'    => 'gewerbe-eg',   // -> nur diese Teilfläche der EG-Etage einfärben
+            'floor'   => 'EG',         // -> Isometrie data-iso-floor
+            'part'    => 'gewerbe',    // -> nur die "Gewerbe"-Gruppe der EG-Etage einfärben
             'surface' => 203.7,
             'lager'   => null,
             'state'   => 'free',
@@ -76,7 +76,8 @@ return [
         ],
         [
             'object'  => 'Gewerbe 1.UG',
-            'floor'   => 'UG', // 1. Untergeschoss -> Isometrie data-iso-floor="UG"
+            'floor'   => 'UG',         // 1. Untergeschoss -> Isometrie data-iso-floor="UG"
+            'part'    => 'gewerbe',    // -> nur die "Gewerbe"-Gruppe der UG-Etage
             'surface' => 354.1,
             'lager'   => 13.2,
             'state'   => 'free',
