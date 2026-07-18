@@ -37,9 +37,7 @@
   {{-- Kontaktformular --}}
   <section class="bg-sky">
     <x-layout.inner class="py-40 md:py-56 lg:py-64">
-      <div class="max-w-4xl">
-        <livewire:contact-form />
-      </div>
+      <livewire:contact-form />
     </x-layout.inner>
   </section>
 

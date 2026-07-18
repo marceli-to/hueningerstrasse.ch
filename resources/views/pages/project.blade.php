@@ -10,10 +10,8 @@
   <section class="bg-sky">
     <x-layout.inner class="py-40 md:py-56 lg:py-64">
       <div class="max-w-3xl" data-reveal>
-        <x-headings.h2>Im Herzen des<br>Volta-Quartiers</x-headings.h2>
-        <p class="font-bold uppercase tracking-wide text-md md:text-lg mb-16 md:mb-20">
-          Industriecharme trifft auf modernes Wohnen und Arbeiten
-        </p>
+        <x-headings.h2 class="mb-24! md:mb-36!">Im Herzen des Volta-Quartiers</x-headings.h2>
+        <x-headings.h3>Industriecharme trifft auf modernes Wohnen und Arbeiten</x-headings.h3>
         <p class="max-w-2xl">
           An der <x-links.styled :href="config('estate.maps_url')" target="_blank" rel="noopener noreferrer">Hüningerstrasse 40</x-links.styled>
           in Basel entsteht nach einem hochwertigen Umbau ein attraktives Wohn- und Gewerbeprojekt mit
@@ -24,7 +22,7 @@
   </section>
 
   {{-- Pures Raumgefühl --}}
-  <x-sections.hero-split bg="bg-white" align="center">
+  <x-sections.hero-split bg="bg-white" align="start">
     <x-headings.h2>Pures Raumgefühl</x-headings.h2>
     <p>
       Das Projekt vereint den charaktervollen Bestand mit einem modernen Wohn- und Nutzungskonzept.
@@ -40,12 +38,11 @@
     <div class="mt-28">
       <x-buttons.primary href="{{ route('page.commercial') }}" title="Gewerbeflächen">
         Gewerbeflächen
-        <x-icons.arrow-right class="w-16 h-auto shrink-0 group-hover:translate-x-3 transition-transform" />
       </x-buttons.primary>
     </div>
 
     <x-slot:aside>
-      <div class="px-24 lg:px-0 lg:h-[520px]" data-reveal>
+      <div class="px-24 lg:px-0" data-reveal>
         <x-gallery.carousel name="gallery" alt="Gewerbe- und Wohnräume an der Hüningerstrasse 40" :images="[
           '/img/gewerbe-buero-01',
           '/img/gebaeude-02',

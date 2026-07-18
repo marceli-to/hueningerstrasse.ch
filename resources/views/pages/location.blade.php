@@ -27,20 +27,11 @@
       attraktiven Standort für modernes Wohnen und vielseitige Gewerbenutzungen.
     </p>
 
-    <div class="mt-28">
-      <p class="font-bold uppercase tracking-wide text-bordeaux text-md mb-2">Adresse</p>
-      <p>
-        <x-links.styled :href="config('estate.maps_url')" target="_blank" rel="noopener noreferrer" class="text-ink transition-colors hover:text-bordeaux">
-          Hüningerstrasse 40, 4056 Basel
-        </x-links.styled>
-      </p>
-    </div>
-
     <x-slot:aside>
-      <div class="px-24 lg:px-0 lg:pt-8" data-reveal>
+      <div class="px-24 lg:px-0" data-reveal>
         <picture class="block w-full">
           <source srcset="/img/landschaft.webp" type="image/webp">
-          <img src="/img/landschaft.jpg" alt="Basel – Altstadt und Rheinufer" class="w-full aspect-[4/3] object-cover" />
+          <img src="/img/landschaft.jpg" alt="Basel – Altstadt und Rheinufer" class="w-full aspect-square object-cover" />
         </picture>
       </div>
     </x-slot:aside>

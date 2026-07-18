@@ -8,7 +8,10 @@ class OfferController extends Controller
 {
     public function commercial()
     {
-        return view('pages.commercial', $this->data('commercial'));
+        // Gewerbe: feste, kleine Objektliste ohne Filter (eigene Tabellenstruktur).
+        return view('pages.commercial', [
+            'objects' => collect(config('estate.commercial')),
+        ]);
     }
 
     public function living()
@@ -17,7 +20,7 @@ class OfferController extends Controller
     }
 
     /**
-     * Build objects + filter options for the given estate list ('living' | 'commercial').
+     * Build objects + filter options for the given estate list ('living').
      */
     private function data(string $key): array
     {

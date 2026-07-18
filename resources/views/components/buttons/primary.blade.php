@@ -6,12 +6,10 @@
   'rel' => '',
   'title' => '',
   'type' => 'button',
-  'iconPosition' => 'after',
-  'icon' => true,
 ])
 
 @php
-  $base = 'inline-flex items-center gap-10 bg-bordeaux hover:bg-ink text-white transition-colors font-bold uppercase tracking-wide text-sm md:text-lg leading-none py-14 px-20 group cursor-pointer';
+  $base = 'inline-flex items-center gap-10 bg-bordeaux hover:bg-ink text-white transition-colors font-bold uppercase tracking-wide text-[20.7px] md:text-[23px] leading-none pt-10 pb-11 px-13 rounded-[2px] group cursor-pointer';
 @endphp
 
 @if($tag === 'button')

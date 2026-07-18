@@ -2,6 +2,7 @@
   'id',
   'error' => false,
   'multiline' => false,
+  'nowrap' => false,
 ])
 
 <label for="{{ $id }}" @class([
@@ -28,5 +29,5 @@
   @if ($multiline)
     </span>
   @endif
-  <span>{{ $slot }}</span>
+  <span @class(['whitespace-nowrap' => $nowrap])>{{ $slot }}</span>
 </label>

@@ -1,6 +1,6 @@
 <div class="{{ $class ?? '' }}">
   <nav>
-    <ul class="flex items-center gap-x-24 lg:gap-x-40">
+    <ul class="flex items-baseline gap-x-28 md:gap-x-32 lg:gap-x-36">
       <x-menu.desktop.item href="{{ route('page.project') }}"    active="{{ request()->routeIs('page.project') }}"    title="Projekt" />
       <x-menu.desktop.item href="{{ route('page.location') }}"   active="{{ request()->routeIs('page.location') }}"   title="Lage" />
       <x-menu.desktop.item href="{{ route('page.commercial') }}" active="{{ request()->routeIs('page.commercial') }}" title="Gewerbe" />

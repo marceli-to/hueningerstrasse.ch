@@ -31,7 +31,7 @@
     </p>
 
     <x-slot:aside>
-      <div class="px-24 lg:px-0 lg:sticky lg:top-120 lg:h-[520px]" data-reveal>
+      <div class="px-24 lg:px-0" data-reveal>
         <x-gallery.carousel name="gallery" alt="Mietwohnungen an der Hüningerstrasse 40" :images="[
           '/img/wohnung',
           '/img/gebaeude-02',
@@ -41,7 +41,7 @@
     </x-slot:aside>
   </x-sections.hero-split>
 
-  {{-- Angebot Wohnen --}}
+  {{-- Angebot Wohnen – vorerst ausgeblendet
   <section class="bg-sky">
     <x-layout.inner class="py-40 md:py-56 lg:py-64">
       <div data-reveal>
@@ -51,5 +51,6 @@
       </div>
     </x-layout.inner>
   </section>
+  --}}
 
 @endsection

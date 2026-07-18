@@ -27,8 +27,8 @@
     <div class="swiper lightbox-swiper w-full h-full">
       <div class="swiper-wrapper" data-lightbox-wrapper></div>
     </div>
-    <x-swiper.buttons.prev class="lightbox-swiper-prev border-white! bg-dew/20! fixed! left-24 top-1/2 -translate-y-1/2" arrowClass="stroke-white!" />
-    <x-swiper.buttons.next class="lightbox-swiper-next border-white! bg-dew/20! fixed! right-24 top-1/2 -translate-y-1/2" arrowClass="stroke-white!" />
+    <x-swiper.buttons.prev class="lightbox-swiper-prev fixed! left-24 top-1/2 -translate-y-1/2" />
+    <x-swiper.buttons.next class="lightbox-swiper-next fixed! right-24 top-1/2 -translate-y-1/2" />
     <div class="lightbox-swiper-pagination swiper-pagination absolute -bottom-30 left-0 right-0 z-10"></div>
   </div>
 </div>

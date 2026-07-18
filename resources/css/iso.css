@@ -42,6 +42,20 @@
 .iso-floor.is-active .iso-face { fill: #b06172; }
 .iso-floor.is-active .iso-top  { fill: #c17e8c; }
 
+/* Benanntes Teilobjekt innerhalb einer Etage: nur dessen Flächen einfärben.
+   Träger ist entweder der einzelne Pfad (data-iso-part am <path>) oder eine
+   umschliessende Gruppe (data-iso-part am <g>). iso.js setzt .is-part-active. */
+.iso-svg [data-iso-part].is-part-active .iso-face,
+.iso-svg [data-iso-part].is-part-active .iso-top,
+.iso-svg .iso-face.is-part-active,
+.iso-svg .iso-top.is-part-active {
+  transition: fill .25s var(--iso-ease);
+}
+.iso-svg [data-iso-part].is-part-active .iso-face,
+.iso-svg .iso-face.is-part-active { fill: #b06172; }
+.iso-svg [data-iso-part].is-part-active .iso-top,
+.iso-svg .iso-top.is-part-active { fill: #c17e8c; }
+
 /* Etagen-Beschriftung. Sie steht als <text> in der Gruppe ihrer Etage (wird also
    mit angehoben) und ersetzt die Konturschrift aus dem AI – die läuft bei dieser
    Anzeigegrösse zu. Schnitt und Grösse deshalb hier steuern, nicht im AI. */

@@ -16,6 +16,7 @@ const Iso = (function () {
   const selectors = {
     object: '[data-object]',        // Listenzeilen
     floor:  '[data-iso-floor]',     // Etagen-Gruppen im SVG
+    part:   '[data-iso-part]',      // benanntes Teilobjekt innerhalb einer Etage
   };
 
   // Nachfolgende Etagen-Geschwister = im Gebäude darüberliegende Etagen
@@ -33,6 +34,9 @@ const Iso = (function () {
     document.querySelectorAll('.iso-floor').forEach(function (el) {
       el.classList.remove('is-active', 'is-up');
     });
+    document.querySelectorAll('.is-part-active').forEach(function (el) {
+      el.classList.remove('is-part-active');
+    });
     document.querySelectorAll(selectors.object).forEach(function (o) {
       o.classList.remove('is-active');
     });
@@ -40,11 +44,22 @@ const Iso = (function () {
 
   // Etage markieren + darüberliegende Etagen anheben. Die Etagen-Beschriftung ist
   // Teil der Etagen-Gruppe (Pfade aus dem AI) und wird dabei mitbewegt.
-  const activateFloor = function (key) {
+  //
+  // Ist ein Teilobjekt (part) angegeben und im SVG als [data-iso-part="…"] vorhanden,
+  // wird NUR dieses eingefärbt (die restliche Etage bleibt neutral). Sonst die ganze Etage.
+  const activateFloor = function (key, part) {
     const floorEl = document.querySelector('[data-iso-floor="' + key + '"]');
     if (!floorEl) return null;
-    floorEl.classList.add('is-active');
     floorsAbove(floorEl).forEach(function (f) { f.classList.add('is-up'); });
+
+    // Teilobjekt-Flächen können einzelne Pfade ODER eine Gruppe mit
+    // [data-iso-part="…"] sein. Sind welche vorhanden -> nur die einfärben.
+    const partEls = part ? floorEl.querySelectorAll('[data-iso-part="' + part + '"]') : [];
+    if (partEls.length) {
+      partEls.forEach(function (el) { el.classList.add('is-part-active'); });
+    } else {
+      floorEl.classList.add('is-active');  // ganze Etage
+    }
     return floorEl;
   };
 
@@ -54,7 +69,8 @@ const Iso = (function () {
     document.querySelectorAll(selectors.object).forEach(function (row) {
       const key = row.dataset.objectFloor;
       if (!key) return;
-      const enter = function () { clear(); row.classList.add('is-active'); activateFloor(key); };
+      const part = row.dataset.objectPart || null;
+      const enter = function () { clear(); row.classList.add('is-active'); activateFloor(key, part); };
       row.addEventListener('mouseenter', enter);
       row.addEventListener('mouseleave', clear);
     });

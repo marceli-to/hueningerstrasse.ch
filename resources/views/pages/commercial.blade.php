@@ -48,7 +48,7 @@
           ];
         @endphp
         @foreach($usages as [$icon, $label])
-          <li class="flex items-center gap-14 !mb-0 !list-none">
+          <li class="!flex items-center gap-14 !mb-0 !list-none">
             <x-dynamic-component :component="'icons.' . $icon" class="w-22 h-22 text-ink shrink-0" />
             <span class="font-bold">{{ $label }}</span>
           </li>
@@ -56,15 +56,14 @@
       </ul>
     </div>
 
-    <div class="mt-32">
+    <div class="mt-51">
       <x-buttons.primary href="{{ route('page.contact') }}" title="Jetzt anfragen">
         Jetzt anfragen
-        <x-icons.arrow-right class="w-16 h-auto shrink-0 group-hover:translate-x-3 transition-transform" />
       </x-buttons.primary>
     </div>
 
     <x-slot:aside>
-      <div class="px-24 lg:px-0 lg:sticky lg:top-120 lg:h-[520px]" data-reveal>
+      <div class="px-24 lg:px-0" data-reveal>
         <x-gallery.carousel name="gallery" alt="Gewerbeflächen an der Hüningerstrasse 40" :images="[
           '/img/gewerbe-buero-02',
           '/img/gewerbe-buero-01',
@@ -81,8 +80,7 @@
     <x-layout.inner class="py-40 md:py-56 lg:py-64">
       <div data-reveal>
         <x-headings.h2>Angebot Gewerbe</x-headings.h2>
-        <x-objects.filter :options="$filterOptions" />
-        <x-objects.wrapper :objects="$objects" title="Gewerbeflächen" />
+        <x-objects.wrapper :objects="$objects" title="Gewerbeflächen" variant="commercial" />
       </div>
     </x-layout.inner>
   </section>

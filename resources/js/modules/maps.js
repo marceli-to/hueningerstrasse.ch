@@ -6,7 +6,7 @@
 const CONFIG = Object.freeze({
   accessToken: 'pk.eyJ1IjoibWFyY2VsaXRvb29vIiwiYSI6ImNtNm1hNG5vdDBmaGUya3NoZnRldnhqd3YifQ.CMI4nKvoE7I8H9Dal7IHyw',
   style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
-  center: [7.576976, 47.566372], // Hüningerstrasse 40, 4056 Basel (Voltaplatz / St. Johann)
+  center: [7.575855, 47.571665], // Hüningerstrasse 40, 4056 Basel (Voltaplatz / St. Johann)
   defaultZoom: 15,
   scriptUrl: 'https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js',
   cssUrl: 'https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css',
@@ -107,17 +107,25 @@ class MapboxMap {
 
     this.#addMarkers();
 
-    this.#map.on('load', () => {
-      this.#mapElement.classList.remove('opacity-0');
+    this.#map.once('load', () => {
+      this.#reveal();
       this.#loaded = true;
     });
+
+    // 'load' never fires if the style or tiles fail — reveal anyway rather than
+    // leaving an invisible container behind.
+    this.#map.once('error', () => this.#reveal());
+  }
+
+  #reveal() {
+    this.#mapElement.classList.remove('opacity-0');
   }
 
   #addMarkers() {
     for (const feature of GEOJSON_DATA.features) {
       const el = document.createElement('div');
       el.className = 'marker';
-      el.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.8 52.8" width="41" height="53"><path d="M40.8,20.4A20.4,20.4,0,0,0,0,20.4C0,31.7,20.4,52.8,20.4,52.8S40.8,31.7,40.8,20.4ZM10.9,20a9.5,9.5,0,1,1,9.5,9.5A9.6,9.6,0,0,1,10.9,20Z" fill="#003934"/></svg>`;
+      el.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.8 52.8" width="41" height="53"><path d="M40.8,20.4A20.4,20.4,0,0,0,0,20.4C0,31.7,20.4,52.8,20.4,52.8S40.8,31.7,40.8,20.4ZM10.9,20a9.5,9.5,0,1,1,9.5,9.5A9.6,9.6,0,0,1,10.9,20Z" fill="#9b4053"/></svg>`;
 
       new mapboxgl.Marker({ element: el, anchor: 'bottom' })
         .setLngLat(feature.geometry.coordinates)

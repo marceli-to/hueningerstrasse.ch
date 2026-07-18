@@ -11,6 +11,6 @@
     <img
       src="/img/{{ $image }}.jpg"
       alt="{{ $alt }}"
-      class="w-full {{ $height }} object-cover">
+      class="w-full h-auto">
   </picture>
 </figure>

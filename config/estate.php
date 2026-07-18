@@ -62,10 +62,26 @@ return [
         ['ref' => 'C.01.2', 'floor' => '3.OG', 'rooms' => '5.5', 'surface_living' => 130.5, 'surface_exterior' => 10.0, 'state' => 'free', 'plan' => null],
     ],
 
-    // --- Gewerbeflächen (Platzhalter aus Design-PDF) ---
+    // --- Gewerbeflächen (aus Vermietungsplänen 2026.07.09) ---
+    // Eigene Struktur: object | geschoss | surface (m²) | lager (m² oder null) | plan (PDF)
     'commercial' => [
-        ['ref' => 'A.00.1', 'floor' => 'EG',   'rooms' => '4.5', 'surface_living' => 103.5, 'surface_exterior' => 7.4, 'state' => 'free', 'plan' => null],
-        ['ref' => 'B.01.1', 'floor' => '1.OG', 'rooms' => '4.5', 'surface_living' => 103.5, 'surface_exterior' => 7.4, 'state' => 'free', 'plan' => null],
+        [
+            'object'  => 'Gewerbe EG',
+            'floor'   => 'EG',           // -> Isometrie data-iso-floor
+            'part'    => 'gewerbe-eg',   // -> nur diese Teilfläche der EG-Etage einfärben
+            'surface' => 203.7,
+            'lager'   => null,
+            'state'   => 'free',
+            'plan'    => '/downloads/H40_Vermietungsplan_GewerbeEG_2026.07.09.pdf',
+        ],
+        [
+            'object'  => 'Gewerbe 1.UG',
+            'floor'   => 'UG', // 1. Untergeschoss -> Isometrie data-iso-floor="UG"
+            'surface' => 354.1,
+            'lager'   => 13.2,
+            'state'   => 'free',
+            'plan'    => '/downloads/H40_Vermietungsplan_Gewerbe1UG_2026.07.09.pdf',
+        ],
     ],
 
 ];

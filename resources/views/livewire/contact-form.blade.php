@@ -14,12 +14,13 @@
 
       <fieldset>
         <x-headings.h3 class="mb-14">Ich interessiere mich für (Bitte auswählen)</x-headings.h3>
-        <div class="grid grid-cols-1 gap-x-40 gap-y-10 sm:grid-flow-col sm:grid-cols-3 sm:grid-rows-2 max-w-2xl">
+        <div class="grid w-fit grid-cols-1 gap-x-72 gap-y-10 sm:grid-flow-col sm:auto-cols-max sm:grid-rows-2 text-lg md:text-xl">
           @foreach ($sizes as $value => $label)
             <x-form.checkbox
               id="size-{{ \Illuminate\Support\Str::slug($value) }}"
               value="{{ $value }}"
               wire:model="apartment_sizes"
+              nowrap
               :error="$errors->has('apartment_sizes')">
               {{ $label }}
             </x-form.checkbox>
@@ -60,7 +61,7 @@
       <div>
         <button
           type="submit"
-          class="inline-flex items-center justify-center gap-10 bg-bordeaux hover:bg-ink text-white transition-colors font-bold uppercase tracking-wide text-sm md:text-lg leading-none py-14 px-20 cursor-pointer disabled:opacity-60"
+          class="inline-flex items-center gap-10 bg-bordeaux hover:bg-ink text-white transition-colors font-bold uppercase tracking-wide text-[20.7px] md:text-[23px] leading-none pt-10 pb-11 px-13 rounded-[2px] group cursor-pointer disabled:opacity-60"
           wire:loading.attr="disabled"
           wire:target="submit">
           <span wire:loading.remove wire:target="submit">Absenden</span>

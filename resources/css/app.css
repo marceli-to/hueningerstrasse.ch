@@ -45,15 +45,15 @@ main li {
 
 /* Swiper pagination dots */
 .swiper-pagination {
-  @apply flex justify-center gap-8;
+  @apply flex justify-center gap-10;
 }
 
 .swiper-pagination-bullet {
-  @apply w-8 h-8 rounded-full bg-ink/30 cursor-pointer transition-opacity;
+  @apply w-12 h-12 rounded-full bg-white cursor-pointer transition-colors;
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-ink;
+  @apply bg-bordeaux;
 }
 
 /* Prevent flash of unstyled content before ScrollReveal initialises */
