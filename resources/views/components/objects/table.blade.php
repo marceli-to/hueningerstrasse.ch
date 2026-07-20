@@ -10,8 +10,12 @@
 @endphp
 
 <div>
-  <x-headings.h3 class="mb-10">{{ config('estate.project') }}</x-headings.h3>
-  <p class="font-bold text-[18px] md:text-[20px] text-ink mb-20">{{ $title }}</p>
+  {{-- Ohne title-Prop entfaellt der komplette Kopf (Projektname + Untertitel)
+       und die Tabelle folgt direkt auf die Sektionsueberschrift. --}}
+  @if($title !== '')
+    <x-headings.h3 class="mb-10">{{ config('estate.project') }}</x-headings.h3>
+    <p class="font-bold text-[18px] md:text-[20px] text-ink mb-20">{{ $title }}</p>
+  @endif
 
   <div class="overflow-x-auto">
     @if($variant === 'commercial')

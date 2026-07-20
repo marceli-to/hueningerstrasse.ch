@@ -80,7 +80,7 @@
     <x-layout.inner class="pt-22 md:pt-34 pb-40 md:pb-56 lg:pb-64">
       <div data-reveal>
         <x-headings.h2>Angebot Gewerbe</x-headings.h2>
-        <x-objects.wrapper :objects="$objects" title="Gewerbeflächen" variant="commercial" />
+        <x-objects.wrapper :objects="$objects" variant="commercial" />
       </div>
     </x-layout.inner>
   </section>
