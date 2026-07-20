@@ -17,8 +17,11 @@
   --color-state-reserved: #e69600;
   --color-state-taken: #c8413c;
 
-  /* Form validation / error states */
-  --color-error: #dc2626;        /* message text */
-  --color-error-bg: #fee2e2;     /* invalid field background */
-  --color-error-border: #f87171; /* invalid field border / ring */
+  /* Form validation / error states — abgeleitet von bordeaux (#9b4053),
+     damit die Fehleranzeige in der Corporate-Farbe bleibt statt in Fremdrot. */
+  --color-error: #9b4053;        /* message text + border = bordeaux pur */
+  --color-error-border: #9b4053; /* invalid field border / ring */
+  --color-error-bg: #eddde0;     /* invalid field background = bordeaux 18% auf weiss.
+                                    Nicht staerker: ab 25% faellt der Bordeaux-Text
+                                    unter das AA-Kontrastminimum von 4.5:1. */
 }
