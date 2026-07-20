@@ -66,6 +66,10 @@ def find_matching_close(s, open_end):
 def main():
     s = open(SVG, encoding="utf-8").read()
 
+    # 0. XML-Prolog entfernen: inline im HTML funktionslos, und bei
+    #    short_open_tag=On liest PHP das "<?" als Code-Öffner -> Parse-Error.
+    s = re.sub(r"^\s*<\?xml[^>]*\?>\s*", "", s)
+
     # 1. Face/Top-Klassen aus <style>
     style = re.search(r"<style>(.*?)</style>", s, re.S).group(1)
     face, top = set(), set()

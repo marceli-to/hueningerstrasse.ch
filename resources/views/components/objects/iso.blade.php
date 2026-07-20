@@ -2,7 +2,6 @@
      via resources/isometrie/build_from_svg.py. NICHT von Hand editieren; bei Änderungen
      das SVG neu exportieren und das Skript erneut laufen lassen. Etagen = <g data-iso-floor>,
      benannte Flächen (Gewerbe, Wohnungen) = id/data-name aus Illustrator. --}}
-<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4150 3400" class="iso-svg {{ $class ?? '' }}" role="img" aria-label="Isometrie Hüningerstrasse 40 – Etagen UG bis 3. OG">
   <!-- Generator: Adobe Illustrator 29.8.9, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
   <defs>
