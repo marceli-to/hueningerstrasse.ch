@@ -114,8 +114,8 @@ class ContactFormTest extends TestCase
         $this->submitForm(['gewerbe']);
         $this->get(route('page.thanks'))
             ->assertOk()
-            ->assertSee('bezüglich der freien', false)
-            ->assertDontSee('Vermarktungsstart');
+            ->assertSee('bereits in Vermarktung')
+            ->assertDontSee('Vermarktungsstart der Mietwohnungen');
     }
 
     public function test_the_thanks_page_falls_back_without_flash_data(): void
@@ -123,7 +123,7 @@ class ContactFormTest extends TestCase
         $this->get(route('page.thanks'))
             ->assertOk()
             ->assertSee('Vielen Dank, wir haben Ihre Anfrage erhalten')
-            ->assertSee('Vermarktungsstart');
+            ->assertSee('Vermarktungsstart der Mietwohnungen');
     }
 
     /** @param  array<int,string>  $sizes */
