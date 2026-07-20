@@ -2,10 +2,10 @@
 <tr>
 <td class="header" align="center" bgcolor="#e0e9eb">
 <a href="{{ config('app.url') }}" style="display: inline-block;">
-<img src="{{ config('app.url') }}/img/logo-mail.png"
+<img src="{{ config('app.url') }}/img/huehninger.png"
   alt="{{ config('app.name') }}"
   title="{{ config('app.name') }}"
-  width="220" height="72"
+  width="220" height="73"
   style="display: block; width: 220px; height: auto; border: 0; margin: 0 auto;">
 </a>
 </td>
