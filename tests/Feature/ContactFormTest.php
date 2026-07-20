@@ -102,7 +102,28 @@ class ContactFormTest extends TestCase
     {
         $this->get(route('page.thanks'))
             ->assertOk()
-            ->assertSee('Wir haben Ihre Anfrage erhalten');
+            ->assertSee('Vielen Dank, wir haben Ihre Anfrage erhalten');
+    }
+
+
+    public function test_the_thanks_page_wording_depends_on_the_interest(): void
+    {
+        Mail::fake();
+
+        // Mit Gewerbefläche -> Gewerbe-Formulierung
+        $this->submitForm(['gewerbe']);
+        $this->get(route('page.thanks'))
+            ->assertOk()
+            ->assertSee('bezüglich der freien', false)
+            ->assertDontSee('Vermarktungsstart');
+    }
+
+    public function test_the_thanks_page_falls_back_without_flash_data(): void
+    {
+        $this->get(route('page.thanks'))
+            ->assertOk()
+            ->assertSee('Vielen Dank, wir haben Ihre Anfrage erhalten')
+            ->assertSee('Vermarktungsstart');
     }
 
     /** @param  array<int,string>  $sizes */

@@ -108,6 +108,9 @@ class ContactForm extends Component
             'zip_city', 'email', 'phone', 'message', 'privacy', 'turnstileToken',
         ]);
 
+        // Die Danke-Seite formuliert je nach Interesse unterschiedlich (wie auf Live).
+        session()->flash('inquiry.commercial', in_array('gewerbe', $registration->apartment_sizes ?? [], true));
+
         // Eigene Antwortseite statt Inline-Meldung: hat eine eigene URL, ist damit
         // als Conversion messbar und ein Reload sendet das Formular nicht erneut.
         $this->redirectRoute('page.thanks', navigate: true);
