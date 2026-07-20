@@ -15,11 +15,6 @@
             Die Gewerbeflächen sind bereits in Vermarktung. Wir melden uns in den nächsten Tagen mit
             weiteren Informationen bei Ihnen.
           </p>
-        @else
-          <p>
-            Der offizielle Vermarktungsstart der Mietwohnungen erfolgt zu einem späteren Zeitpunkt.
-            Wir informieren Sie rechtzeitig darüber sowie über weitere Neuigkeiten zum Projekt.
-          </p>
         @endif
 
         <p class="!mb-0">
