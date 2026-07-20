@@ -41,7 +41,14 @@ return [
     ],
 
     'registrations' => [
+        // Empfänger der wöchentlichen CSV-Liste (mehrere per Komma getrennt).
         'export_email' => env('REGISTRATIONS_EXPORT_EMAIL'),
+        // Sofort-Benachrichtigung, sobald jemand "Gewerbefläche" anwählt.
+        'commercial_email' => env('REGISTRATIONS_COMMERCIAL_EMAIL'),
+    ],
+
+    'google_analytics' => [
+        'id' => env('GOOGLE_ANALYTICS_ID'),
     ],
 
 ];

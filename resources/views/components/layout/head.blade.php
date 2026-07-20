@@ -45,4 +45,16 @@
 <meta name="twitter:image:alt" content="Hüningerstrasse 40 – Wohn- und Gewerbeprojekt im Volta-Quartier Basel" />
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+{{-- Google Analytics (nur wenn GOOGLE_ANALYTICS_ID gesetzt ist) --}}
+@if ($gaId = config('services.google_analytics.id'))
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaId }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ $gaId }}');
+</script>
+@endif
 </head>

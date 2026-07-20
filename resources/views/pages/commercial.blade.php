@@ -34,8 +34,8 @@
 
     {{-- Mögliche Nutzungen --}}
     <div class="mt-32">
-      <x-headings.h3 class="mb-16">Mögliche Nutzungen</x-headings.h3>
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-40 gap-y-12 !pl-0 !mb-0">
+      <x-headings.h3 class="mb-24">Mögliche Nutzungen</x-headings.h3>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-40 gap-y-20 !pl-0 !mb-0">
         @php
           $usages = [
             ['gewerbe-buero', 'Büro'],

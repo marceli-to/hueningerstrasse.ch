@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Livewire\ContactForm;
+use App\Mail\CommercialInquiry;
 use App\Mail\RegistrationConfirmation;
 use App\Models\Registration;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -60,5 +61,57 @@ class ContactFormTest extends TestCase
         $this->assertSame(['1.5', 'gewerbe'], Registration::first()->apartment_sizes);
 
         Mail::assertSent(RegistrationConfirmation::class, fn ($mail) => $mail->hasTo('erika@example.com'));
+    }
+
+    public function test_it_notifies_the_agency_when_commercial_space_is_selected(): void
+    {
+        Mail::fake();
+        config(['services.registrations.commercial_email' => 'alessia.lavacca@apleona.com']);
+
+        $this->submitForm(['3.5', 'gewerbe']);
+
+        Mail::assertSent(CommercialInquiry::class, function ($mail) {
+            return $mail->hasTo('alessia.lavacca@apleona.com')
+                && $mail->registration->email === 'erika@example.com';
+        });
+    }
+
+    public function test_it_does_not_notify_the_agency_without_commercial_space(): void
+    {
+        Mail::fake();
+        config(['services.registrations.commercial_email' => 'alessia.lavacca@apleona.com']);
+
+        $this->submitForm(['3.5']);
+
+        Mail::assertNotSent(CommercialInquiry::class);
+    }
+
+    public function test_it_skips_the_commercial_notification_without_a_recipient(): void
+    {
+        Mail::fake();
+        config(['services.registrations.commercial_email' => null]);
+
+        $this->submitForm(['gewerbe']);
+
+        Mail::assertNotSent(CommercialInquiry::class);
+        $this->assertDatabaseCount('registrations', 1);
+    }
+
+    /** @param  array<int,string>  $sizes */
+    private function submitForm(array $sizes): void
+    {
+        Livewire::test(ContactForm::class)
+            ->set('apartment_sizes', $sizes)
+            ->set('first_name', 'Erika')
+            ->set('last_name', 'Muster')
+            ->set('street', 'Teststrasse 1')
+            ->set('zip_city', '4056 Basel')
+            ->set('email', 'erika@example.com')
+            ->set('phone', '061 000 00 00')
+            ->set('message', 'Ich interessiere mich für eine Gewerbefläche.')
+            ->set('privacy', true)
+            ->call('submit')
+            ->assertHasNoErrors()
+            ->assertSet('submitted', true);
     }
 }

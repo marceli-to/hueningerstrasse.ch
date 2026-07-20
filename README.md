@@ -105,6 +105,62 @@ Die verbindliche Gestaltung liegt als PDF in
 
 ---
 
+## Formular & Anmeldungen
+
+Die Formular-Logik ist aus dem Vorlage-Projekt
+[imwaldacher.ch](https://github.com/marceli-to/imwaldacher.ch) übernommen.
+
+**Es gibt bewusst kein Admin-Backend** — kein Login, keine Übersicht im Browser.
+Der Kunde erhält die Anmeldungen ausschliesslich als **wöchentliche E-Mail mit
+CSV-Anhang**.
+
+### Ablauf
+
+1. `App\Livewire\ContactForm` validiert und speichert nach `registrations` (SQLite).
+2. Der Absender bekommt sofort eine Bestätigungsmail (`App\Mail\RegistrationConfirmation`).
+3. Jeden **Montag 08:00** (Europe/Zurich) sammelt `registrations:export-weekly` alle
+   noch nicht exportierten Einträge, mailt sie als CSV an
+   `REGISTRATIONS_EXPORT_EMAIL` und setzt `exported_at`.
+
+### Daten einsehen
+
+```bash
+sqlite3 database/database.sqlite \
+  "SELECT created_at, first_name, last_name, email FROM registrations ORDER BY created_at DESC;"
+
+php artisan registrations:export-weekly --all   # alle Einträge sofort per Mail schicken
+php artisan registrations:export-weekly         # nur neue (setzt exported_at)
+```
+
+Die DB-Datei ist über `database/.gitignore` (`*.sqlite*`) ausgenommen und wird beim
+Deploy **nicht** überschrieben.
+
+### ⚠️ Cron auf dem Server einrichten
+
+Der Scheduler-Eintrag in [`routes/console.php`](routes/console.php) allein genügt
+nicht — Laravel braucht einen System-Cron, der jede Minute `schedule:run` aufruft.
+**Ohne diesen Cron wird nie eine Export-Mail verschickt** und die Anmeldungen bleiben
+unbemerkt in der DB liegen.
+
+In Plesk unter *Geplante Aufgaben* anlegen (nur **Live**):
+
+```
+* * * * * cd /httpdocs && /opt/php84/bin/php artisan schedule:run >> /dev/null 2>&1
+```
+
+Auf Staging bewusst **nicht** einrichten, sonst gehen Testanmeldungen an den Kunden.
+
+Prüfen, ob der Eintrag registriert ist: `php artisan schedule:list`
+
+### Spam-Schutz
+
+Cloudflare Turnstile ist eingebaut, aber **nur aktiv, wenn `TURNSTILE_SITE_KEY` und
+`TURNSTILE_SECRET_KEY` in der `.env` gesetzt sind**. Bei leerem Secret gibt
+`verifyTurnstile()` stillschweigend `true` zurück — dann ist das Formular
+ungeschützt (kein Honeypot, kein Rate-Limiting als Fallback).
+
+---
+
 ## Wichtige Befehle
 
 ```bash
@@ -112,4 +168,5 @@ php artisan test            # Tests
 php artisan view:clear      # Blade-Cache leeren (nach Config-Änderungen)
 php artisan config:clear    # Config-Cache leeren (nach .env-Änderungen)
 npm run build               # Assets für Produktion bauen
+php artisan schedule:list   # Prüfen, ob der Wochen-Export registriert ist
 ```

@@ -23,6 +23,9 @@ class ExportWeeklyRegistrations extends Command
             return self::FAILURE;
         }
 
+        // Mehrere Empfänger per Komma getrennt erlaubt.
+        $recipients = array_values(array_filter(array_map('trim', explode(',', $recipient))));
+
         $query = Registration::query()->orderBy('created_at');
 
         if (! $this->option('all')) {
@@ -34,14 +37,14 @@ class ExportWeeklyRegistrations extends Command
         $periodStart = now()->subWeek();
         $periodEnd = now();
 
-        Notification::route('mail', $recipient)
+        Notification::route('mail', $recipients)
             ->notify(new WeeklyRegistrationsExport($registrations, $periodStart, $periodEnd));
 
         if ($registrations->isNotEmpty()) {
             Registration::whereIn('id', $registrations->pluck('id'))->update(['exported_at' => now()]);
         }
 
-        $this->info("Sent {$registrations->count()} registration(s) to {$recipient}.");
+        $this->info("Sent {$registrations->count()} registration(s) to ".implode(', ', $recipients).'.');
 
         return self::SUCCESS;
     }

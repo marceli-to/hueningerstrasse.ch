@@ -5,12 +5,13 @@
 ])
 
 @php
-  $fmt = fn ($v) => rtrim(rtrim(number_format((float) $v, 1, '.', ''), '0'), '.');
+  // Flächen werden auf ganze m² aufgerundet.
+  $fmt = fn ($v) => (string) (int) ceil((float) $v);
 @endphp
 
 <div>
-  <h3 class="font-bold uppercase tracking-wide text-xl md:text-2xl text-ink mb-10">{{ config('estate.project') }}</h3>
-  <p class="font-bold text-md md:text-lg text-ink mb-14">{{ $title }}</p>
+  <x-headings.h3 class="mb-10">{{ config('estate.project') }}</x-headings.h3>
+  <p class="font-bold text-[18px] md:text-[20px] text-ink mb-20">{{ $title }}</p>
 
   <div class="overflow-x-auto">
     @if($variant === 'commercial')
@@ -18,7 +19,7 @@
         <thead>
           <tr class="bg-bordeaux text-white text-sm md:text-md align-bottom">
             <th class="py-14 pl-8 pr-28 font-normal whitespace-nowrap">Objekt</th>
-            <th class="py-14 pr-28 font-normal whitespace-nowrap">Fläche m²</th>
+            <th class="py-14 pr-28 font-normal whitespace-nowrap">Fläche netto m<sup>2</sup></th>
             <th class="py-14 pr-28 font-normal whitespace-nowrap">Lager m²</th>
             <th class="py-14 pr-8 font-normal whitespace-nowrap text-center">Grundriss</th>
           </tr>

@@ -75,7 +75,7 @@ return [
             'plan'    => '/downloads/H40_Vermietungsplan_GewerbeEG_2026.07.09.pdf',
         ],
         [
-            'object'  => 'Gewerbe 1.UG',
+            'object'  => 'Gewerbe 1. UG',
             'floor'   => 'UG',         // 1. Untergeschoss -> Isometrie data-iso-floor="UG"
             'part'    => 'gewerbe',    // -> nur die "Gewerbe"-Gruppe der UG-Etage
             'surface' => 354.1,

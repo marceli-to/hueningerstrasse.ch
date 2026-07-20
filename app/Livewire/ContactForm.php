@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Mail\CommercialInquiry;
 use App\Mail\RegistrationConfirmation;
 use App\Models\Registration;
 use Illuminate\Support\Facades\Http;
@@ -88,7 +89,7 @@ class ContactForm extends Component
             return;
         }
 
-        Registration::create([
+        $registration = Registration::create([
             'apartment_sizes' => array_values($this->apartment_sizes),
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
@@ -101,12 +102,40 @@ class ContactForm extends Component
 
         Mail::to($this->email)->send(new RegistrationConfirmation);
 
+        $this->notifyCommercial($registration);
+
         $this->reset([
             'apartment_sizes', 'first_name', 'last_name', 'street',
             'zip_city', 'email', 'phone', 'message', 'privacy', 'turnstileToken',
         ]);
 
         $this->submitted = true;
+    }
+
+    /**
+     * Sofort-Benachrichtigung an die Vermarktung, wenn "Gewerbefläche" angewählt wurde.
+     *
+     * Scheitert der Versand, wird nur geloggt: Die Anfrage ist bereits gespeichert und
+     * erscheint ohnehin in der Wochenliste — der Absender soll deswegen keinen Fehler sehen.
+     */
+    private function notifyCommercial(Registration $registration): void
+    {
+        if (! in_array('gewerbe', $registration->apartment_sizes ?? [], true)) {
+            return;
+        }
+
+        $recipient = config('services.registrations.commercial_email');
+
+        if (blank($recipient)) {
+            return;
+        }
+
+        try {
+            Mail::to(array_map('trim', explode(',', $recipient)))
+                ->send(new CommercialInquiry($registration));
+        } catch (\Throwable $e) {
+            report($e);
+        }
     }
 
     private function verifyTurnstile(): bool
