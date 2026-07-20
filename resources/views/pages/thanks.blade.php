@@ -23,8 +23,7 @@
         @endif
 
         <p class="!mb-0">
-          Eine Bestätigung Ihrer Anfrage haben wir Ihnen per E-Mail zugestellt. Sollte diese nicht
-          innerhalb weniger Minuten eintreffen, prüfen Sie bitte Ihren Spam-Ordner.
+          Eine Bestätigung Ihrer Anfrage haben wir Ihnen per E-Mail zugestellt.
         </p>
 
       </div>
