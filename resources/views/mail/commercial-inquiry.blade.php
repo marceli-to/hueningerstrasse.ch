@@ -24,7 +24,4 @@ Interesse an:
 
 <small>Eingegangen am {{ $registration->created_at->timezone('Europe/Zurich')->format('d.m.Y, H:i') }} Uhr.
 Diese Anfrage erscheint zusätzlich in der wöchentlichen Gesamtliste.</small>
-
-Freundliche Grüsse<br>
-{{ config('app.name') }}
 </x-mail::message>

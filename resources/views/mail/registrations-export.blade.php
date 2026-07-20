@@ -14,7 +14,4 @@ finden Sie in der beigefügten CSV-Datei.
   ({{ collect($r->apartment_sizes)->map(fn ($s) => $s === 'gewerbe' ? 'Gewerbefläche' : $s.'-Zi.')->implode(', ') }})
 @endforeach
 @endif
-
-Freundliche Grüsse<br>
-{{ config('app.name') }}
 </x-mail::message>
