@@ -24,7 +24,6 @@ class ContactForm extends Component
     public bool $privacy = false;
 
     public string $turnstileToken = '';
-    public bool $submitted = false;
 
     /** Options offered, as value => label, in display order (column-major, per design). */
     public array $sizes = [
@@ -109,7 +108,9 @@ class ContactForm extends Component
             'zip_city', 'email', 'phone', 'message', 'privacy', 'turnstileToken',
         ]);
 
-        $this->submitted = true;
+        // Eigene Antwortseite statt Inline-Meldung: hat eine eigene URL, ist damit
+        // als Conversion messbar und ein Reload sendet das Formular nicht erneut.
+        $this->redirectRoute('page.thanks', navigate: true);
     }
 
     /**

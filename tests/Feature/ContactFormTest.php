@@ -30,7 +30,7 @@ class ContactFormTest extends TestCase
                 'message' => 'required',
                 'privacy' => 'accepted',
             ])
-            ->assertSet('submitted', false);
+            ->assertNoRedirect();
     }
 
     public function test_it_stores_registration_and_sends_confirmation(): void
@@ -49,7 +49,7 @@ class ContactFormTest extends TestCase
             ->set('privacy', true)
             ->call('submit')
             ->assertHasNoErrors()
-            ->assertSet('submitted', true);
+            ->assertRedirect(route('page.thanks'));
 
         $this->assertDatabaseHas('registrations', [
             'first_name' => 'Erika',
@@ -97,6 +97,14 @@ class ContactFormTest extends TestCase
         $this->assertDatabaseCount('registrations', 1);
     }
 
+
+    public function test_the_thanks_page_is_reachable(): void
+    {
+        $this->get(route('page.thanks'))
+            ->assertOk()
+            ->assertSee('Wir haben Ihre Anfrage erhalten');
+    }
+
     /** @param  array<int,string>  $sizes */
     private function submitForm(array $sizes): void
     {
@@ -112,6 +120,6 @@ class ContactFormTest extends TestCase
             ->set('privacy', true)
             ->call('submit')
             ->assertHasNoErrors()
-            ->assertSet('submitted', true);
+            ->assertRedirect(route('page.thanks'));
     }
 }

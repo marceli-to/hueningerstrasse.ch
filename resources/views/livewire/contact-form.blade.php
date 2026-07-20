@@ -1,13 +1,4 @@
 <div>
-  @if ($submitted)
-    <div class="flex flex-col gap-16" role="status" aria-live="polite" data-reveal>
-      <x-headings.h2 class="!mb-0">Wir haben Ihre Anfrage erhalten</x-headings.h2>
-      <p class="max-w-2xl">
-        Vielen Dank für Ihr Interesse an der Hüningerstrasse 40. Wir setzen uns zeitnah mit Ihnen in
-        Verbindung und informieren Sie über das weitere Vorgehen.
-      </p>
-    </div>
-  @else
     <x-headings.h2 class="mb-29! md:mb-43!">Kontaktformular</x-headings.h2>
 
     <form wire:submit="submit" class="flex flex-col gap-24 md:gap-28">
@@ -52,7 +43,7 @@
         <x-form.checkbox id="privacy" name="privacy" wire:model.live="privacy" multiline :error="$errors->has('privacy')">
           Ich habe die
           <a href="{{ route('page.privacy') }}" class="text-bordeaux hover:underline decoration-1 underline-offset-2">Datenschutzerklärung</a>
-          gelesen und akzeptiere diese.
+          gelesen und akzeptiere diese.*
         </x-form.checkbox>
         @error('privacy')
           <p class="mt-8 text-sm text-error">{{ $message }}</p>
@@ -93,5 +84,4 @@
         <script>window.onTurnstileLoad = () => document.dispatchEvent(new Event('turnstile:loaded'));</script>
       @endpush
     @endif
-  @endif
 </div>
