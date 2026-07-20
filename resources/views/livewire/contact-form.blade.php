@@ -1,7 +1,11 @@
 <div>
     <x-headings.h2 class="mb-29! md:mb-43!">Kontaktformular</x-headings.h2>
 
-    <form wire:submit="submit" class="flex flex-col gap-24 md:gap-28">
+    {{-- method="post" ist eine Absicherung: Sollte Livewires JS je ausfallen, wuerde
+         ein Formular ohne method-Angabe nativ per GET abschicken und dabei alle
+         eingegebenen Personendaten in die URL schreiben (Browser-Verlauf, Server-Logs,
+         Referrer). Mit post schlaegt der Fallback stattdessen sichtbar fehl. --}}
+    <form wire:submit="submit" method="post" class="flex flex-col gap-24 md:gap-28">
 
       <fieldset>
         <x-headings.h3 class="mb-14">Ich interessiere mich für (Bitte auswählen)</x-headings.h3>
