@@ -1,6 +1,6 @@
 @extends('app')
 @section('meta_title', 'Gewerbe')
-@section('meta_description', 'Moderne Gewerbeflächen mit Industriecharme an der Hüningerstrasse 40 in Basel – rund 203 m² im EG und 353 m² im UG, Fertigstellung per Februar 2027.')
+@section('meta_description', 'Moderne Gewerbeflächen mit Industriecharme an der Hüningerstrasse 40 in Basel – rund 203 m² im EG und 354 m² im UG, Fertigstellung per Februar 2027.')
 
 @section('content')
 
@@ -12,6 +12,11 @@
       Industrie- und Ateliercharakter. Die Fertigstellung der Gewerbeflächen ist <strong>per Februar 2027</strong>
       vorgesehen.
     </p>
+    <div class="mt-24 mb-40">
+      <x-buttons.primary href="#angebot" title="Zum Angebot">
+        Zum Angebot
+      </x-buttons.primary>
+    </div>
     <p>
       Die markante Architektur, hohe Decken und grosszügigen Schaufenster schaffen ideale Voraussetzungen
       für kreative Arbeitswelten, innovative Dienstleister, Architekturbüros, Design- und Kreativagenturen,
@@ -19,7 +24,7 @@
       Unternehmen, die Wert auf Sichtbarkeit, Flexibilität und ein inspirierendes Arbeitsumfeld legen.
     </p>
     <p>
-      Die Flächen umfassen rund 203 m² im Erdgeschoss sowie 353 m² im 1. Untergeschoss und können einzeln
+      Die Flächen umfassen rund 203 m² im Erdgeschoss sowie 354 m² im 1. Untergeschoss und können einzeln
       oder als zusammenhängende Gesamtfläche gemietet werden. Eine optionale interne Treppe verbindet die
       beiden Ebenen und schafft zusätzliche Flexibilität für unterschiedlichste Nutzungskonzepte. Das
       Untergeschoss eignet sich zudem ideal als Lager- oder Nebenfläche und ergänzt die Nutzung im
@@ -76,7 +81,7 @@
   </x-sections.hero-split>
 
   {{-- Angebot Gewerbe --}}
-  <section class="bg-sky">
+  <section id="angebot" class="bg-sky scroll-mt-105 lg:scroll-mt-125">
     <x-layout.inner class="pt-22 md:pt-34 pb-40 md:pb-56 lg:pb-64">
       <div data-reveal>
         <x-headings.h2>Angebot Gewerbe</x-headings.h2>
