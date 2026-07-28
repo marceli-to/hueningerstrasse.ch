@@ -12,3 +12,13 @@ Route::view('/danke', 'pages.thanks')->name('page.thanks');
 
 Route::view('/impressum', 'pages.imprint')->name('page.imprint');
 Route::view('/datenschutz', 'pages.privacy')->name('page.privacy');
+
+// robots.txt kommt aus der App statt als statische Datei, damit Staging per
+// ROBOTS_NOINDEX=true gesperrt bleibt und ein Deploy das nicht zuruecksetzt.
+Route::get('/robots.txt', function () {
+    $body = config('seo.noindex')
+        ? "User-agent: *\nDisallow: /\n"
+        : "User-agent: *\nDisallow:\n";
+
+    return response($body, 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+})->name('robots');
