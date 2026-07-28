@@ -39,6 +39,16 @@ class WeeklyRegistrationsExport extends Notification
                 'period' => $period,
             ]);
 
+        // Stille Kopie, mehrere Adressen per Komma getrennt.
+        $bcc = array_values(array_filter(array_map(
+            'trim',
+            explode(',', (string) config('services.registrations.export_bcc'))
+        )));
+
+        if ($bcc !== []) {
+            $mail->bcc($bcc);
+        }
+
         if ($this->registrations->isNotEmpty()) {
             $filename = 'anfragen-'.$this->periodStart->format('Y-m-d').'-'.$this->periodEnd->format('Y-m-d').'.csv';
 

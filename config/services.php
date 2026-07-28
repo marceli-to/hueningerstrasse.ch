@@ -43,6 +43,8 @@ return [
     'registrations' => [
         // Empfänger der wöchentlichen CSV-Liste (mehrere per Komma getrennt).
         'export_email' => env('REGISTRATIONS_EXPORT_EMAIL'),
+        // Stille Kopie der Wochenliste (mehrere per Komma getrennt).
+        'export_bcc' => env('REGISTRATIONS_EXPORT_BCC'),
         // Sofort-Benachrichtigung, sobald jemand "Gewerbefläche" anwählt.
         'commercial_email' => env('REGISTRATIONS_COMMERCIAL_EMAIL'),
     ],
