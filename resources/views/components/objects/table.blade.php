@@ -19,11 +19,14 @@
 
   <div class="overflow-x-auto">
     @if($variant === 'commercial')
-      <table class="text-left border-collapse min-w-[440px]">
+      {{-- Drei Spalten passen auch auf schmale Viewports, daher keine Mindestbreite. --}}
+      <table class="w-full text-left border-collapse">
         <thead>
           <tr class="bg-bordeaux text-white text-sm md:text-md align-bottom">
+            {{-- w-full auf der Flaechenspalte: sie nimmt den Rest, Objekt und Grundriss
+                 schrumpfen auf ihren Inhalt. So bleibt die Tabelle immer genau 100% breit. --}}
             <th class="py-14 pl-8 pr-28 font-normal whitespace-nowrap">Objekt</th>
-            <th class="py-14 pr-28 font-normal whitespace-nowrap">Fläche netto m<sup>2</sup></th>
+            <th class="w-full py-14 pr-28 font-normal whitespace-nowrap">Fläche netto m<sup>2</sup></th>
             <th class="py-14 pr-8 font-normal whitespace-nowrap text-center">Grundriss</th>
           </tr>
         </thead>
