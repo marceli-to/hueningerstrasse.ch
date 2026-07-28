@@ -63,14 +63,13 @@ return [
     ],
 
     // --- Gewerbeflächen (aus Vermietungsplänen 2026.07.09) ---
-    // Eigene Struktur: object | geschoss | surface (m²) | lager (m² oder null) | plan (PDF)
+    // Eigene Struktur: object | geschoss | surface (m²) | plan (PDF)
     'commercial' => [
         [
             'object'  => 'Gewerbe EG',
             'floor'   => 'EG',         // -> Isometrie data-iso-floor
             'part'    => 'gewerbe',    // -> nur die "Gewerbe"-Gruppe der EG-Etage einfärben
             'surface' => 203,
-            'lager'   => null,
             'state'   => 'free',
             'plan'    => '/downloads/H40_Vermietungsplan_GewerbeEG_2026.07.09.pdf',
         ],
@@ -78,8 +77,8 @@ return [
             'object'  => 'Gewerbe 1. UG',
             'floor'   => 'UG',         // 1. Untergeschoss -> Isometrie data-iso-floor="UG"
             'part'    => 'gewerbe',    // -> nur die "Gewerbe"-Gruppe der UG-Etage
-            'surface' => 354,
-            'lager'   => 13,
+            // Die beiden Flaechen im 1. UG (354 m² + 13 m² Lager) sind zusammengefuehrt.
+            'surface' => 367,
             'state'   => 'free',
             'plan'    => '/downloads/H40_Vermietungsplan_Gewerbe1UG_2026.07.09.pdf',
         ],

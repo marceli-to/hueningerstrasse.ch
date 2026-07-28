@@ -19,12 +19,11 @@
 
   <div class="overflow-x-auto">
     @if($variant === 'commercial')
-      <table class="text-left border-collapse min-w-[560px]">
+      <table class="text-left border-collapse min-w-[440px]">
         <thead>
           <tr class="bg-bordeaux text-white text-sm md:text-md align-bottom">
             <th class="py-14 pl-8 pr-28 font-normal whitespace-nowrap">Objekt</th>
             <th class="py-14 pr-28 font-normal whitespace-nowrap">Fläche netto m<sup>2</sup></th>
-            <th class="py-14 pr-28 font-normal whitespace-nowrap">Lager m²</th>
             <th class="py-14 pr-8 font-normal whitespace-nowrap text-center">Grundriss</th>
           </tr>
         </thead>
@@ -38,7 +37,6 @@
               class="border-b border-ink/15 text-sm md:text-md font-normal transition-colors hover:bg-ink/5 cursor-default">
               <td class="py-14 pl-8 pr-28 whitespace-nowrap">{{ $o['object'] }}</td>
               <td class="py-14 pr-28">{{ $fmt($o['surface']) }}</td>
-              <td class="py-14 pr-28">{{ !empty($o['lager']) ? $fmt($o['lager']) : '–' }}</td>
               <td class="py-14 pr-8 text-center">
                 @if(!empty($o['plan']))
                   <a href="{{ $o['plan'] }}" download target="_blank" rel="noopener" aria-label="Vermietungsplan {{ $o['object'] }} herunterladen" class="inline-flex text-bordeaux transition-colors hover:text-ink">
