@@ -23,9 +23,11 @@
       <table class="w-full text-left border-collapse">
         <thead>
           <tr class="bg-bordeaux text-white text-sm md:text-md align-bottom">
-            {{-- w-full auf der Flaechenspalte: sie nimmt den Rest, Objekt und Grundriss
-                 schrumpfen auf ihren Inhalt. So bleibt die Tabelle immer genau 100% breit. --}}
-            <th class="py-14 pl-8 pr-28 font-normal whitespace-nowrap">Objekt</th>
+            {{-- w-full auf der Flaechenspalte: sie nimmt den Rest, Grundriss schrumpft auf
+                 seinen Inhalt. So bleibt die Tabelle immer genau 100% breit. Objekt bekommt
+                 40%, damit die Flaeche weiter rechts steht (auf schmalen Viewports faellt
+                 die Prozentbreite automatisch auf die Inhaltsbreite zurueck). --}}
+            <th class="w-2/5 py-14 pl-8 pr-28 font-normal whitespace-nowrap">Objekt</th>
             <th class="w-full py-14 pr-28 font-normal whitespace-nowrap">Fläche netto m<sup>2</sup></th>
             <th class="py-14 pr-8 font-normal whitespace-nowrap text-center">Grundriss</th>
           </tr>
