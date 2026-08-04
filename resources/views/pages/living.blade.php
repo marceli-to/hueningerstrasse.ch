@@ -41,16 +41,16 @@
     </x-slot:aside>
   </x-sections.hero-split>
 
-  {{-- Angebot Wohnen – vorerst ausgeblendet
+  {{-- Angebot Wohnen --}}
   <section class="bg-sky">
     <x-layout.inner class="py-40 md:py-56 lg:py-64">
       <div data-reveal>
-        <x-headings.h2>Angebot Wohnen</x-headings.h2>
+        {{-- Mehr Luft zum Filter als der h2-Standard (mb-16 / md:mb-24). --}}
+        <x-headings.h2 class="mb-25! md:mb-37!">Angebot Wohnen</x-headings.h2>
         <x-objects.filter :options="$filterOptions" />
         <x-objects.wrapper :objects="$objects" title="Mietwohnungen" />
       </div>
     </x-layout.inner>
   </section>
-  --}}
 
 @endsection

@@ -58,15 +58,36 @@
         </tbody>
       </table>
     @else
-      <table class="text-left border-collapse min-w-[560px]">
+      <table class="min-w-full text-left border-collapse">
         <thead>
-          <tr class="bg-bordeaux text-white text-sm md:text-md align-bottom">
-            <th class="py-10 pl-8 pr-28 font-normal">Nr.</th>
-            <th class="py-10 pr-28 font-normal">Etage</th>
-            <th class="py-10 pr-28 font-normal">Zimmer</th>
-            <th class="py-10 pr-28 font-normal">Wohnfläche<br>Netto m²</th>
-            <th class="py-10 pr-28 font-normal">Aussenfläche<br>m²</th>
-            <th class="py-10 pr-8 font-normal text-center">Grundriss</th>
+          {{-- whitespace-nowrap haelt die Titel zusammen, die Spalten wachsen auf
+               ihre Inhaltsbreite; unter den Inhalt kann die Tabelle also nie
+               schrumpfen. min-w-full sorgt fuer die Gegenrichtung: bleibt Platz
+               uebrig, fuellt sie ihn aus statt links zu kleben. Reicht der Platz
+               nicht, scrollt der Wrapper horizontal. --}}
+          <tr class="bg-bordeaux text-white text-xs md:text-md align-top">
+            <th class="py-10 pl-8 pr-10 md:pr-20 font-normal whitespace-nowrap">Nr.</th>
+            <th class="py-10 pr-10 md:pr-20 font-normal whitespace-nowrap">Etage</th>
+            {{-- Unter md gekürzt, damit die Tabelle auf dem Telefon schmaler wird. --}}
+            <th class="py-10 pr-10 md:pr-20 font-normal whitespace-nowrap">
+              <span class="md:hidden">Zi.</span><span class="hidden md:inline">Zimmer</span>
+            </th>
+            {{-- Einheit unter md auf eine zweite Zeile, das spart Spaltenbreite.
+                 <br> bricht auch bei whitespace-nowrap. --}}
+            <th class="py-10 pr-10 md:pr-20 font-normal whitespace-nowrap">
+              <span class="md:hidden">Fl. netto<br>m²</span><span class="hidden md:inline">Fläche netto m²</span>
+            </th>
+            <th class="py-10 pr-10 md:pr-20 font-normal whitespace-nowrap">
+              <span class="md:hidden">Aussen<br>m²</span><span class="hidden md:inline">Aussen m²</span>
+            </th>
+            <th class="py-10 pr-10 md:pr-20 font-normal text-center whitespace-nowrap">Grundriss</th>
+            {{-- Letzte Spalte ohne Innenabstand und rechtsbuendig: sie ist durch
+                 min-w-full breiter als ihr Inhalt, sonst bliebe rechts Luft.
+                 Der Titel entfaellt optisch, bleibt fuer Screenreader aber
+                 stehen – eine leere Kopfzelle waere sonst nicht zuzuordnen. --}}
+            <th class="py-10 font-normal whitespace-nowrap text-right">
+              <span class="sr-only">Vormerken</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -75,16 +96,21 @@
               data-filterable
               data-object
               data-object-number="{{ $o['ref'] }}"
+              {{-- Die Nummer ist zugleich der Name der Flaeche im Illustrator-SVG
+                   (V.1 -> <g id="V1" data-iso-part="V.1">), daher faerbt iso.js
+                   beim Hover genau diese Wohnung ein statt der ganzen Etage. --}}
+              data-object-part="{{ $o['part'] ?? $o['ref'] }}"
               data-object-state="{{ $o['state'] }}"
               data-object-rooms="{{ $o['rooms'] }}"
               data-object-floor="{{ $o['floor'] }}"
-              class="border-b border-ink/15 text-sm md:text-md font-normal transition-colors hover:bg-ink/5">
-              <td class="py-10 pl-8 pr-28">{{ $o['ref'] }}</td>
-              <td class="py-10 pr-28">{{ $o['floor_label'] }}</td>
-              <td class="py-10 pr-28">{{ $o['rooms'] }}</td>
-              <td class="py-10 pr-28">{{ $fmt($o['surface_living']) }}</td>
-              <td class="py-10 pr-28">{{ $fmt($o['surface_exterior']) }}</td>
-              <td class="py-10 pr-8 text-center">
+              class="border-b border-ink/15 text-xs md:text-md font-normal transition-colors hover:bg-ink/5">
+              <td class="py-10 pl-8 pr-10 md:pr-20">{{ $o['ref'] }}</td>
+              <td class="py-10 pr-10 md:pr-20">{{ $o['floor_label'] }}</td>
+              <td class="py-10 pr-10 md:pr-20">{{ $o['rooms'] }}</td>
+              <td class="py-10 pr-10 md:pr-20">{{ $fmt($o['surface_living']) }}</td>
+              {{-- Wohnungen ohne Aussenflaeche: Zelle bleibt leer statt "0". --}}
+              <td class="py-10 pr-10 md:pr-20">{{ (float) $o['surface_exterior'] > 0 ? $fmt($o['surface_exterior']) : '' }}</td>
+              <td class="py-10 pr-10 md:pr-20 text-center">
                 @if(!empty($o['plan']))
                   <a href="{{ $o['plan'] }}" target="_blank" rel="noopener" aria-label="Grundriss {{ $o['ref'] }} herunterladen" class="inline-flex text-bordeaux transition-colors hover:text-ink">
                     <x-icons.download class="w-16 h-16" />
@@ -94,6 +120,16 @@
                     <x-icons.download class="w-16 h-16" />
                   </span>
                 @endif
+              </td>
+              <td class="py-6 text-right">
+                {{-- Gleicher Button wie sonst im Projekt, nur auf Tabellenmass
+                     heruntergesetzt (der Standard ist auf 23px Text ausgelegt). --}}
+                <x-buttons.primary
+                  href="{{ route('page.contact') }}"
+                  title="Wohnung {{ $o['ref'] }} vormerken"
+                  class="text-[12px]! md:text-[13px]! font-normal! md:font-bold! pt-6! pb-7! px-10! whitespace-nowrap">
+                  Vormerken
+                </x-buttons.primary>
               </td>
             </tr>
           @endforeach

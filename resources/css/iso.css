@@ -71,9 +71,11 @@
 }
 .iso-floor.is-active .iso-label { fill: #fff; }   /* Kontrast auf Bordeaux */
 
-/* Gewerbe (Teilobjekt) aktiv: Etage bleibt neutral, aber das Label (UG/EG)
-   liegt auf der eingefärbten Fläche -> ebenfalls weiss. */
-.iso-floor:has(.is-part-active) .iso-label { fill: #fff; }
+/* Teilobjekt aktiv: die Etage bleibt neutral. Das Label wechselt nur dann auf
+   weiss, wenn die Fläche direkt darunter rot ist – welche das ist, steht als
+   data-iso-label-part am <text>, den Abgleich macht iso.js. Sonst (z.B. eine
+   Wohnung am anderen Ende der Etage) bliebe die Schrift weiss auf Hellgrau. */
+.iso-label.is-label-active { fill: #fff; }
 
 /* Etagen im SVG sind (auf Desktop) interaktiv */
 @media (min-width: 1024px) {

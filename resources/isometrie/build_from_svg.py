@@ -29,6 +29,9 @@ BLADE = os.path.abspath(os.path.join(HERE, "..", "views", "components", "objects
 
 FLOOR_MAP = {"UG": "UG", "EG": "EG", "_x31_._OG": "1.OG", "_x32_._OG": "2.OG", "_x33_._OG": "3.OG"}
 
+# Wohnungs-ids aus dem AI: Haus-Kuerzel + Nummer, ohne Punkt (V1, V101, HA101, HC203).
+APARTMENT_ID = re.compile(r"^(V|HA|HB|HC)(\d+)$")
+
 # Etagen-Labels in Root-Koordinaten (stimmen mit dem SVG-Koordinatensystem überein).
 LABELS = {
     "UG":   '<text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 643.9, 1875.9)">UG</text>',
@@ -37,6 +40,11 @@ LABELS = {
     "2.OG": '<text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 650.4, 1327.2)">2. OG</text>',
     "3.OG": '<text class="iso-label" transform="matrix(0.866, 0.5, 0, 1, 653.8, 1165.6)">3. OG</text>',
 }
+
+# Fläche, die direkt unter der jeweiligen Beschriftung liegt (per getBBox ermittelt).
+# Nur wenn genau diese Fläche rot ist, muss das Label auf weiss wechseln – sonst
+# steht es weiterhin auf neutralem Grund und bliebe unlesbar.
+LABEL_PART = {"UG": "gewerbe", "EG": "gewerbe", "1.OG": "V.103", "2.OG": "V.203", "3.OG": "V.303"}
 
 ROOT_TAG = ('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
             'viewBox="0 0 4150 3400" class="iso-svg {{ $class ?? \'\' }}" role="img" '
@@ -98,6 +106,22 @@ def main():
     s = s.replace('<g id="Gewerbe1" data-name="Gewerbe">',
                   '<g id="Gewerbe1" data-name="Gewerbe" data-iso-part="gewerbe">', 1)
 
+    # 4b. Wohnungen -> Teilobjekt. Die Illustrator-ids (V1, HA101, HC203 …) sind
+    #     die Nummern aus dem Mieterspiegel ohne Punkt; data-iso-part bekommt die
+    #     Schreibweise mit Punkt, damit sie 1:1 zu config('estate.living').ref passt.
+    found = []
+
+    def tag_apartment(m):
+        gid = m.group(1)
+        am = APARTMENT_ID.match(gid)
+        if not am:
+            return m.group(0)
+        ref = f"{am.group(1)}.{am.group(2)}"
+        found.append(ref)
+        return f'<g id="{gid}" data-iso-part="{ref}">'
+
+    s = re.sub(r'<g id="([A-Za-z]+\d+)">', tag_apartment, s)
+
     # 5. iso-face / iso-top ergänzen
     def add_iso(m):
         cls = m.group(1)
@@ -114,6 +138,10 @@ def main():
 
     # 6b. Vektor-Labels je Etage vor deren </g> einsetzen
     for key, label in LABELS.items():
+        part = LABEL_PART.get(key)
+        if part:
+            label = label.replace('class="iso-label"',
+                                  f'class="iso-label" data-iso-label-part="{part}"', 1)
         marker = f'data-iso-floor="{key}"'
         gi = s.find(marker)
         open_end = s.find(">", gi) + 1
@@ -124,6 +152,7 @@ def main():
     open(BLADE, "w", encoding="utf-8").write(out)
     print("geschrieben:", BLADE)
     print("face-classes:", sorted(face), " top-classes:", sorted(top))
+    print("Wohnungen mit data-iso-part:", len(found), sorted(found))
     print("data-iso-part=gewerbe:", out.count('data-iso-part="gewerbe"'),
           " iso-face:", out.count("iso-face"), " iso-top:", out.count("iso-top"),
           " labels:", out.count('class="iso-label"'))

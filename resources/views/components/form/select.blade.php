@@ -2,7 +2,9 @@
 
 <div class="w-full">
   @if($label)
-    <label for="{{ $id }}" class="block font-bold uppercase tracking-wide text-md text-ink mb-8">
+    {{-- Schriftgrad wie x-headings.h3 ("HÜNINGERSTRASSE 40"), damit Filter und
+         Tabellenkopf auf einer Linie liegen. --}}
+    <label for="{{ $id }}" class="block font-bold uppercase tracking-wide text-[20px] md:text-[22px] text-ink mb-23">
       {{ $label }}
     </label>
   @endif
