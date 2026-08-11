@@ -28,7 +28,7 @@
     </p>
 
     <x-slot:aside>
-      <div class="px-24 lg:px-0" data-reveal>
+      <div class="px-18 md:px-24 lg:px-0" data-reveal>
         <picture class="block w-full">
           <source srcset="/img/landschaft.webp" type="image/webp">
           <img src="/img/landschaft.jpg" alt="Basel – Altstadt und Rheinufer" class="w-full aspect-square object-cover" />

@@ -21,9 +21,15 @@
 
       </div>
 
-      <div class="flex h-full items-center justify-end gap-x-32 md:gap-x-41">
-        <x-icons.logo-apleona class="w-150 md:w-180 h-auto" />
-        <x-icons.logo-medpension class="w-[174px] md:w-[209px] h-auto" />
+      {{-- Unter md kleiner: 150px + 174px + 32px Abstand ergeben 356px und damit
+           mehr, als die Inhaltsspalte auf dem Telefon hergibt (327px bei 375px
+           Viewport, 272px bei 320px) – die Logos liefen also aus ihrer Spalte
+           heraus. 110 + 128 + 24 = 262 passt auch auf dem schmalsten Geraet.
+           Seitenverhaeltnis bleibt ueber h-auto erhalten, ab md sind die
+           Groessen unveraendert. --}}
+      <div class="flex h-full items-center justify-end gap-x-24 md:gap-x-41">
+        <x-icons.logo-apleona class="w-110 md:w-180 h-auto shrink-0" />
+        <x-icons.logo-medpension class="w-[128px] md:w-[209px] h-auto shrink-0" />
       </div>
 
     </div>

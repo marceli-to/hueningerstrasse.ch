@@ -42,7 +42,7 @@
     </div>
 
     <x-slot:aside>
-      <div class="px-24 lg:px-0" data-reveal>
+      <div class="px-18 md:px-24 lg:px-0" data-reveal>
         <x-gallery.carousel name="gallery" alt="Gewerbe- und Wohnräume an der Hüningerstrasse 40" :images="[
           '/img/gewerbe-buero-01',
           '/img/gebaeude-02',

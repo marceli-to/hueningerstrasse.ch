@@ -6,7 +6,11 @@
 
   {{-- Intro split --}}
   <x-sections.hero-split bg="bg-white" align="start">
-    <x-headings.h1>Aussergewöhnliche Mietwohnungen mit Industrie&shy;architektur</x-headings.h1>
+    {{-- hyphens-auto: "Aussergewöhnliche" ist zu lang fuer schmale Viewports und
+         ragt sonst aus der Spalte. Die Trennung braucht das lang-Attribut am
+         html-Element (steht dort ueber app()->getLocale(), also "de"). Das
+         &shy; in Industrie-architektur bleibt als zusaetzlicher Wunschtrenner. --}}
+    <x-headings.h1 class="hyphens-auto">Aussergewöhnliche Mietwohnungen mit Industrie&shy;architektur</x-headings.h1>
     <p>
       An der Hüningerstrasse 40 entstehen im Zuge eines umfassenden Umbaus 32 charaktervolle
       Mietwohnungen – von 1.5- bis 5.5-Zimmerwohnungen sowie zwei Wohnateliers. Das Projekt verbindet
@@ -31,7 +35,7 @@
     </p>
 
     <x-slot:aside>
-      <div class="px-24 lg:px-0" data-reveal>
+      <div class="px-18 md:px-24 lg:px-0" data-reveal>
         <x-gallery.carousel name="gallery" alt="Mietwohnungen an der Hüningerstrasse 40" :images="[
           '/img/wohnung',
           '/img/gebaeude-02',

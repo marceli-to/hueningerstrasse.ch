@@ -17,7 +17,14 @@
     <p class="font-bold text-[18px] md:text-[20px] text-ink mb-20">{{ $title }}</p>
   @endif
 
-  <div class="overflow-x-auto">
+  {{-- contain-paint zusaetzlich zum Scrollen: overflow-x-auto laesst die Tabelle
+       zwar korrekt im Container scrollen und klippt sie auch, trotzdem schlaegt
+       ihre volle Breite bis hinauf zu <html> in scrollWidth durch (bei 375px
+       Viewport 424 statt 375). Sichtbar verschoben ist dabei nichts und die
+       Seite laesst sich in Chrome auch nicht seitlich scrollen, andere Browser
+       leiten daraus aber eine zu breite Seite ab. contain:paint kappt diese
+       Weitergabe – overflow:hidden auf dem Scroller genuegt dafuer nicht. --}}
+  <div class="overflow-x-auto contain-paint">
     @if($variant === 'commercial')
       {{-- Drei Spalten passen auch auf schmale Viewports, daher keine Mindestbreite. --}}
       <table class="w-full text-left border-collapse">
@@ -80,7 +87,12 @@
             <th class="py-10 pr-10 md:pr-20 font-normal whitespace-nowrap">
               <span class="md:hidden">Aussen<br>m²</span><span class="hidden md:inline">Aussen m²</span>
             </th>
-            <th class="py-10 pr-10 md:pr-20 font-normal text-center whitespace-nowrap">Grundriss</th>
+            {{-- Unter md auf zwei Zeilen getrennt, wie die beiden Flaechenspalten
+                 daneben: "Grundriss" war der breiteste Inhalt dieser Spalte und
+                 bestimmte damit ihre Breite, obwohl darunter nur ein Icon steht. --}}
+            <th class="py-10 pr-10 md:pr-20 font-normal text-center whitespace-nowrap">
+              <span class="md:hidden">Grund-<br>riss</span><span class="hidden md:inline">Grundriss</span>
+            </th>
             {{-- Letzte Spalte ohne Innenabstand und rechtsbuendig: sie ist durch
                  min-w-full breiter als ihr Inhalt, sonst bliebe rechts Luft.
                  Der Titel entfaellt optisch, bleibt fuer Screenreader aber
