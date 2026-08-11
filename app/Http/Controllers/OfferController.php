@@ -27,13 +27,15 @@ class OfferController extends Controller
         $floors = config('estate.floors');
         $filters = config('estate.filters');
 
+        // Reihenfolge kommt 1:1 aus config/estate.php und entspricht dem
+        // Mieterspiegel (nach Haus: V, HA, HB, HC, darin nach Geschoss/Objekt).
+        // Deshalb hier bewusst kein sortBy – sonst landet die Tabelle wieder in
+        // alphabetischer Ref-Reihenfolge.
         $objects = collect(config("estate.$key"))
             ->map(function (array $o) use ($floors) {
                 $o['floor_label'] = $floors[$o['floor']]['label'] ?? $o['floor'];
-                $o['floor_sort'] = $floors[$o['floor']]['sort'] ?? 99;
                 return $o;
             })
-            ->sortBy(fn ($o) => [$o['floor_sort'], $o['ref']])
             ->values();
 
         $rooms = $objects->pluck('rooms')->filter()->unique()->sort()->values();
